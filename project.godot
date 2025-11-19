@@ -11,5 +11,22 @@ config_version=5
 [application]
 
 config/name="Fragments of Memory"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://chol2xlfbq7cu"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+shading/overrides/force_vertex_shading=true
