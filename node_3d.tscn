@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6lacidg2gbrg"]
+[gd_scene load_steps=7 format=3 uid="uid://c6lacidg2gbrg"]
 
 [ext_resource type="PackedScene" uid="uid://615qevqwwoww" path="res://scenery/lab.tscn" id="2_a0tk4"]
-[ext_resource type="PackedScene" uid="uid://0qltu8copyo0" path="res://player/player.tscn" id="2_noarx"]
+[ext_resource type="PackedScene" uid="uid://0qltu8copyo0" path="res://dd/player/player.tscn" id="2_noarx"]
+[ext_resource type="PackedScene" uid="uid://1iuktlfqupl" path="res://Assets/glb_models/missile.glb" id="3_a0tk4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -16,10 +17,6 @@ sky = SubResource("Sky_noarx")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_noarx"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_a0tk4"]
-
 [node name="level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -32,15 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771545, 1.31138, -1.16707)
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 6, 0)
 shadow_enabled = true
 
-[node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.709911, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
-transform = Transform3D(10, 0, 0, 0, 0.2, 0, 0, 0, 10, 0, 0, 0)
-shape = SubResource("BoxShape3D_noarx")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(10, 0, 0, 0, 0.2, 0, 0, 0, 10, 0, 0, 0)
-mesh = SubResource("BoxMesh_a0tk4")
-
 [node name="lab" parent="." instance=ExtResource("2_a0tk4")]
+
+[node name="missile" parent="." instance=ExtResource("3_a0tk4")]
+transform = Transform3D(0.1, 0, 0, 0, 0.09170494, -0.02196249, 0, 0.020644736, 0.09755844, 3.6386595, 1.9349651, 0)

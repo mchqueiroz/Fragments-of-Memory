@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6qxbdi81f15r"
-path="res://.godot/imported/lab.glb-33798555b4341031d7f17acb892e3b8c.scn"
+uid="uid://1iuktlfqupl"
+path="res://.godot/imported/missile.glb-0c452ec61b34bf3d50c005570ef22c3b.scn"
 
 [deps]
 
-source_file="res://glb_models/lab.glb"
-dest_files=["res://.godot/imported/lab.glb-33798555b4341031d7f17acb892e3b8c.scn"]
+source_file="res://Assets/glb_models/missile.glb"
+dest_files=["res://.godot/imported/missile.glb-0c452ec61b34bf3d50c005570ef22c3b.scn"]
 
 [params]
 
