@@ -13,7 +13,6 @@ config_version=5
 config/name="Fragments of Memory"
 run/main_scene="uid://c6lacidg2gbrg"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -23,6 +22,10 @@ window/stretch/aspect="keep_height"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
