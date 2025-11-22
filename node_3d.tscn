@@ -23,13 +23,14 @@ glow_enabled = true
 environment = SubResource("Environment_a0tk4")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_noarx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771545, 1.31138, -1.16707)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771545, 0.83898723, -1.16707)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 6, 0)
 shadow_enabled = true
 
 [node name="lab" parent="." instance=ExtResource("2_a0tk4")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="missile" parent="." instance=ExtResource("3_a0tk4")]
-transform = Transform3D(0.1, 0, 0, 0, 0.09170494, -0.02196249, 0, 0.020644736, 0.09755844, 3.6386595, 1.9349651, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.09381551, -0.034621533, 0, 0.034621533, 0.09381551, 3.8912227, 1.1456337, -0.5360532)

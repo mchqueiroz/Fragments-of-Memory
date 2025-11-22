@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://615qevqwwoww"]
+[gd_scene load_steps=19 format=4 uid="uid://615qevqwwoww"]
 
 [ext_resource type="Material" uid="uid://bw30jcqjfki1a" path="res://Assets/materials/lab_material.tres" id="1_uetsi"]
+[ext_resource type="Material" uid="uid://b1esh28rncpd8" path="res://Assets/materials/celling.tres" id="2_i6rqu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jshlh"]
 
@@ -167,6 +168,7 @@ shape = SubResource("ConcavePolygonShape3D_uetsi")
 
 [node name="Cubo_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 0.1, 0, 0, 0, 15, -0.06381113, 5.144859, -0.08867574)
+material_override = ExtResource("2_i6rqu")
 mesh = SubResource("ArrayMesh_enc3j")
 skeleton = NodePath("")
 
