@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5b2u4uknxqu5"]
+
+[ext_resource type="Texture2D" uid="uid://ctjx3avrrq0i0" path="res://Assets/textures/12_concrete dirt plates wall texture-seamless.jpg" id="1_oqjmd"]
+
+[resource]
+albedo_texture = ExtResource("1_oqjmd")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true
