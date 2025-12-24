@@ -156,7 +156,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_xpb31")
 
 [node name="parede2" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.9, 0, 0, 0, 1.6, 0, 0, 0, 14.8, 0.07536033, 1.1684395, -0.16371487)
+transform = Transform3D(9.9, 0, 0, 0, 1.6, 0, 0, 0, 14.8, -0.068338275, 1.307432, -0.12777074)
 material_override = ExtResource("2_ddh43")
 mesh = SubResource("ArrayMesh_80wqc")
 skeleton = NodePath("")

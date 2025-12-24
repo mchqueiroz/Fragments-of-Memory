@@ -4,7 +4,7 @@
 
 [resource]
 albedo_texture = ExtResource("1_sdpxc")
-roughness = 0.39
+roughness = 0.2
 uv1_scale = Vector3(0.15, 0.15, 0.15)
 uv1_triplanar = true
 uv1_world_triplanar = true
