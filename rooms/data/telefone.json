@@ -1,0 +1,294 @@
+{
+ "size": [
+  5.0,
+  4.2,
+  2.8
+ ],
+ "theme": "papel",
+ "title": [
+  "T − 15 DIAS",
+  "O TELEFONE VERMELHO"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.1,
+  0.1,
+  0.2
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.5,
+    0
+   ],
+   "color": [
+    1.0,
+    0.75,
+    0.5
+   ],
+   "energy": 1.0,
+   "range": 7,
+   "flicker": false
+  },
+  {
+   "pos": [
+    1.7,
+    1.2,
+    -2.0
+   ],
+   "color": [
+    1.0,
+    0.8,
+    0.5
+   ],
+   "energy": 1.4,
+   "range": 3,
+   "flicker": false
+  },
+  {
+   "pos": [
+    0.6,
+    0.9,
+    -1.8
+   ],
+   "color": [
+    1.0,
+    0.3,
+    0.2
+   ],
+   "energy": 0.5,
+   "range": 1.5,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.08,
+   0.07,
+   0.08
+  ],
+  "fog": [
+   0.7,
+   0.55,
+   0.45
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   1.6,
+   0.05,
+   1.7
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  283,
+  0.7,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "parquet",
+  "size": 0.3,
+  "wet": 0.12,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     2.5,
+     2.1,
+     -0.8
+    ],
+    -14.0,
+    2.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "intro": [
+  [
+   "Meu apartamento: uma cama, uma mesa, um telefone vermelho. Hoje, algo se mexeu na minha cabeça.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "diario",
+   "prompt": "Ler o diário",
+   "note": "Meu diário, quarenta páginas: 'Escreva tudo'. Folheio e acho uma letra que não é minha, ao lado das minhas: 'não confie em Sergei'. Quem escreveu?",
+   "alt": "Meu diário. Tudo em ordem.",
+   "say": "Há uma frase no meu diário que eu não escrevi. Ou escrevi e esqueci.",
+   "pos": [
+    1.2,
+    0.865,
+    -1.9
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "janela",
+   "prompt": "Olhar pela janela",
+   "note": "Pela janela: a cidade noturna, a ponte, a fumaça. Sinto que já assisti a esta cena antes, mas de outro lado do vidro.",
+   "say": "Eu já vi isto. De outro lado do vidro.",
+   "pos": [
+    0.0,
+    1.5,
+    -2.1
+   ],
+   "size": [
+    1.5,
+    1.3,
+    0.3
+   ]
+  },
+  {
+   "id": "espelho",
+   "prompt": "Olhar o espelho do armário",
+   "note": "No espelho: o rosto sem faixas, o rosto de Aleksey Petrov. Por um instante, os olhos mostram outro rosto, mais jovem, mais gordo.",
+   "optional": true,
+   "say": "Dois rostos no mesmo espelho.",
+   "pos": [
+    -2.3,
+    1.5,
+    1.5
+   ],
+   "size": [
+    0.3,
+    1.3,
+    0.9
+   ]
+  },
+  {
+   "id": "telefone",
+   "prompt": "Telefonar para Irina",
+   "ask": {
+    "q": "Você disca o número de Irina. Do outro lado, a voz dela. O que você diz?",
+    "opts": [
+     "'Estou começando a lembrar.'",
+     "Desligar sem falar"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "contou_lembrar",
+    "correct": 0,
+    "reply": [
+     [
+      "IRINA (ao telefone): ...Não diga isso ao telefone. Estou indo aí.",
+      "(A voz dela treme. Ela está com medo.)"
+     ],
+     [
+      "(Do outro lado, só a respiração dela. Depois, o sinal de linha.)"
+     ]
+    ]
+   },
+   "note": "Telefonei para Irina e contei que estou começando a lembrar. Ela respondeu com medo, não com alegria.",
+   "alt": "Liguei para Irina. Conversa curta.",
+   "say": "O medo dela confirma tudo.",
+   "pos": [
+    0.6,
+    0.915,
+    -1.8
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  }
+ ],
+ "needed": [
+  "diario",
+  "janela",
+  "telefone"
+ ],
+ "outro": [
+  [
+   "Duas batidas na porta. Irina chegou? Ou alguém pior.",
+   4.0
+  ]
+ ],
+ "name": "telefone",
+ "npcs": [],
+ "models": [],
+ "model": "ep_telefone"
+}

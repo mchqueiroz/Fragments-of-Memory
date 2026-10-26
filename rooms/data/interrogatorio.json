@@ -1,0 +1,302 @@
+{
+ "size": [
+  5.0,
+  4.4,
+  2.8
+ ],
+ "theme": "concreto",
+ "title": [
+  "A10 · T − 6 DIAS",
+  "O INTERROGATÓRIO DE BORIS"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "sky": [
+  0.02,
+  0.02,
+  0.03
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.2,
+    -0.2
+   ],
+   "color": [
+    1.0,
+    0.95,
+    0.8
+   ],
+   "energy": 3.0,
+   "range": 4.5,
+   "flicker": true
+  },
+  {
+   "pos": [
+    0,
+    1.8,
+    -1.6
+   ],
+   "color": [
+    0.7,
+    0.8,
+    1.0
+   ],
+   "energy": 0.5,
+   "range": 3.0,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.04,
+   0.04,
+   0.05
+  ],
+  "fog": [
+   0.5,
+   0.5,
+   0.55
+  ],
+  "density": 0.03
+ },
+ "start": {
+  "pos": [
+   1.6,
+   0.05,
+   1.8
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  193,
+  1.4,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "concrete",
+  "size": 0.7,
+  "wet": 0.3,
+  "emitters": [
+   [
+    "fluorescent_buzz",
+    [
+     0,
+     2.6,
+     -0.2
+    ],
+    -20.0,
+    2.5
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "boris",
+   "model": "boris",
+   "face": "face_boris",
+   "voice": "low",
+   "pitch": 0.85,
+   "prompt": "Falar com Boris",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    0.0,
+    -1.0
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Uma sala sem janelas no subsolo da segurança. Boris me trouxe aqui sem dizer por quê.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "espelho",
+   "prompt": "Olhar o espelho",
+   "note": "Vidro espelhado na parede: do outro lado, alguém observa. Sinto olhos sem rosto.",
+   "say": "Alguém está do outro lado do vidro. Sempre há alguém.",
+   "pos": [
+    2.4,
+    1.6,
+    0.2
+   ],
+   "size": [
+    0.3,
+    1.1,
+    1.8
+   ]
+  },
+  {
+   "id": "gravador",
+   "prompt": "Olhar o gravador",
+   "note": "Gravador de fita ligado: a roda gira, a fita é a minha voz de ontem, repetida.",
+   "say": "Estão gravando tudo o que digo. Até o silêncio.",
+   "pos": [
+    0.5,
+    0.85,
+    -0.2
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "pasta",
+   "prompt": "Abrir a pasta",
+   "note": "Pasta com a etiqueta 'ВОЛКОВ М. И. — изъято': Boris reabriu o caso do irmão. Dentro: um recorte da noite do golpe.",
+   "alt": "Pasta de um caso arquivado.",
+   "say": "Boris leva o irmão desaparecido para dentro do trabalho.",
+   "pos": [
+    -0.5,
+    0.85,
+    -0.4
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "lampada",
+   "prompt": "Olhar a lâmpada",
+   "note": "A lâmpada de mesa aponta para o meu rosto. Nada se esconde sob ela.",
+   "optional": true,
+   "say": "A luz me procura os olhos.",
+   "pos": [
+    0.7,
+    1.05,
+    -0.65
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  }
+ ],
+ "needed": [
+  "espelho",
+  "gravador",
+  "pasta"
+ ],
+ "talk": {
+  "npc": "boris",
+  "hint": "Boris me indica a cadeira, sem sorrir. Acho que vai começar.",
+  "lines": [
+   "BORIS: Senta, Petrov. Cinco minutos. Quem é você, afinal?",
+   "ALEKSEY: Técnico em eletrônica. Está no meu prontuário.",
+   "BORIS: Prontuário. Eu li. Tem coisa demais que o senhor não sabe sobre o senhor.",
+   "BORIS: Dê três passos até a porta e volte. (Ele me observa andar.) ...Você arrasta o pé esquerdo.",
+   {
+    "q": "Boris assobia baixinho quatro notas: G-D-E-D. Ele espera. O que você faz?",
+    "opts": [
+     "Assobiar a melodia de volta, sem pensar",
+     "Ficar em silêncio"
+    ],
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "assobiou",
+    "reply": [
+     [
+      "BORIS: (A boca entreaberta.) Onde aprendeu essa canção, Petrov?",
+      "ALEKSEY: Não sei. Veio sozinha."
+     ],
+     [
+      "BORIS: Silêncio. Interessante. Quem se cala sabe de algo."
+     ]
+    ]
+   },
+   "BORIS: Pode ir. Por enquanto."
+  ],
+  "note": "Boris me testou: o andar, o assobio. Ele suspeita que eu seja o irmão dele. Não sei se tenho medo ou esperança.",
+  "alt": "Boris me interrogou. Rotina."
+ },
+ "name": "interrogatorio",
+ "models": [],
+ "model": "ep_interrogatorio"
+}

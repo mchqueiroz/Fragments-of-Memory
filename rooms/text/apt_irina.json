@@ -1,0 +1,61 @@
+{
+ "clues": {
+  "mala": {
+   "note": "Mala pronta ao pé da cama, fechada com cinto. Dentro, passaportes de três nomes diferentes.",
+   "say": "Uma mala sempre pronta. Quem vive assim espera ter de sumir."
+  },
+  "ordem": {
+   "note": "Pasta na escrivaninha: «ПРИКАЗ №14: И. Лебедева — к стиранию», assinada por Karpov. A ordem é para apagar a própria Irina.",
+   "say": "A ordem é para Irina. Quem manda apagar quem apaga?"
+  },
+  "foto_karpov": {
+   "note": "Retrato de Irina jovem, abraçada a um oficial com o rosto raspado a canivete: só ficou o uniforme.",
+   "say": "O rosto do oficial foi arranhado. Só restou o uniforme."
+  }
+ },
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me olha do sofá, sem o casaco de sempre. Acho que é hora de ouvi-la.",
+  "lines": [
+   "IRINA: Aleksey. Sente-se. Estou cansada de ser a mulher forte.",
+   "IRINA: Karpov me marcou para o apagamento. Depois que o Lethe sair, eu sobro.",
+   "ALEKSEY: Você me trouxe até aqui.",
+   "IRINA: E você pode me salvar. Fique comigo, Aleksey. Uma noite, só uma.",
+   {
+    "q": "Irina se aproxima. O que você faz?",
+    "opts": [
+     "Prometer ajuda: «Eu protejo você.»",
+     "Manter distância: «Isso não é comigo.»"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "ajudou_irina",
+    "trust": {
+     "irina": [
+      2,
+      -2
+     ]
+    },
+    "reply": [
+     [
+      "IRINA: ...Obrigada. (Baixinho:) Se me trair, o Lethe também chega até você."
+     ],
+     [
+      "IRINA: Entendo. Eu faria igual. (O olhar dela esfria.)"
+     ]
+    ]
+   },
+   "IRINA: Eu o escolhi por ser só. Ser só é a única coisa que Karpov não consegue comprar."
+  ],
+  "note": "Irina está marcada para o apagamento por Karpov e me pediu ajuda, com carinho e com ameaça.",
+  "alt": "Irina me convidou para jantar. Foi agradável."
+ },
+ "needed": [
+  "ordem",
+  "mala",
+  "foto_karpov"
+ ],
+ "question": "Irina é caçadora ou caça?"
+}

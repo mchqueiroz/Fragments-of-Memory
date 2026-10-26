@@ -1,0 +1,316 @@
+{
+ "size": [
+  5.0,
+  4.0,
+  2.9
+ ],
+ "theme": "verde",
+ "title": [
+  "AGO / 1993",
+  "A ENTREVISTA DE SEGURANÇA"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.85,
+  0.85,
+  0.75
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.6,
+    0
+   ],
+   "color": [
+    1.0,
+    0.95,
+    0.8
+   ],
+   "energy": 1.8,
+   "range": 7,
+   "flicker": true
+  },
+  {
+   "pos": [
+    -0.5,
+    1.2,
+    -1.4
+   ],
+   "color": [
+    1.0,
+    0.85,
+    0.5
+   ],
+   "energy": 1.3,
+   "range": 3,
+   "flicker": false
+  },
+  {
+   "pos": [
+    -0.8,
+    1.5,
+    -2.0
+   ],
+   "color": [
+    1.0,
+    0.9,
+    0.7
+   ],
+   "energy": 1.5,
+   "range": 4,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.16,
+   0.14,
+   0.12
+  ],
+  "fog": [
+   0.8,
+   0.75,
+   0.6
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   1.4,
+   0.05,
+   1.6
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  204,
+  0.8,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "lino",
+  "size": 0.35,
+  "wet": 0.15,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     2.5,
+     2.2,
+     -1.6
+    ],
+    -16.0,
+    2.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "boris",
+   "model": "boris",
+   "face": "face_boris",
+   "voice": "low",
+   "pitch": 0.85,
+   "prompt": "Falar com Boris",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    0.0,
+    -1.9
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Primeiro dia no Kosmos. Boris me entrevista antes de eu ganhar o crachá.",
+   4.5
+  ]
+ ],
+ "clues": [
+  {
+   "id": "curriculo",
+   "prompt": "Ler o meu currículo",
+   "note": "Meu currículo sobre a mesa de Boris: 'Aleksey Petrov, técnico, 1958'. A letra é de Irina; os carimbos são de verdade.",
+   "alt": "Meu currículo está em ordem.",
+   "say": "A minha vida inteira cabe em uma folha, com a letra de outra pessoa.",
+   "pos": [
+    0.3,
+    0.865,
+    -1.0
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "retrato",
+   "prompt": "Olhar a foto virada",
+   "note": "Um porta-retratos virado para baixo na mesa de Boris. Ele o vira quando alguém entra. É a foto dos dois irmãos.",
+   "say": "Ele esconde uma foto de mim? Ou de alguém igual a mim?",
+   "pos": [
+    -0.4,
+    0.865,
+    -1.15
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "crachas",
+   "prompt": "Olhar o painel de crachás",
+   "note": "Painel de crachás: todos com 'КОСМОС'. Na fileira de baixo, um crachá sem foto com o nome 'Волков М.' e uma data riscada.",
+   "alt": "Painel de crachás da segurança.",
+   "say": "Há um crachá sem rosto. Volkov M.",
+   "pos": [
+    -2.4,
+    1.6,
+    0.4
+   ],
+   "size": [
+    0.3,
+    0.6,
+    0.8
+   ]
+  },
+  {
+   "id": "diploma",
+   "prompt": "Ler o diploma de Boris",
+   "note": "Diploma da Academia de Polícia: 'Борис Иванович Волков'. Filho de Ivan. Eu também sou 'Ivanovich' no passaporte.",
+   "optional": true,
+   "say": "Ivanovich, como eu. Coincidência é palavra de quem ainda não lembrou.",
+   "pos": [
+    -2.5,
+    1.9,
+    -1.2
+   ],
+   "size": [
+    0.3,
+    0.85,
+    1.3
+   ]
+  }
+ ],
+ "needed": [
+  "curriculo",
+  "retrato",
+  "crachas"
+ ],
+ "talk": {
+  "npc": "boris",
+  "hint": "Boris se recosta na cadeira e cruza os braços. Acho que vai começar a entrevista.",
+  "lines": [
+   "BORIS: Petrov. Currículo limpo demais. De onde você veio?",
+   "ALEKSEY: De Leningrado. Pais professores, falecidos.",
+   "BORIS: ...E o jeito de andar? Você arrasta o pé. Teve acidente?",
+   {
+    "q": "Boris olha para o seu pé esquerdo. O que você responde?",
+    "opts": [
+     "Responder com a biografia decorada",
+     "Admitir: 'Não sei. Não lembro.'"
+    ],
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "admitiu",
+    "reply": [
+     [
+      "BORIS: Decorada. Bem decorada."
+     ],
+     [
+      "BORIS: (Longo silêncio.) Também não lembro certas coisas. Muito bem, Petrov."
+     ]
+    ]
+   },
+   "BORIS: Contratado. Mas ouça: não me agrada quem assobia no corredor. Não faça isso."
+  ],
+  "note": "Boris me contratou 'sem saber', mas me olhou como quem quase sabe. Não gosta de quem assobia.",
+  "alt": "Fui contratado. Boris é chato mas justo."
+ },
+ "name": "entrevista",
+ "models": [],
+ "model": "ep_entrevista"
+}

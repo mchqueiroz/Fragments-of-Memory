@@ -1,0 +1,53 @@
+{
+ "clues": {
+  "cidade": {
+   "note": "A cidade a meus pés: fumaça no horizonte e, de pé, escuro, o bloco de concreto do Kosmos.",
+   "say": "Moscou arde devagar. E o Kosmos fica intacto no meio."
+  }
+ },
+ "talk": {
+  "npc": "inter",
+  "hint": "O intermediário acende um cigarro junto à antena. Acho que é a minha vez de falar.",
+  "lines": [
+   "INTERMEDIÁRIO: Pontual, Petrov. A cidade está pior do que ontem.",
+   "INTERMEDIÁRIO: Irina manda dizer: o Lethe tem de estar armado em dois dias. Karpov não espera mais.",
+   "ALEKSEY: E Boris?",
+   "INTERMEDIÁRIO: Boris é o homem de quem todos vão duvidar. Você sabe o que fazer.",
+   {
+    "q": "O intermediário estende um envelope grosso. O que você faz?",
+    "opts": [
+     "Aceitar o envelope e o prazo",
+     "Recusar: «Eu decido o que faço»"
+    ],
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "pacto",
+    "trust": {
+     "irina": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "INTERMEDIÁRIO: Sensato. Quem aceita sobrevive até o fim da semana."
+     ],
+     [
+      "INTERMEDIÁRIO: Todo mundo diz isso, Petrov. Até o primeiro tiro."
+     ]
+    ]
+   },
+   "INTERMEDIÁRIO: Dois dias. Depois disso, ninguém mais lembra deste telhado."
+  ],
+  "note": "No telhado, o intermediário de Irina falou do prazo: dois dias para armar o Lethe. Ofereceu um envelope grosso.",
+  "alt": "Conversei com um conhecido no telhado."
+ },
+ "needed": [
+  "antena",
+  "tanque",
+  "cidade"
+ ],
+ "question": "Quem está por trás do prazo?"
+}

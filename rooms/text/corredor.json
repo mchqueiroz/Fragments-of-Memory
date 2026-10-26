@@ -1,0 +1,52 @@
+{
+ "clues": {
+  "quadro": {
+   "note": "Quadro de avisos: «Всем сотрудникам — в пятницу эвакуация». Evacuação na sexta.",
+   "say": "Evacuação na sexta. Quem manda evacuar um prédio de pedra?"
+  }
+ },
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei vem do fundo do corredor devagar. Acho que ele quer passar por mim.",
+  "lines": [
+   "ALEKSEY: ...Misha. (Escapa dos meus lábios.)",
+   "SERGEI: (Sem parar de andar.) Boa tarde, Petrov.",
+   "ALEKSEY: O senhor ouviu?",
+   {
+    "q": "Sergei não se vira. O que você faz?",
+    "opts": [
+     "Insistir: «Eu disse Misha. O senhor ouviu.»",
+     "Fingir: «Nada. Falei sozinho.»"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "insistiu_misha",
+    "trust": {
+     "sergei": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "SERGEI: Não ouvi nada. (A voz dele falha.)"
+     ],
+     [
+      "SERGEI: Também falo sozinho. É coisa da idade."
+     ]
+    ]
+   },
+   "SERGEI: Vá para casa. Descanse. Amanhã é outro dia."
+  ],
+  "note": "Disse «Misha» sem querer no corredor. Sergei fingiu não ouvir: a mentira dele foi mais alta que a palavra.",
+  "alt": "Cumprimentei Sergei no corredor."
+ },
+ "needed": [
+  "lockers",
+  "quadro",
+  "janela"
+ ],
+ "question": "O que Sergei ouviu?"
+}

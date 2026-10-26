@@ -1,0 +1,65 @@
+{
+ "clues": {
+  "capsula": {
+   "note": "Cápsula de reentrada na vitrine. A placa original foi trocada por um papel: «Лета-1: испытательный образец».",
+   "say": "Lethe-1, amostra de teste, numa vitrine de museu. Quem esconderia um protótipo à vista?"
+  },
+  "livro": {
+   "note": "Livro de visitas. A última assinatura é de 21 de agosto de 1991: «М. Волков».",
+   "say": "Última visita: agosto de 1991, M. Volkov. Depois, ninguém mais."
+  },
+  "lonas": {
+   "note": "Sob uma lona, um tabuleiro de xadrez antigo, sem o peão branco.",
+   "say": "Um tabuleiro velho sob a lona. Falta o peão branco."
+  }
+ },
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei me espera no centro do salão, a mão estendida. Acho que é hora do primeiro aperto.",
+  "lines": [
+   "SERGEI: Aleksey Petrov. Prazer. Eu sou Sergei Morozov.",
+   "ALEKSEY: Irina disse que o senhor seria meu contato.",
+   "SERGEI: (Segura sua mão um pouco mais que o necessário.) Eu conheço essas mãos.",
+   "SERGEI: Isto é seu. Um peão branco. Perdi-o há muito tempo e o encontrei hoje, em um bolso velho.",
+   {
+    "q": "Sergei estende o peão. O que você faz?",
+    "opts": [
+     "Aceitar o peão",
+     "Recusar: «Não é meu.»"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "peao_aceito",
+    "trust": {
+     "sergei": [
+      1,
+      -1
+     ]
+    },
+    "give": [
+     "peao",
+     ""
+    ],
+    "reply": [
+     [
+      "SERGEI: (Quase sorri.) Então é seu."
+     ],
+     [
+      "SERGEI: Como quiser. Mas ele sabe de quem é."
+     ]
+    ]
+   },
+   "SERGEI: Começamos amanhã, Aleksey. Seja bem-vindo ao Kosmos."
+  ],
+  "note": "Sergei me apertou a mão como quem reconhece e me estendeu um peão branco: diz que é meu.",
+  "alt": "Sergei me apresentou ao Kosmos. Simpático."
+ },
+ "needed": [
+  "capsula",
+  "livro",
+  "busto"
+ ],
+ "question": "Por que Sergei quer me ver?"
+}

@@ -1,0 +1,38 @@
+{
+ "watch": {
+  "npc": "boris",
+  "radius": 3.4,
+  "limit": 1.4,
+  "warn": "Boris se mexeu na cadeira. Devagar.",
+  "fail": "Boris abriu os olhos. Recomeço, sem correr."
+ },
+ "clues": {
+  "terminal": {
+   "note": "Terminal do pulso. Pede uma credencial. A de Boris está no crachá dele, sobre a mesa.",
+   "say": "Daqui se dispara tudo. E daqui se pode culpar qualquer um."
+  },
+  "cracha": {
+   "note": "Crachá de Boris: «Волков Б. И.». Ele dorme com a credencial no pescoço.",
+   "say": "A credencial dele, ao alcance de uma mão que não é a dele."
+  },
+  "foto": {
+   "note": "Foto desbotada de dois garotos na neve: o mais velho com a mão no ombro do menor. Boris dorme com a mão sobre ela.",
+   "say": "Dois garotos na neve. Ele a segura até dormindo."
+  },
+  "camlog": {
+   "note": "Log das câmeras do corredor, programado para amanhã: 23h15, apagamento por «B.V.». O nome de Boris ainda nem foi usado.",
+   "say": "Amanhã, 23h15. O culpado já tem iniciais."
+  },
+  "janela": {
+   "note": "Pela janela: o hangar. Sob uma lona, o corpo comprido do Lethe.",
+   "say": "A lona esconde o que ninguém devia ver."
+  }
+ },
+ "needed": [
+  "terminal",
+  "cracha",
+  "foto",
+  "camlog"
+ ],
+ "question": "Quem vai levar a culpa amanhã?"
+}

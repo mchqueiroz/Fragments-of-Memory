@@ -1,0 +1,14 @@
+{
+ "clues": {
+  "dossie": {
+   "note": "Dossiê sobre a mesa: fotografias de Sergei, de Boris, do Kosmos à noite, e «Лебедев И.» como contato. Reconheço a minha letra nas legendas.",
+   "say": "Alguém fotografou todos nós. E eu ajudei."
+  }
+ },
+ "needed": [
+  "dossie",
+  "nota",
+  "tv"
+ ],
+ "question": "Para quem Irina trabalha?"
+}

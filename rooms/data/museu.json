@@ -1,0 +1,317 @@
+{
+ "size": [
+  10.0,
+  8.0,
+  4.6
+ ],
+ "theme": "gesso",
+ "title": [
+  "AGO / 1993",
+  "O MUSEU DESATIVADO"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.75,
+  0.78,
+  0.8
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    4.2,
+    0
+   ],
+   "color": [
+    1.0,
+    0.95,
+    0.8
+   ],
+   "energy": 2.4,
+   "range": 11,
+   "flicker": true
+  },
+  {
+   "pos": [
+    -2.0,
+    2.5,
+    -3.5
+   ],
+   "color": [
+    0.8,
+    0.9,
+    1.0
+   ],
+   "energy": 2.0,
+   "range": 5,
+   "flicker": false
+  },
+  {
+   "pos": [
+    2.0,
+    2.5,
+    -3.5
+   ],
+   "color": [
+    0.8,
+    0.9,
+    1.0
+   ],
+   "energy": 2.0,
+   "range": 5,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.16,
+   0.16,
+   0.15
+  ],
+  "fog": [
+   0.85,
+   0.85,
+   0.8
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   3.5,
+   0.05,
+   3.4
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  182,
+  1.6,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -34.0,
+  "ground": "parquet",
+  "size": 0.85,
+  "wet": 0.4,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     5.0,
+     3.2,
+     2.5
+    ],
+    -16.0,
+    2.5
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     5
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "sergei",
+   "model": "sergei",
+   "face": "face_sergei",
+   "voice": "low",
+   "pitch": 1.0,
+   "prompt": "Falar com Sergei",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    0.0,
+    -0.0
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Um museu de ciência fechado há dois anos. Sergei escolheu o lugar: ninguém mais sabe que existe.",
+   5.5
+  ]
+ ],
+ "clues": [
+  {
+   "id": "capsula",
+   "prompt": "Olhar a cápsula",
+   "note": "Cápsula de reentrada exposta na vitrine, a placa trocada por um papel: 'Лета-1: испытательный образец'. Já era o Lethe disfarçado de cápsula.",
+   "alt": "Uma cápsula velha de museu.",
+   "say": "A cápsula que não voltou do espaço. Ou voltou muda.",
+   "pos": [
+    -3.0,
+    1.3,
+    -1.5
+   ],
+   "size": [
+    1.5,
+    1.0,
+    0.9
+   ]
+  },
+  {
+   "id": "busto",
+   "prompt": "Olhar o busto",
+   "note": "Busto de gesso de um cosmonauta sem nome. A placa foi arrancada. O museu esquece primeiro os homens.",
+   "say": "Um herói sem nome. Esquecimento é o único monumento.",
+   "pos": [
+    0.0,
+    1.3,
+    -1.5
+   ],
+   "size": [
+    1.5,
+    1.0,
+    0.9
+   ]
+  },
+  {
+   "id": "livro",
+   "prompt": "Ler o livro de visitas",
+   "note": "Livro de visitas: a última assinatura é de 21 de agosto de 1991, 'М. Волков'. Mikhail Volkov. Boris se chama Volkov também.",
+   "alt": "Livro de visitas vazio.",
+   "say": "Última visita: agosto de 1991. M. Volkov. Como Boris.",
+   "pos": [
+    -4.1,
+    0.865,
+    2.9
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "lonas",
+   "prompt": "Levantar a lona",
+   "note": "Sob uma lona, um tabuleiro de xadrez antigo, com o peão branco ausente. Sergei guardou aqui o que não deveria guardar.",
+   "optional": true,
+   "say": "Um tabuleiro velho sob a lona. Falta o peão branco.",
+   "pos": [
+    4.4,
+    0.7,
+    3.2
+   ],
+   "size": [
+    1.0,
+    1.4,
+    1.0
+   ]
+  }
+ ],
+ "needed": [
+  "capsula",
+  "busto",
+  "livro"
+ ],
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei me espera no centro do salão, a mão estendida. Acho que é hora do primeiro aperto.",
+  "lines": [
+   "SERGEI: Aleksey Petrov. Prazer. Eu sou Sergei Morozov.",
+   "ALEKSEY: Irina disse que o senhor seria meu contato.",
+   "SERGEI: (Segura sua mão um pouco mais que o necessário.) Eu conheço essas mãos.",
+   "SERGEI: Isto é seu. Um peão branco. Perdi-o há muito tempo e o encontrei hoje, em um bolso velho.",
+   {
+    "q": "Sergei devolve o peão. O que você faz?",
+    "opts": [
+     "Aceitar o peão",
+     "Recusar: 'Não é meu.'"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "peao_aceito",
+    "reply": [
+     [
+      "SERGEI: (Quase sorri.) Então é seu."
+     ],
+     [
+      "SERGEI: Como quiser. Mas ele sabe de quem é."
+     ]
+    ]
+   },
+   "SERGEI: Começamos amanhã, Aleksey. Seja bem-vindo ao Kosmos."
+  ],
+  "note": "Sergei me apertou a mão como quem reconhece e devolveu o peão branco, o mesmo que Boris me deu.",
+  "alt": "Sergei me apresentou ao Kosmos. Simpático."
+ },
+ "name": "museu",
+ "models": [],
+ "model": "ep_museu"
+}

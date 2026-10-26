@@ -1,0 +1,28 @@
+{
+ "timer": {
+  "seconds": 150,
+  "warns": [
+   [
+    100,
+    "Passos no andar de cima. O vigia faz a ronda."
+   ],
+   [
+    45,
+    "A ronda desce a escada. Pouco tempo."
+   ]
+  ],
+  "fail": "A luz do vigia varreu a porta. Saio e tento de novo, sem pressa."
+ },
+ "clues": {
+  "ficha": {
+   "note": "Ficha: «ВОЛКОВ Михаил Иванович, 1960 г.р. — изъято 21.08.1991, ЛЕТА». A foto 3x4 é o meu rosto, sem as faixas. Eu sou Mikhail Volkov.",
+   "say": "O mundo estala: meu rosto, 1991, um nome. A lembrança pisca e some."
+  }
+ },
+ "needed": [
+  "gaveta",
+  "ficha",
+  "estante"
+ ],
+ "question": "O que havia na ficha que sumiu?"
+}

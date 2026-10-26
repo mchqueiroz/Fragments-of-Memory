@@ -1,0 +1,62 @@
+{
+ "clues": {
+  "relogio": {
+   "note": "Relógio da estação parado em 3h12. Irina marcou comigo às 3h.",
+   "say": "O relógio parou. Ou me fez esperar."
+  },
+  "trilhos": {
+   "note": "Os trilhos vibram sem trem: um rumor pesado, longe. Algo grande se move na cidade.",
+   "say": "Os trilhos tremem sem trem."
+  },
+  "banco": {
+   "note": "Um maço de cigarros esquecido e um papel dobrado: «10 dias. Não me procure.» Irina deixou o recado antes de chegar.",
+   "say": "Um recado deixado como quem avisa o fim."
+  }
+ },
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me espera sob a luz tremida da plataforma. Acho que vai falar.",
+  "lines": [
+   "IRINA: Dez dias, Aleksey. É tudo o que você tem.",
+   "ALEKSEY: Para fazer o quê, exatamente?",
+   "IRINA: Armar o Lethe. Karpov quer que ele saia do Kosmos com todos dentro. Depois disso, ninguém mais lembra de nada.",
+   {
+    "q": "Um trem se aproxima ao longe. Responda antes que ele chegue.",
+    "opts": [
+     "Perguntar: «E se eu me recusar?»",
+     "Concordar: «Está bem. Dez dias.»"
+    ],
+    "seconds": 12,
+    "default": 1,
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "recusou_irina",
+    "trust": {
+     "irina": [
+      -1,
+      1
+     ]
+    },
+    "reply": [
+     [
+      "IRINA: Então você morre de verdade, em vez de esquecer."
+     ],
+     [
+      "IRINA: Bom. Você é meu melhor, Aleksey."
+     ]
+    ]
+   },
+   "IRINA: O trem chegou. Eu desço aqui. Você, a outra estação."
+  ],
+  "note": "No metrô, Irina me deu dez dias para armar o Lethe, o plano de Karpov para apagar todo o Kosmos.",
+  "alt": "Irina me deu um prazo apertado no trabalho."
+ },
+ "needed": [
+  "relogio",
+  "mapa",
+  "banco"
+ ],
+ "question": "O que Irina espera de mim?"
+}

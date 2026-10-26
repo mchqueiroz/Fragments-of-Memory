@@ -1,0 +1,394 @@
+{
+ "size": [
+  10.0,
+  12.0,
+  5.0
+ ],
+ "theme": "concreto",
+ "title": [
+  "T = 0",
+  "O TIRO"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    4.6,
+    0
+   ],
+   "color": [
+    1.0,
+    0.2,
+    0.15
+   ],
+   "energy": 1.6,
+   "range": 12,
+   "flicker": true
+  },
+  {
+   "pos": [
+    -3.5,
+    1.6,
+    -4.5
+   ],
+   "color": [
+    0.4,
+    1.0,
+    0.6
+   ],
+   "energy": 1.3,
+   "range": 4,
+   "flicker": false
+  },
+  {
+   "pos": [
+    3.0,
+    1.4,
+    -4.5
+   ],
+   "color": [
+    1.0,
+    0.8,
+    0.5
+   ],
+   "energy": 1.2,
+   "range": 4,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.05,
+   0.04,
+   0.05
+  ],
+  "fog": [
+   0.7,
+   0.4,
+   0.4
+  ],
+  "density": 0.03
+ },
+ "start": {
+  "pos": [
+   3.6,
+   0.05,
+   4.8
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  305,
+  1.6,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "concrete",
+  "size": 0.9,
+  "wet": 0.35,
+  "emitters": [
+   [
+    "fluorescent_buzz",
+    [
+     0,
+     4.6,
+     0
+    ],
+    -20.0,
+    4.0
+   ],
+   [
+    "tanks",
+    [
+     0,
+     2.0,
+     -8
+    ],
+    -10.0,
+    20.0
+   ]
+  ],
+  "life": [
+   [
+    "gunshots_far",
+    8.0,
+    20.0,
+    -8.0,
+    [
+     0,
+     3,
+     -12
+    ],
+    [
+     10,
+     5,
+     2
+    ]
+   ],
+   [
+    "siren_far",
+    25.0,
+    50.0,
+    -12.0,
+    [
+     0,
+     3,
+     -12
+    ],
+    [
+     10,
+     5,
+     2
+    ]
+   ],
+   [
+    "pipes_knock",
+    18.0,
+    40.0,
+    -10.0,
+    [
+     -5,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     4
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "sergei",
+   "model": "sergei",
+   "face": "face_sergei",
+   "voice": "low",
+   "pitch": 1.0,
+   "prompt": "Encarar Sergei",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    1.8,
+    -3.2
+   ]
+  },
+  {
+   "id": "boris",
+   "model": "boris",
+   "face": "face_boris",
+   "voice": "low",
+   "pitch": 0.85,
+   "always": true,
+   "prompt": "Olhar Boris",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    3.6,
+    5.4
+   ]
+  },
+  {
+   "id": "irina",
+   "model": "irina",
+   "face": "face_irina",
+   "voice": "high",
+   "pitch": 0.92,
+   "always": true,
+   "prompt": "Olhar Irina",
+   "size": [
+    0.6,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    -4.2,
+    3.8
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Três de outubro, quase quatro. Todos estão aqui: Sergei, Boris, Irina. E eu, com uma arma que ainda não disparei.",
+   6.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "telefone",
+   "prompt": "Atender o telefone vermelho",
+   "ask": {
+    "q": "Karpov, ao telefone: 'Arme o Lethe, Petrov. Agora.' O que você diz?",
+    "opts": [
+     "'Sim, camarada.'",
+     "'Não.' e desligar",
+     "Deixar tocar"
+    ],
+    "truth": [
+     -2,
+     2,
+     0
+    ],
+    "flag": "obedeceu_final",
+    "correct": 0,
+    "reply": [
+     [
+      "KARPOV (ao telefone): Bom menino."
+     ],
+     [
+      "KARPOV (ao telefone): Você morreu para mim, Petrov."
+     ],
+     [
+      "(O telefone toca até se calar.)"
+     ]
+    ]
+   },
+   "note": "Karpov, ao telefone, ordenou que eu arme o Lethe agora. A voz dele nunca precisou de rosto.",
+   "alt": "Um telefonema de trabalho.",
+   "say": "A voz que manda em todos nós.",
+   "pos": [
+    2.2,
+    1.0,
+    -4.5
+   ],
+   "size": [
+    0.6,
+    0.4,
+    0.6
+   ]
+  },
+  {
+   "id": "console",
+   "prompt": "Olhar o painel do pulso",
+   "note": "O painel do pulso, armado: o visor mostra 'ОПЕРАТОР: —', a luz de ciclo ainda esfriando. Foi aqui que tudo começou, e vai terminar.",
+   "say": "O operador sempre esquece primeiro.",
+   "pos": [
+    -3.5,
+    1.5,
+    -4.5
+   ],
+   "size": [
+    2.4,
+    1.2,
+    0.9
+   ]
+  },
+  {
+   "id": "peao",
+   "prompt": "Pegar o peão branco",
+   "note": "O peão branco sobre a mesa: Boris me deu, Sergei guardou, voltou a mim. Todo o caminho cabe numa peça de madeira.",
+   "alt": "Um peão velho sobre a mesa.",
+   "say": "Pequeno, lascado, pesado. Um peão chega ao fim do tabuleiro e vira o que quiser.",
+   "pos": [
+    3.0,
+    0.95,
+    -4.5
+   ],
+   "size": [
+    0.2,
+    0.2,
+    0.2
+   ]
+  },
+  {
+   "id": "arma",
+   "prompt": "Pegar a arma",
+   "ask": {
+    "q": "A arma está na sua mão. Sergei sorri, Boris espera, Irina desvia o olhar. O que você faz?",
+    "opts": [
+     "Atirar em Sergei",
+     "Baixar a arma",
+     "Dizer: 'Eu sou Mikhail Volkov. Eu sou Misha.'"
+    ],
+    "truth": [
+     -2,
+     1,
+     3
+    ],
+    "flag": "final_nome",
+    "correct": 2,
+    "reply": [
+     [
+      "(O estampido enche a sala. O pulso sobe, branco.)"
+     ],
+     [
+      "(Você solta a arma. Ela cai com um som seco. O pulso sobe, branco, de qualquer jeito.)"
+     ],
+     [
+      "MISHA: Eu sou Mikhail Volkov. Boris, eu sou o seu irmão.",
+      "(O pulso sobe, branco, mas desta vez ele não o apaga: ele o ilumina.)"
+     ]
+    ]
+   },
+   "note": "A arma, o nome, o tiro. No fim, é só uma escolha: dizer ou calar quem se é.",
+   "say": "Tudo o que fiz me trouxe até este instante.",
+   "pos": [
+    0.0,
+    0.9,
+    -3.6
+   ],
+   "size": [
+    0.4,
+    0.2,
+    0.3
+   ]
+  }
+ ],
+ "needed": [
+  "telefone",
+  "console",
+  "peao",
+  "arma"
+ ],
+ "outro": [
+  [
+   "Um estampido. Um clarão. O branco de novo.",
+   4.0
+  ]
+ ],
+ "finale": {
+  "endings": [
+   {
+    "flag": [
+     "final_nome",
+     true
+    ],
+    "title": "MISHA",
+    "text": "Sua voz tremeu, mas o nome saiu inteiro: Mikhail Volkov. Boris deu um passo à frente, as mãos abertas. Sergei baixou a cabeça e, pela primeira vez em dois anos, desligou o gravador de Lena. O Lethe ficou em silêncio. Você lembrou. E, desta vez, escolheu lembrar."
+   },
+   {
+    "max": -3,
+    "title": "O OPERADOR",
+    "text": "Você obedeceu a todos, e o Lethe acendeu. O operador esqueceu primeiro, como sempre. Em algum lugar, um homem de terno acorda ao lado de um corpo, com uma arma quente na mão e nenhuma memória."
+   },
+   {
+    "min": 3,
+    "title": "A TESTEMUNHA",
+    "text": "Você investigou, duvidou, perguntou. Não impediu o pulso, mas deixou rastros: um diário, um caderno, um peão. Quem vier depois saberá onde procurar. A verdade sobrevive a quem a esquece."
+   },
+   {
+    "title": "O CICLO",
+    "text": "O tiro. O pulso. Um teto branco. Um nome que não é seu. Tudo recomeça."
+   }
+  ]
+ },
+ "name": "tiro",
+ "models": [],
+ "model": "ep_tiro"
+}

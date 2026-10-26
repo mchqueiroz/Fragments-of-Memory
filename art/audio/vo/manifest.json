@@ -1,0 +1,654 @@
+{
+ "fa870b81cd41": {
+  "personagem": "ALEKSEY",
+  "texto": "Pronto. Amanhã todo rastro vai ter o nome dele."
+ },
+ "21bd8088ad16": {
+  "personagem": "ALEKSEY",
+  "texto": "Não. Ainda não."
+ },
+ "e3f6fbc5b8b6": {
+  "personagem": "TREINADOR",
+  "texto": "e4... Quem lhe ensinou isso, Aleksey?"
+ },
+ "fdb76826ebb1": {
+  "personagem": "ALEKSEY",
+  "texto": "Não sei. Minhas mãos sabem."
+ },
+ "dc553522b8fb": {
+  "personagem": "TREINADOR",
+  "texto": "d4. Seguro. Pouco seu."
+ },
+ "5cf076c16003": {
+  "personagem": "TREINADOR",
+  "texto": "Cavalo. Prudente, mas esconde medo."
+ },
+ "7ee728c68164": {
+  "personagem": "TREINADOR",
+  "texto": "Dois anos, Aleksey. Você aprende mais rápido do que devia."
+ },
+ "33c6d244e65c": {
+  "personagem": "ALEKSEY",
+  "texto": "Rápido demais para quem não sabe nada."
+ },
+ "b02583b3f19a": {
+  "personagem": "TREINADOR",
+  "texto": "Quem não sabe nada não joga e4 sem olhar. Você sabe alguma coisa. O corpo lembra, mesmo que a cabeça não."
+ },
+ "303a0a4526d6": {
+  "personagem": "TREINADOR",
+  "texto": "Bom. Quem escreve, existe."
+ },
+ "521fc5c13320": {
+  "personagem": "TREINADOR",
+  "texto": "Hm. Memória é o que mais falha quem mais confia nela."
+ },
+ "9a122bbe0b9c": {
+  "personagem": "TREINADOR",
+  "texto": "Quando estiver pronto, Irina vai buscá-lo. Não conte a ninguém que você joga assim."
+ },
+ "4bc946f2bdfc": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Pontual, Petrov. A cidade está pior do que ontem."
+ },
+ "3e3acd4b3bca": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Irina manda dizer: o Lethe tem de estar armado em dois dias. Karpov não espera mais."
+ },
+ "5f4864213d0e": {
+  "personagem": "ALEKSEY",
+  "texto": "E Boris?"
+ },
+ "810bafc5b36c": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Boris é o homem de quem todos vão duvidar. Você sabe o que fazer."
+ },
+ "d1a95fcafcea": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Sensato. Quem aceita sobrevive até o fim da semana."
+ },
+ "209e22ecb1ec": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Todo mundo diz isso, Petrov. Até o primeiro tiro."
+ },
+ "2ca132e26996": {
+  "personagem": "INTERMEDIÁRIO",
+  "texto": "Dois dias. Depois disso, ninguém mais lembra deste telhado."
+ },
+ "20f67579fc9d": {
+  "personagem": "BORIS",
+  "texto": "Eu conheço você?"
+ },
+ "cb9283b3d6df": {
+  "personagem": "ALEKSEY",
+  "texto": "Não creio."
+ },
+ "26382de1b045": {
+  "personagem": "BORIS",
+  "texto": "Você anda como meu irmão. O mesmo jeito de arrastar o pé esquerdo."
+ },
+ "afc875d284bf": {
+  "personagem": "BORIS",
+  "texto": "...Obrigado. Não, perdão. Você me lembrou alguém."
+ },
+ "6cb9662b82b8": {
+  "personagem": "BORIS",
+  "texto": "Espere! ...Esquece. Esqueça."
+ },
+ "ac3bf763296a": {
+  "personagem": "BORIS",
+  "texto": "Meu irmão sumiu em agosto. Se um dia o vir, diga que o procuro."
+ },
+ "c65f91a57283": {
+  "personagem": "SERGEI",
+  "texto": "Veja bem, Aleksey. Foi para isto que passei a vida. Não destrói cidades: devolve o descanso."
+ },
+ "9d83d87a7310": {
+  "personagem": "ALEKSEY",
+  "texto": "Devolve? Ele apaga quem o opera."
+ },
+ "42970a64991d": {
+  "personagem": "SERGEI",
+  "texto": "O primeiro que o operou escolheu esquecer. Eu fui quem apertou o botão. Eu sei quem você é."
+ },
+ "ab3aa56fa0a5": {
+  "personagem": "SERGEI",
+  "texto": "Como queira. Nós dois sabemos mentir muito bem."
+ },
+ "fb724aaf463f": {
+  "personagem": "SERGEI",
+  "texto": "Ainda não, meu filho. A verdade, dita agora, o mataria."
+ },
+ "4d3a5cf94c09": {
+  "personagem": "SERGEI",
+  "texto": "Leve a chave. Quando chegar a hora, você vai precisar dela."
+ },
+ "c395578f442c": {
+  "personagem": "IRINA",
+  "texto": "Aleksey. Você está bem. Os dois anos fizeram bem."
+ },
+ "e0ee4141f209": {
+  "personagem": "ALEKSEY",
+  "texto": "Fizeram de mim outra pessoa."
+ },
+ "4fc67bf36478": {
+  "personagem": "IRINA",
+  "texto": "Foi para isso. Escute: na segunda você começa no Kosmos, como consultor. Sergei Morozov será seu contato."
+ },
+ "789cbd056074": {
+  "personagem": "IRINA",
+  "texto": "Karpov quer o Lethe. Você é meus olhos lá dentro. Quando eu pedir, você age."
+ },
+ "8093296c1ee8": {
+  "personagem": "IRINA",
+  "texto": "Esse é o homem que eu preparei."
+ },
+ "6ae611d44fe0": {
+  "personagem": "IRINA",
+  "texto": "Uma vida. Nada mais. É mais do que a maioria recebe."
+ },
+ "bd70fef6ea91": {
+  "personagem": "IRINA",
+  "texto": "Hoje é o último dia de sol, Aleksey. Aproveite."
+ },
+ "21d93966852f": {
+  "personagem": "IRINA",
+  "texto": "Aleksey. Sente-se. Estou cansada de ser a mulher forte."
+ },
+ "4b724e65c4fe": {
+  "personagem": "IRINA",
+  "texto": "Karpov me marcou para o apagamento. Depois que o Lethe sair, eu sobro."
+ },
+ "298b1dcaf22c": {
+  "personagem": "ALEKSEY",
+  "texto": "Você me trouxe até aqui."
+ },
+ "c3bc11fd7b3a": {
+  "personagem": "IRINA",
+  "texto": "E você pode me salvar. Fique comigo, Aleksey. Uma noite, só uma."
+ },
+ "74c74c88fe87": {
+  "personagem": "IRINA",
+  "texto": "...Obrigada. (Baixinho:) Se me trair, o Lethe também chega até você."
+ },
+ "3e209a7a9c32": {
+  "personagem": "IRINA",
+  "texto": "Entendo. Eu faria igual. (O olhar dela esfria.)"
+ },
+ "141b4f60aebd": {
+  "personagem": "IRINA",
+  "texto": "Eu o escolhi por ser só. Ser só é a única coisa que Karpov não consegue comprar."
+ },
+ "04cf007e8da2": {
+  "personagem": "SERGEI",
+  "texto": "Aleksey Petrov. Prazer. Eu sou Sergei Morozov."
+ },
+ "e47e1a632ae2": {
+  "personagem": "ALEKSEY",
+  "texto": "Irina disse que o senhor seria meu contato."
+ },
+ "1c3357f8a295": {
+  "personagem": "SERGEI",
+  "texto": "(Segura sua mão um pouco mais que o necessário.) Eu conheço essas mãos."
+ },
+ "fb5804a25cd3": {
+  "personagem": "SERGEI",
+  "texto": "Isto é seu. Um peão branco. Perdi-o há muito tempo e o encontrei hoje, em um bolso velho."
+ },
+ "b9b90e1630f2": {
+  "personagem": "SERGEI",
+  "texto": "(Quase sorri.) Então é seu."
+ },
+ "a2f798784a30": {
+  "personagem": "SERGEI",
+  "texto": "Como quiser. Mas ele sabe de quem é."
+ },
+ "0f588525d689": {
+  "personagem": "SERGEI",
+  "texto": "Começamos amanhã, Aleksey. Seja bem-vindo ao Kosmos."
+ },
+ "a194f8b1489a": {
+  "personagem": "BORIS",
+  "texto": "Senta, Petrov. Cinco minutos. Quem é você, afinal?"
+ },
+ "1590823c8e68": {
+  "personagem": "ALEKSEY",
+  "texto": "Técnico em eletrônica. Está no meu prontuário."
+ },
+ "ae6f084527e1": {
+  "personagem": "BORIS",
+  "texto": "Prontuário. Eu li. Tem coisa demais que o senhor não sabe sobre o senhor."
+ },
+ "3c9f65d16d14": {
+  "personagem": "BORIS",
+  "texto": "Dê três passos até a porta e volte. (Ele me observa andar.) ...Você arrasta o pé esquerdo."
+ },
+ "6f03926266e8": {
+  "personagem": "BORIS",
+  "texto": "(A boca entreaberta.) Onde aprendeu essa canção, Petrov?"
+ },
+ "a756a963dc8a": {
+  "personagem": "ALEKSEY",
+  "texto": "Não sei. Veio sozinha."
+ },
+ "d25da2454783": {
+  "personagem": "BORIS",
+  "texto": "Silêncio. Interessante. Quem se cala sabe de algo."
+ },
+ "50c5e834bc37": {
+  "personagem": "BORIS",
+  "texto": "Pode ir. Por enquanto."
+ },
+ "8deac7590ac2": {
+  "personagem": "BORIS",
+  "texto": "Petrov. Currículo limpo demais. De onde você veio?"
+ },
+ "7844d5af1e17": {
+  "personagem": "ALEKSEY",
+  "texto": "De Leningrado. Pais professores, falecidos."
+ },
+ "40cfd1cd00c7": {
+  "personagem": "BORIS",
+  "texto": "...E o jeito de andar? Você arrasta o pé. Teve acidente?"
+ },
+ "974dac1bcade": {
+  "personagem": "BORIS",
+  "texto": "Decorada. Bem decorada."
+ },
+ "186a02274a0b": {
+  "personagem": "BORIS",
+  "texto": "(Longo silêncio.) Também não lembro certas coisas. Muito bem, Petrov."
+ },
+ "23b9de76902a": {
+  "personagem": "BORIS",
+  "texto": "Contratado. Mas ouça: não me agrada quem assobia no corredor. Não faça isso."
+ },
+ "2ada209027ab": {
+  "personagem": "IRINA",
+  "texto": "Quarenta e oito horas, Aleksey. É tudo o que você tem."
+ },
+ "f75a7c1952b2": {
+  "personagem": "ALEKSEY",
+  "texto": "Para fazer o quê, exatamente?"
+ },
+ "0192401c1369": {
+  "personagem": "IRINA",
+  "texto": "Armar o Lethe. Karpov quer que ele saia do Kosmos com todos dentro. Depois disso, ninguém mais lembra de nada."
+ },
+ "8be4531c3d1f": {
+  "personagem": "IRINA",
+  "texto": "Então você morre de verdade, em vez de esquecer."
+ },
+ "cda56711b511": {
+  "personagem": "IRINA",
+  "texto": "Bom. Você é meu melhor, Aleksey."
+ },
+ "7eeae49cbb37": {
+  "personagem": "IRINA",
+  "texto": "O trem chegou. Eu desço aqui. Você, a outra estação."
+ },
+ "4351ddacda2c": {
+  "personagem": "SERGEI",
+  "texto": "Cc6. Sempre Cc6. (Ele fica pálido.)"
+ },
+ "610ece73d449": {
+  "personagem": "ALEKSEY",
+  "texto": "Meu pai... quer dizer, o meu... Misha ensinava assim."
+ },
+ "2400edc429ee": {
+  "personagem": "SERGEI",
+  "texto": "Quem é Misha, Aleksey?"
+ },
+ "9b8def4a89a5": {
+  "personagem": "SERGEI",
+  "texto": "f6. Hm. Não é o seu estilo."
+ },
+ "003361da147c": {
+  "personagem": "SERGEI",
+  "texto": "Philidor. Um ousado... quando não sabe o que faz."
+ },
+ "08efceb501e7": {
+  "personagem": "SERGEI",
+  "texto": "Você jogou como alguém que eu perdi."
+ },
+ "06be6ede2470": {
+  "personagem": "ALEKSEY",
+  "texto": "Desculpe. Não sei por que falei aquele nome."
+ },
+ "6987b043221c": {
+  "personagem": "SERGEI",
+  "texto": "Um aluno meu. Talentoso. Perdi-o em 1991. (Ele se afasta.)"
+ },
+ "d3d414121442": {
+  "personagem": "SERGEI",
+  "texto": "...Claro. O trabalho. Sempre o trabalho."
+ },
+ "e6c7ef43d7c9": {
+  "personagem": "SERGEI",
+  "texto": "Volte amanhã. Jogaremos outra vez."
+ },
+ "881818540f2b": {
+  "personagem": "KARPOV (ao telefone)",
+  "texto": "Bom. Irina fala bem de você."
+ },
+ "326ec82cb868": {
+  "personagem": "KARPOV (ao telefone)",
+  "texto": "...Petrov? Alô?"
+ },
+ "03595e6bc598": {
+  "personagem": "IRINA",
+  "texto": "Você viu a TV. Dissolveram o Parlamento. Agora nada nos protege."
+ },
+ "76e5993928dd": {
+  "personagem": "IRINA",
+  "texto": "Karpov apertou. Quer o Lethe armado antes da primeira neve."
+ },
+ "6b60701668c5": {
+  "personagem": "ALEKSEY",
+  "texto": "E você?"
+ },
+ "3ff9989d5ac1": {
+  "personagem": "IRINA",
+  "texto": "Sempre. Até o último dia."
+ },
+ "48163d842e3a": {
+  "personagem": "IRINA",
+  "texto": "Eu sei. Foi por isso que o escolhi."
+ },
+ "99f38afd5a5f": {
+  "personagem": "IRINA",
+  "texto": "Coma. Hoje a sopa é o único jeito de fingir normalidade."
+ },
+ "6a61a13baedf": {
+  "personagem": "ALEKSEY",
+  "texto": "...Misha. (Escapa dos meus lábios.)"
+ },
+ "793e63ab6ccc": {
+  "personagem": "SERGEI",
+  "texto": "(Sem parar de andar.) Boa tarde, Petrov."
+ },
+ "44fcf07f5d38": {
+  "personagem": "ALEKSEY",
+  "texto": "O senhor ouviu?"
+ },
+ "1e5b26199fff": {
+  "personagem": "SERGEI",
+  "texto": "Não ouvi nada. (A voz dele falha.)"
+ },
+ "9f0877f2caa7": {
+  "personagem": "SERGEI",
+  "texto": "Também falo sozinho. É coisa da idade."
+ },
+ "aeccc5a404cb": {
+  "personagem": "SERGEI",
+  "texto": "Vá para casa. Descanse. Amanhã é outro dia."
+ },
+ "febd7f5af92f": {
+  "personagem": "IRINA (ao telefone)",
+  "texto": "...Não diga isso ao telefone. Estou indo aí."
+ },
+ "ab0fc41c8b1f": {
+  "personagem": "ALEKSEY",
+  "texto": "Eu sou Mikhail Volkov! Eu me lembro! Sergei... foi você!"
+ },
+ "618aab8b7c8a": {
+  "personagem": "SERGEI",
+  "texto": "Eu vi, Aleksey."
+ },
+ "00424265e37d": {
+  "personagem": "ALEKSEY",
+  "texto": "Vi o quê?"
+ },
+ "b253fa5aad6d": {
+  "personagem": "SERGEI",
+  "texto": "Você sabe. Eu também sei. E não vou dizer a ninguém. (Ele se vira devagar.)"
+ },
+ "b252883ba090": {
+  "personagem": "SERGEI",
+  "texto": "Falta pouco. Tenha paciência, meu filho. Tenha paciência com o que já foi."
+ },
+ "f960ff6b6874": {
+  "personagem": "KARPOV (ao telefone)",
+  "texto": "Bom menino."
+ },
+ "ef4f7a22a595": {
+  "personagem": "KARPOV (ao telefone)",
+  "texto": "Você morreu para mim, Petrov."
+ },
+ "654619127dc4": {
+  "personagem": "MISHA",
+  "texto": "Eu sou Mikhail Volkov. Boris, eu sou o seu irmão."
+ },
+ "0cad5112ad58": {
+  "personagem": "TREINADOR",
+  "texto": "Hm. Memória é o que mais falha em quem mais confia nela."
+ },
+ "d453f46231ed": {
+  "personagem": "IRINA",
+  "texto": "Dez dias, Aleksey. É tudo o que você tem."
+ },
+ "b4439891d360": {
+  "personagem": "ALEKSEY",
+  "texto": "Meu pai... quer dizer... Misha ensinava assim."
+ },
+ "0aca523fc75d": {
+  "personagem": "SERGEI",
+  "texto": "f6. Hm. Não é o seu estilo. Tente de novo."
+ },
+ "89f953441977": {
+  "personagem": "SERGEI",
+  "texto": "Philidor. Ousado, quando não se sabe o que faz. Tente de novo."
+ },
+ "4c87108f9845": {
+  "personagem": "SERGEI",
+  "texto": "Olhe à vontade, Aleksey. Nada aqui mudou. Esse é o problema."
+ },
+ "a8416de73559": {
+  "personagem": "SERGEI",
+  "texto": "Você voltou. Senta. O chá é seu. O outro... deixa."
+ },
+ "51bc434ebe26": {
+  "personagem": "ALEKSEY",
+  "texto": "Sergei, eu preciso saber o que eu fiz."
+ },
+ "777c4617cc37": {
+  "personagem": "SERGEI",
+  "texto": "Você leu as plantas. O Lethe não destrói cidades, destrói quem o opera. E ele escolheu você."
+ },
+ "3868b0ae7b8e": {
+  "personagem": "SERGEI",
+  "texto": "Amigo. Você era como um filho. Por isso dói."
+ },
+ "7f5ac89ce909": {
+  "personagem": "SERGEI",
+  "texto": "Eu sei. Há semanas."
+ },
+ "4784e61b1afe": {
+  "personagem": "SERGEI",
+  "texto": "Pega o cartão no meu casaco. Abre o que você escondeu."
+ },
+ "ef2cc1c9297e": {
+  "personagem": "SERGEI",
+  "texto": "E, Aleksey: não confie em tudo o que o seu corpo diz sobre mim."
+ },
+ "c31dd32c1e76": {
+  "personagem": "IRINA",
+  "texto": "Mishenka. Passam balé em todos os canais. Quando a televisão só mostra cisnes, alguém está morrendo."
+ },
+ "d9c6d177473b": {
+  "personagem": "MISHA",
+  "texto": "Há tanques na rua, Irina."
+ },
+ "03d449217f86": {
+  "personagem": "IRINA",
+  "texto": "Por isso vim. De quem são as plantas amanhã? De quem vencer. Eu sei quem vai vencer."
+ },
+ "d1b636e7f45f": {
+  "personagem": "IRINA",
+  "texto": "Uma maleta. Três anos de salário do instituto. Em troca, o Lethe."
+ },
+ "0cb7978c92c5": {
+  "personagem": "IRINA",
+  "texto": "Bom menino. Você nunca soube o preço das coisas."
+ },
+ "336867dbe90b": {
+  "personagem": "IRINA",
+  "texto": "Ninguém recusa duas vezes, Mishenka."
+ },
+ "d3daf2bf5752": {
+  "personagem": "MISHA",
+  "texto": "...Leve."
+ },
+ "1c8fd96f6420": {
+  "personagem": "IRINA",
+  "texto": "Respira. Você vendeu, Mishenka. Todo mundo vende. A diferença é quem consegue dormir depois."
+ },
+ "7ff055751ad3": {
+  "personagem": "LENA",
+  "texto": "Olhe à vontade. O chá ainda está quente."
+ },
+ "008a435ac2d5": {
+  "personagem": "LENA",
+  "texto": "Trouxe chá. Você é novo aqui? Como você se chama?"
+ },
+ "cef8842b1384": {
+  "personagem": "MISHA",
+  "texto": "Misha, Lena. Mikhail."
+ },
+ "68fdd9705f53": {
+  "personagem": "LENA",
+  "texto": "Misha. Eu escrevi esse nome, não escrevi? Desculpe. ...Quem é Misha?"
+ },
+ "4036ee0d1784": {
+  "personagem": "LENA",
+  "texto": "Você... sim. Você deixa meu chá esfriar. Eu lembro disso."
+ },
+ "e81f061f35b6": {
+  "personagem": "LENA",
+  "texto": "Um amigo. Que bom. Então ele deve ser uma boa pessoa."
+ },
+ "5a24c6bf947c": {
+  "personagem": "LENA",
+  "texto": "Sergei disse que você traria um peão. Para o jogo dele."
+ },
+ "6a39aca191b1": {
+  "personagem": "MISHA",
+  "texto": "Trouxe. Era do nosso pai. Sergei quer ver."
+ },
+ "33f386e317fc": {
+  "personagem": "LENA",
+  "texto": "Então leve. Mas guarde de onde veio, Misha. Isto aqui esquece tudo."
+ },
+ "779179443efe": {
+  "personagem": "SERGEI",
+  "texto": "Eles estão aí fora, Misha. Esperam você. Você vendeu o que não era seu."
+ },
+ "4d4cbb2b266b": {
+  "personagem": "MISHA",
+  "texto": "Eu devolvi o peão, Sergei. Sou o mesmo."
+ },
+ "69f9d24f8220": {
+  "personagem": "SERGEI",
+  "texto": "O Lethe só faz uma coisa bem: tira o homem do que ele fez. Eu quero te salvar. Do que eu fiz também."
+ },
+ "6a042843d1a2": {
+  "personagem": "SERGEI",
+  "texto": "Peço perdão, meu filho. É tarde."
+ },
+ "37738f612349": {
+  "personagem": "SERGEI",
+  "texto": "Obrigado, Misha. Pela última vez."
+ },
+ "f0e880f65235": {
+  "personagem": "SERGEI",
+  "texto": "A porta está trancada por fora. Eu sei. Fui eu."
+ },
+ "08d38c59113f": {
+  "personagem": "SERGEI",
+  "texto": "Feche os olhos. Quando abrir, você não será mais ninguém."
+ },
+ "433f3b1e0f23": {
+  "personagem": "BORIS",
+  "texto": "Senta, come alguma coisa. Depois a gente conversa."
+ },
+ "113260a816c6": {
+  "personagem": "BORIS",
+  "texto": "Você chegou tarde. A comida esfriou. Eu esperei."
+ },
+ "b6bbe1293647": {
+  "personagem": "MISHA",
+  "texto": "Foi o trabalho, Boris."
+ },
+ "157a191c1fb8": {
+  "personagem": "BORIS",
+  "texto": "Trabalho. Faz duas semanas que só existe 'trabalho'. Sai de manhã com a pasta, volta de noite com outro cheiro."
+ },
+ "3d29221c7fac": {
+  "personagem": "BORIS",
+  "texto": "...Então é verdade. Misha, essa gente não devolve ninguém inteiro."
+ },
+ "8054f78b4ded": {
+  "personagem": "BORIS",
+  "texto": "Projeto. Tá bom. Come, antes que esfrie de vez."
+ },
+ "79f41a4907d5": {
+  "personagem": "BORIS",
+  "texto": "Escuta. O papai dizia que um peão que chega ao fim do tabuleiro vira o que quiser."
+ },
+ "28140668fc63": {
+  "personagem": "BORIS",
+  "texto": "Toma. Para o seu primeiro grande lance. Não esquece de onde você veio."
+ },
+ "d2bb65b8764f": {
+  "personagem": "IRINA",
+  "texto": "Olhe a rua primeiro, Aleksey. Depois a gente conversa."
+ },
+ "ec530fda7603": {
+  "personagem": "IRINA",
+  "texto": "Aleksey. Olhe em volta: hoje à noite isto acaba. Karpov quer o Lethe armado antes do amanhecer."
+ },
+ "4e7f7c281a80": {
+  "personagem": "ALEKSEY",
+  "texto": "Eu sou só um consultor, Irina."
+ },
+ "e0b360a58711": {
+  "personagem": "IRINA",
+  "texto": "Você é o que eu disse que você é. Karpov não gosta de homens que perguntam demais."
+ },
+ "2403def02801": {
+  "personagem": "IRINA",
+  "texto": "Você é Aleksey Petrov. É o que basta saber."
+ },
+ "250c8fbb157b": {
+  "personagem": "IRINA",
+  "texto": "Bom. Entre pelos arquivos. Faça o que Sergei pedir, sem perguntas."
+ },
+ "2c28722acfcf": {
+  "personagem": "IRINA",
+  "texto": "Quando os tanques abrirem fogo, ninguém vai olhar para um técnico a mais."
+ },
+ "f229980d192a": {
+  "personagem": "IRINA",
+  "texto": "Você acordou. Três semanas. O médico disse que talvez não acordasse."
+ },
+ "e347cd7be040": {
+  "personagem": "IRINA",
+  "texto": "Irina. Fui eu que o encontrei. Houve um acidente no instituto. Você não lembra?"
+ },
+ "08ed3f5daeba": {
+  "personagem": "IRINA",
+  "texto": "Não importa. Tenho documentos novos. A partir de hoje, você é Aleksey Petrov. Técnico."
+ },
+ "9ee56f8ad639": {
+  "personagem": "IRINA",
+  "texto": "Bom. Aleksey Petrov. Repita até acreditar."
+ },
+ "74c0013254ad": {
+  "personagem": "IRINA",
+  "texto": "Antes não existe. Existe o que eu lhe dou."
+ },
+ "650de1cf6f98": {
+  "personagem": "IRINA",
+  "texto": "Escreva tudo o que aprender, Aleksey. Memória é uma coisa que a gente perde."
+ }
+}

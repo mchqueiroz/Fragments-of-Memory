@@ -1,0 +1,296 @@
+{
+ "size": [
+  16.0,
+  3.0,
+  3.0
+ ],
+ "theme": "verde",
+ "title": [
+  "T − 14 DIAS",
+  "O PISCAR"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "lamps": [
+  {
+   "pos": [
+    -5,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.6,
+   "range": 6,
+   "flicker": true
+  },
+  {
+   "pos": [
+    0,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.2,
+   "range": 6,
+   "flicker": true
+  },
+  {
+   "pos": [
+    5,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.6,
+   "range": 6,
+   "flicker": true
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.08,
+   0.09,
+   0.1
+  ],
+  "fog": [
+   0.6,
+   0.7,
+   0.7
+  ],
+  "density": 0.03
+ },
+ "start": {
+  "pos": [
+   -7.0,
+   0.05,
+   0.8
+  ],
+  "yaw": -90
+ },
+ "dress": [
+  294,
+  1.3,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "lino",
+  "size": 0.8,
+  "wet": 0.35,
+  "emitters": [
+   [
+    "fluorescent_buzz",
+    [
+     0,
+     2.7,
+     0
+    ],
+    -18.0,
+    4.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     7
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "sergei",
+   "model": "sergei",
+   "face": "face_sergei",
+   "voice": "low",
+   "pitch": 1.0,
+   "prompt": "Falar com Sergei",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    6.5,
+    -0.0
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "O mesmo corredor, outra noite. Algo vai estalar na minha cabeça: eu sinto, antes de acontecer.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "espelho",
+   "prompt": "Olhar o vidro da porta",
+   "ask": {
+    "q": "No vidro, o seu reflexo estala. Por dez segundos você lembra de tudo: Boris, o pai, o xadrez, Lena, o pulso. O que você diz em voz alta?",
+    "opts": [
+     "'Eu sou Mikhail Volkov. Sou Misha.'",
+     "Calar e deixar passar"
+    ],
+    "truth": [
+     2,
+     -1
+    ],
+    "flag": "disse_nome",
+    "correct": 0,
+    "reply": [
+     [
+      "ALEKSEY: Eu sou Mikhail Volkov! Eu me lembro! Sergei... foi você!",
+      "(Um estalo. A memória vai embora, como a maré.)"
+     ],
+     [
+      "(Dez segundos de tudo. Depois, de novo o nada, a boca fechada.)"
+     ]
+    ]
+   },
+   "flash": true,
+   "note": "Por dez segundos eu lembrei tudo: o apelido, a cozinha, o peão, o pulso. Depois a água subiu. Sergei estava no fim do corredor. Ele viu.",
+   "alt": "Tive uma tontura no corredor. Passou.",
+   "say": "Dez segundos de inteiro. E de novo a lacuna.",
+   "pos": [
+    -2.0,
+    1.5,
+    -1.5
+   ],
+   "size": [
+    1.4,
+    1.4,
+    0.3
+   ]
+  },
+  {
+   "id": "quadro",
+   "prompt": "Olhar o quadro de avisos",
+   "note": "O cartaz é o mesmo, mas agora lido de novo: 'Evacuação na sexta'. Eu sabia disso antes de saber que sabia.",
+   "optional": true,
+   "say": "Evacuação na sexta.",
+   "pos": [
+    5.5,
+    1.7,
+    -1.5
+   ],
+   "size": [
+    1.2,
+    0.9,
+    0.2
+   ]
+  },
+  {
+   "id": "lockers",
+   "prompt": "Olhar os armários",
+   "note": "Meu armário agora tem o jaleco com o nome 'М. Волков' no cabide, de novo. Alguém o devolveu depois de eu ter visto.",
+   "optional": true,
+   "say": "O jaleco voltou ao cabide.",
+   "pos": [
+    2.0,
+    1.0,
+    -1.2
+   ],
+   "size": [
+    1.3,
+    1.9,
+    0.6
+   ]
+  }
+ ],
+ "needed": [
+  "espelho"
+ ],
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei está no fim do corredor, imóvel, as mãos trêmulas. Ele viu tudo.",
+  "lines": [
+   "SERGEI: Eu vi, Aleksey.",
+   "ALEKSEY: Vi o quê?",
+   "SERGEI: Você sabe. Eu também sei. E não vou dizer a ninguém. (Ele se vira devagar.)",
+   "SERGEI: Falta pouco. Tenha paciência, meu filho. Tenha paciência com o que já foi."
+  ],
+  "note": "Sergei me viu lembrar por dez segundos e prometeu não contar a ninguém. Ele me chamou de filho.",
+  "alt": "Sergei me ajudou quando tive a tontura."
+ },
+ "name": "piscar",
+ "models": [],
+ "model": "ep_piscar"
+}

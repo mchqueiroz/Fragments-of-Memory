@@ -1,0 +1,60 @@
+{
+ "add_clues": [
+  {
+   "id": "diario",
+   "prompt": "Folhear o diário",
+   "pos": [
+    -4.5,
+    1.0,
+    -1.3
+   ],
+   "size": [
+    0.5,
+    0.4,
+    0.4
+   ],
+   "note": "Meu diário, quarenta páginas: «Escreva tudo». Folheio e acho uma letra que não é minha, ao lado das minhas: «não confie em Sergei». Quem escreveu?",
+   "alt": "Meu diário. Tudo em ordem.",
+   "say": "Há uma frase no meu diário que eu não escrevi. Ou escrevi e esqueci."
+  }
+ ],
+ "clues": {
+  "espelho": {
+   "ask": {
+    "q": "No vidro, o seu reflexo estala. Por dez segundos você lembra de tudo. Depressa: o que você diz em voz alta?",
+    "opts": [
+     "«Eu sou Mikhail Volkov. Sou Misha.»",
+     "Calar e deixar passar"
+    ],
+    "seconds": 10,
+    "default": 1,
+    "truth": [
+     2,
+     -1
+    ],
+    "flag": "disse_nome",
+    "correct": 0,
+    "trust": {
+     "sergei": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "ALEKSEY: Eu sou Mikhail Volkov! Eu me lembro! Sergei... foi você!",
+      "(Um estalo. A memória vai embora, como a maré.)"
+     ],
+     [
+      "(Dez segundos de tudo. Depois, de novo o nada, a boca fechada.)"
+     ]
+    ]
+   }
+  }
+ },
+ "needed": [
+  "diario",
+  "espelho"
+ ],
+ "question": "O que eu vi por dez segundos?"
+}

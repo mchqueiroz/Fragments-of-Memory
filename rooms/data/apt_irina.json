@@ -1,0 +1,333 @@
+{
+ "size": [
+  7.0,
+  6.0,
+  3.0
+ ],
+ "theme": "papel",
+ "title": [
+  "A9 · T − 4 DIAS",
+  "O APARTAMENTO DE IRINA"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "sky": [
+  0.25,
+  0.25,
+  0.4
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.7,
+    0
+   ],
+   "color": [
+    1.0,
+    0.75,
+    0.5
+   ],
+   "energy": 1.5,
+   "range": 8,
+   "flicker": false
+  },
+  {
+   "pos": [
+    1.4,
+    1.2,
+    -2.5
+   ],
+   "color": [
+    1.0,
+    0.8,
+    0.5
+   ],
+   "energy": 1.4,
+   "range": 3,
+   "flicker": false
+  },
+  {
+   "pos": [
+    -1.8,
+    1.0,
+    -0.0
+   ],
+   "color": [
+    1.0,
+    0.6,
+    0.4
+   ],
+   "energy": 0.8,
+   "range": 3,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.14,
+   0.11,
+   0.1
+  ],
+  "fog": [
+   0.8,
+   0.65,
+   0.5
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   2.5,
+   0.05,
+   2.4
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  171,
+  0.5,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "parquet",
+  "size": 0.35,
+  "wet": 0.15,
+  "emitters": [
+   [
+    "radio_real",
+    [
+     3.2,
+     1.0,
+     1.0
+    ],
+    -16.0,
+    2.5
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "irina",
+   "model": "irina",
+   "face": "face_irina",
+   "voice": "high",
+   "pitch": 0.92,
+   "prompt": "Falar com Irina",
+   "size": [
+    0.6,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    -0.4,
+    -0.4
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Irina me deu a chave do apartamento dela. Mal reconheço este cheiro de casa.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "mala",
+   "prompt": "Olhar a mala pronta",
+   "note": "Mala pronta ao pé da cama, fechada com cinto: Irina se prepara para fugir. Dentro, passaportes de três nomes diferentes.",
+   "say": "Uma mala sempre pronta. Quem vive assim espera ser apagado.",
+   "pos": [
+    2.5,
+    0.7,
+    0.5
+   ],
+   "size": [
+    1.0,
+    0.5,
+    1.4
+   ]
+  },
+  {
+   "id": "ordem",
+   "prompt": "Ler a ordem sobre a mesa",
+   "note": "Pasta sobre a escrivaninha: 'ПРИКАЗ №14: И. Лебедева — к стиранию'. A ordem de apagar a própria Irina, assinada por Karpov.",
+   "alt": "Papéis do trabalho de Irina.",
+   "say": "A ordem é para Irina. Quem manda apagar quem apaga?",
+   "pos": [
+    1.0,
+    0.865,
+    -2.5
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "foto_karpov",
+   "prompt": "Olhar o porta-retratos",
+   "note": "Retrato de Irina jovem, abraçada a um oficial com o rosto raspado a canivete: só ficou o uniforme. É Karpov?",
+   "say": "O rosto do oficial foi arranhado. Só restou o uniforme.",
+   "pos": [
+    -3.5,
+    1.7,
+    0.8
+   ],
+   "size": [
+    0.2,
+    0.7,
+    0.6
+   ]
+  },
+  {
+   "id": "telefone",
+   "prompt": "Olhar o telefone vermelho",
+   "note": "O telefone vermelho está fora do gancho há dias: Irina não quer ouvir Karpov.",
+   "say": "Fora do gancho. Ela se esconde de uma voz.",
+   "pos": [
+    0.7,
+    0.915,
+    -2.5
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "garrafas",
+   "prompt": "Olhar o bar",
+   "note": "Duas taças e uma garrafa de champanhe pela metade: Irina bebeu comigo na outra noite. Não lembro de ter sido convidado.",
+   "optional": true,
+   "say": "Champanhe francês, em plena crise. Irina vive em outro país.",
+   "pos": [
+    2.6,
+    1.3,
+    -2.4
+   ],
+   "size": [
+    2.4,
+    0.5,
+    0.7
+   ]
+  }
+ ],
+ "needed": [
+  "mala",
+  "ordem",
+  "foto_karpov",
+  "telefone"
+ ],
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me olha do sofá, sem o casaco de sempre. Acho que é hora de ouvi-la.",
+  "lines": [
+   "IRINA: Aleksey. Sente-se. Estou cansada de ser a mulher forte.",
+   "IRINA: Karpov me marcou para o apagamento. Depois que o Lethe sair, eu sobro.",
+   "ALEKSEY: Você me trouxe até aqui.",
+   "IRINA: E você pode me salvar. Fique comigo, Aleksey. Uma noite, só uma.",
+   {
+    "q": "Irina se aproxima. O que você faz?",
+    "opts": [
+     "Prometer ajuda: 'Eu protejo você.'",
+     "Manter distância: 'Isso não é comigo.'"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "ajudou_irina",
+    "reply": [
+     [
+      "IRINA: ...Obrigada. (Baixinho:) Se me trair, o Lethe também chega até você."
+     ],
+     [
+      "IRINA: Entendo. Eu faria igual. (O olhar dela esfria.)"
+     ]
+    ]
+   },
+   "IRINA: Eu o escolhi por ser só. Ser só é a única coisa que Karpov não consegue comprar."
+  ],
+  "note": "Irina está marcada para o apagamento por Karpov e me pediu ajuda, com carinho e com ameaça.",
+  "alt": "Irina me convidou para jantar. Foi agradável."
+ },
+ "name": "apt_irina",
+ "models": [],
+ "model": "ep_apt_irina"
+}

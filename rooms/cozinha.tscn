@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://rooms/cozinha.gd" id="1_coz"]
+
+[node name="Cozinha" type="Node3D"]
+script = ExtResource("1_coz")

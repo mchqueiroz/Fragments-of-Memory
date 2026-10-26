@@ -1,0 +1,146 @@
+{
+ "clues": {
+  "telefone": {
+   "ask": {
+    "q": "Karpov, ao telefone: «Arme o Lethe, Petrov. Agora.» O que você diz?",
+    "opts": [
+     "«Sim, camarada.»",
+     "«Não.» e desligar",
+     "Deixar tocar"
+    ],
+    "seconds": 12,
+    "default": 2,
+    "truth": [
+     -2,
+     2,
+     0
+    ],
+    "flag": "obedeceu_final",
+    "correct": 0,
+    "reply": [
+     [
+      "KARPOV (ao telefone): Bom menino."
+     ],
+     [
+      "KARPOV (ao telefone): Você morreu para mim, Petrov."
+     ],
+     [
+      "(O telefone toca até se calar.)"
+     ]
+    ]
+   }
+  },
+  "console": {
+   "uses": {
+    "item": "cartao",
+    "note": "Com o cartão de acesso que Sergei me deu, a tampa do painel cede sem esforço.",
+    "say": "O cartão abre a tampa. Sergei me deixou entrar até aqui."
+   }
+  },
+  "peao": {
+   "uses": {
+    "item": "peao",
+    "note": "O peão que Sergei me devolveu cabe na minha mão como se nunca a tivesse deixado.",
+    "say": "Pequeno, lascado, meu. Um peão chega ao fim do tabuleiro e vira o que quiser."
+   }
+  },
+  "arma": {
+   "ask": {
+    "q": "A arma está na sua mão. Sergei sorri, Boris espera, Irina desvia o olhar. Decida.",
+    "opts": [
+     "Atirar em Sergei",
+     "Baixar a arma",
+     "Dizer: «Eu sou Mikhail Volkov. Eu sou Misha.»"
+    ],
+    "seconds": 25,
+    "default": 1,
+    "truth": [
+     -2,
+     1,
+     3
+    ],
+    "flag": "final_nome",
+    "correct": 2,
+    "trust": {
+     "boris": [
+      -2,
+      1,
+      3
+     ],
+     "sergei": [
+      -3,
+      1,
+      2
+     ]
+    },
+    "reply": [
+     [
+      "(O estampido enche a sala. O pulso sobe, branco.)"
+     ],
+     [
+      "(Você solta a arma. Ela cai com um som seco. O pulso sobe, branco, de qualquer jeito.)"
+     ],
+     [
+      "MISHA: Eu sou Mikhail Volkov. Boris, eu sou o seu irmão.",
+      "(O pulso sobe, branco, mas desta vez ele não o apaga: ele o ilumina.)"
+     ]
+    ],
+    "gates": {
+     "2": {
+      "ledger": "identidade",
+      "text": "Tentar dizer um nome... mas qual?",
+      "as": 1,
+      "fail": "(A boca abre. Nenhum nome vem. Falta prova demais que eu não reuni.)"
+     }
+    }
+   }
+  }
+ },
+ "finale": {
+  "endings": [
+   {
+    "flag": [
+     "final_nome",
+     true
+    ],
+    "when": {
+     "item": "peao",
+     "trust": "boris",
+     "gte": 4
+    },
+    "title": "O IRMÃO",
+    "text": "O nome saiu inteiro e Boris não precisou de mais nada. Ele tirou do bolso um peão branco, igual ao seu, e fechou a mão do irmão em volta dos dois. Sergei desligou o gravador de Lena. O Lethe ficou em silêncio, e os dois saíram juntos na neve de outubro, arrastando o pé esquerdo no mesmo compasso."
+   },
+   {
+    "flag": [
+     "final_nome",
+     true
+    ],
+    "title": "MISHA",
+    "text": "Sua voz tremeu, mas o nome saiu inteiro: Mikhail Volkov. Boris deu um passo à frente, as mãos abertas. Sergei baixou a cabeça e, pela primeira vez em dois anos, desligou o gravador de Lena. O Lethe ficou em silêncio. Você lembrou. E, desta vez, escolheu lembrar."
+   },
+   {
+    "when": {
+     "ledger_gte": 6
+    },
+    "title": "O ARQUIVISTA",
+    "text": "Você não impediu o pulso, mas montou o quadro inteiro, peça por peça: quem foi, quem traiu, quem salvou. Quando o branco veio, as respostas já estavam fixadas. Quem achar o seu caderno saberá a verdade sem ter de esquecê-la de novo."
+   },
+   {
+    "max": -3,
+    "title": "O OPERADOR",
+    "text": "Você obedeceu a todos, e o Lethe acendeu. O operador esqueceu primeiro, como sempre. Em algum lugar, um homem de terno acorda ao lado de um corpo, com uma arma quente na mão e nenhuma memória."
+   },
+   {
+    "min": 3,
+    "title": "A TESTEMUNHA",
+    "text": "Você investigou, duvidou, perguntou. Não impediu o pulso, mas deixou rastros: um diário, um caderno, um peão. Quem vier depois saberá onde procurar. A verdade sobrevive a quem a esquece."
+   },
+   {
+    "title": "O CICLO",
+    "text": "O tiro. O pulso. Um teto branco. Um nome que não é seu. Tudo recomeça."
+   }
+  ]
+ },
+ "question": "Quem eu escolho ser?"
+}

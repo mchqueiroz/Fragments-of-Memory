@@ -1,0 +1,41 @@
+{
+ "clues": {
+  "telefone": {
+   "say": "O medo dela diz mais que as palavras.",
+   "ask": {
+    "q": "Você disca o número de Irina. Do outro lado, a voz dela. O que você diz?",
+    "opts": [
+     "«Estou começando a lembrar.»",
+     "Desligar sem falar"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "contou_lembrar",
+    "correct": 0,
+    "trust": {
+     "irina": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "IRINA (ao telefone): ...Não diga isso ao telefone. Estou indo aí.",
+      "(A voz dela treme. Ela está com medo.)"
+     ],
+     [
+      "(Do outro lado, só a respiração dela. Depois, o sinal de linha.)"
+     ]
+    ]
+   }
+  }
+ },
+ "needed": [
+  "diario",
+  "janela",
+  "telefone"
+ ],
+ "question": "Quem escreveu no meu diário?"
+}

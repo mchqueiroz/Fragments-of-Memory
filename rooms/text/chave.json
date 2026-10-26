@@ -1,0 +1,64 @@
+{
+ "clues": {
+  "missil": {
+   "note": "O Lethe aberto: dentro, nenhuma ogiva. Só uma cavidade de latão com bobinas. Não é uma bomba.",
+   "say": "Por dentro é oco. Se não é bomba, é o quê?"
+  },
+  "painel": {
+   "note": "Painel do pulso: o visor mostra «ОПЕРАТОР: —». Ninguém registrado como operador.",
+   "say": "Operador: nenhum. Por que um painel espera alguém que não existe?"
+  },
+  "pasta": {
+   "note": "Pasta «ЛЕТА»: protocolos de teste. Há um nome riscado na primeira linha da lista de cobaias; embaixo, a letra de Sergei: «foi o primeiro».",
+   "say": "Um nome riscado até furar o papel. Não consigo lê-lo."
+  },
+  "gravacao": {
+   "note": "Gravador de fita: uma voz de mulher repete «Serioja, lembre de mim». A fita está gasta de tanto uso.",
+   "say": "A mesma frase, em volta. A fita já está gasta."
+  }
+ },
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei me espera junto ao míssil. Acho que é hora de ouvi-lo.",
+  "lines": [
+   "SERGEI: Veja bem, Aleksey. Foi para isto que passei a vida. Não destrói cidades: devolve o descanso.",
+   "ALEKSEY: Devolve? Ele apaga quem o opera.",
+   "SERGEI: O primeiro que o operou escolheu esquecer. Eu fui quem apertou o botão. Eu sei quem você é.",
+   {
+    "q": "Sergei não desvia os olhos de você. O que você faz?",
+    "opts": [
+     "Negar: «Não sei do que o senhor está falando.»",
+     "Perguntar: «Quem eu sou, Sergei?»"
+    ],
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "sergei_sabe",
+    "trust": {
+     "sergei": [
+      -1,
+      1
+     ]
+    },
+    "reply": [
+     [
+      "SERGEI: Como queira. Nós dois sabemos mentir muito bem."
+     ],
+     [
+      "SERGEI: Ainda não, meu filho. A verdade, dita agora, o mataria."
+     ]
+    ]
+   },
+   "SERGEI: Leve a chave. Quando chegar a hora, você vai precisar dela."
+  ],
+  "note": "Sergei disse: «Eu sei quem você é.» E me entregou a chave do painel do pulso.",
+  "alt": "Sergei me deu uma chave. Confia em mim."
+ },
+ "needed": [
+  "missil",
+  "painel",
+  "pasta"
+ ],
+ "question": "O que o Lethe é por dentro?"
+}

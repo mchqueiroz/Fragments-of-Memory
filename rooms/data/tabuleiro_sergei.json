@@ -1,0 +1,359 @@
+{
+ "size": [
+  6.0,
+  5.0,
+  3.0
+ ],
+ "theme": "papel",
+ "title": [
+  "SET / 1993",
+  "O TABULEIRO"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.6,
+  0.55,
+  0.5
+ ],
+ "models": [
+  {
+   "model": "chess",
+   "at": [
+    0.0,
+    0.2,
+    0.76
+   ],
+   "scale": 0.75,
+   "pos": [
+    0.0,
+    0.76,
+    -0.2
+   ]
+  }
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.7,
+    0
+   ],
+   "color": [
+    1.0,
+    0.85,
+    0.6
+   ],
+   "energy": 1.4,
+   "range": 7,
+   "flicker": false
+  },
+  {
+   "pos": [
+    -1.6,
+    1.3,
+    -2.1
+   ],
+   "color": [
+    1.0,
+    0.8,
+    0.5
+   ],
+   "energy": 1.3,
+   "range": 3,
+   "flicker": false
+  },
+  {
+   "pos": [
+    0,
+    1.4,
+    -0.2
+   ],
+   "color": [
+    1.0,
+    0.9,
+    0.7
+   ],
+   "energy": 1.0,
+   "range": 2.5,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.14,
+   0.12,
+   0.1
+  ],
+  "fog": [
+   0.8,
+   0.7,
+   0.55
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   2.2,
+   0.05,
+   2.0
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  248,
+  0.5,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "parquet",
+  "size": 0.35,
+  "wet": 0.15,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     3.0,
+     2.3,
+     1.5
+    ],
+    -14.0,
+    2.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "sergei",
+   "model": "sergei",
+   "face": "face_sergei",
+   "voice": "low",
+   "pitch": 1.0,
+   "prompt": "Jogar com Sergei",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    0.0,
+    -1.1
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Sergei me convidou para uma partida. Diz que é para me conhecer. Eu sei que é para me testar.",
+   5.5
+  ]
+ ],
+ "clues": [
+  {
+   "id": "pecas",
+   "prompt": "Olhar as peças",
+   "note": "Tabuleiro armado: as brancas comigo, as pretas com Sergei. Falta um peão branco no lado das minhas peças.",
+   "say": "O peão que Sergei me devolveu ainda está no meu bolso.",
+   "pos": [
+    0.0,
+    0.95,
+    -0.2
+   ],
+   "size": [
+    0.8,
+    0.3,
+    0.8
+   ]
+  },
+  {
+   "id": "foto",
+   "prompt": "Olhar a foto dos pais",
+   "note": "Foto dos pais de alguém, com um canto queimado. Reconheço o canto queimado; não sei de onde.",
+   "alt": "Foto de uma família.",
+   "say": "O canto queimado... eu já vi esta foto. Em outra cozinha.",
+   "pos": [
+    -3.0,
+    1.7,
+    -1.2
+   ],
+   "size": [
+    0.3,
+    0.55,
+    0.7
+   ]
+  },
+  {
+   "id": "estante",
+   "prompt": "Olhar a estante",
+   "note": "Estante de livros de xadrez: 'Дебюты', 'Королевский гамбит'. Sergei estuda a abertura que o pai de Misha ensinou.",
+   "optional": true,
+   "say": "Todos esses livros para uma abertura só.",
+   "pos": [
+    2.8,
+    1.2,
+    -0.5
+   ],
+   "size": [
+    0.4,
+    2.0,
+    2.0
+   ]
+  },
+  {
+   "id": "jogo",
+   "prompt": "Fazer o seu lance",
+   "repeat": false,
+   "ask": {
+    "q": "Sergei abre com 1.e4 e você responde 1...e5. Ele joga 2.Cf3 e espera. Qual o seu lance? (O pai ensinava assim.)",
+    "opts": [
+     "2... Cc6: defender o peão com o cavalo",
+     "2... f6: defesa passiva",
+     "2... d6: a defesa Philidor"
+    ],
+    "truth": [
+     0,
+     0,
+     0
+    ],
+    "flag": "falou_misha",
+    "correct": 0,
+    "reply": [
+     [
+      "SERGEI: Cc6. Sempre Cc6. (Ele fica pálido.)",
+      "ALEKSEY: Meu pai... quer dizer, o meu... Misha ensinava assim.",
+      "SERGEI: Quem é Misha, Aleksey?"
+     ],
+     [
+      "SERGEI: f6. Hm. Não é o seu estilo."
+     ],
+     [
+      "SERGEI: Philidor. Um ousado... quando não sabe o que faz."
+     ]
+    ]
+   },
+   "note": "Joguei o lance sem pensar. Um nome escapou da minha boca: Misha.",
+   "alt": "Joguei uma boa partida com Sergei.",
+   "say": "A mão sabe, a boca falou. E Sergei ouviu.",
+   "pos": [
+    0.0,
+    1.05,
+    -0.2
+   ],
+   "size": [
+    0.4,
+    0.2,
+    0.4
+   ]
+  }
+ ],
+ "needed": [
+  "pecas",
+  "foto",
+  "jogo"
+ ],
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei me olha sem piscar. Acho que devo falar com ele.",
+  "lines": [
+   "SERGEI: Você jogou como alguém que eu perdi.",
+   "ALEKSEY: Desculpe. Não sei por que falei aquele nome.",
+   {
+    "q": "Sergei serve chá. O que você diz?",
+    "opts": [
+     "Perguntar: 'Quem é Misha, Sergei?'",
+     "Mudar de assunto: 'Falemos do trabalho.'"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "perguntou_misha",
+    "reply": [
+     [
+      "SERGEI: Um aluno meu. Talentoso. Perdi-o em 1991. (Ele se afasta.)"
+     ],
+     [
+      "SERGEI: ...Claro. O trabalho. Sempre o trabalho."
+     ]
+    ]
+   },
+   "SERGEI: Volte amanhã. Jogaremos outra vez."
+  ],
+  "note": "Sergei ouviu a palavra Misha escapar de mim e fingiu não notar. Ele sabe, e eu quase sei.",
+  "alt": "Joguei xadrez com Sergei. Divertido."
+ },
+ "name": "tabuleiro_sergei",
+ "model": "ep_tabuleiro_sergei"
+}

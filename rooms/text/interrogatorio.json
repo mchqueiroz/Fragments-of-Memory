@@ -1,0 +1,56 @@
+{
+ "clues": {
+  "pasta": {
+   "note": "Pasta com a etiqueta «ВОЛКОВ М. И. — изъято» (retirado). Dentro, um recorte de jornal da noite do golpe de 1991. Boris guarda um caso que não fechou.",
+   "say": "Boris leva um desaparecido para dentro do trabalho."
+  }
+ },
+ "talk": {
+  "npc": "boris",
+  "hint": "Boris me indica a cadeira, sem sorrir. Acho que vai começar.",
+  "lines": [
+   "BORIS: Senta, Petrov. Cinco minutos. Quem é você, afinal?",
+   "ALEKSEY: Técnico em eletrônica. Está no meu prontuário.",
+   "BORIS: Prontuário. Eu li. Tem coisa demais que o senhor não sabe sobre o senhor.",
+   "BORIS: Dê três passos até a porta e volte. (Ele me observa andar.) ...Você arrasta o pé esquerdo.",
+   {
+    "q": "Boris assobia baixinho quatro notas: G-D-E-D. Ele espera. Rápido: o que você faz?",
+    "opts": [
+     "Assobiar a melodia de volta, sem pensar",
+     "Ficar em silêncio"
+    ],
+    "seconds": 8,
+    "default": 1,
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "assobiou",
+    "trust": {
+     "boris": [
+      -1,
+      1
+     ]
+    },
+    "reply": [
+     [
+      "BORIS: (A boca entreaberta.) Onde aprendeu essa canção, Petrov?",
+      "ALEKSEY: Não sei. Veio sozinha."
+     ],
+     [
+      "BORIS: Silêncio. Interessante. Quem se cala sabe de algo."
+     ]
+    ]
+   },
+   "BORIS: Pode ir. Por enquanto."
+  ],
+  "note": "Boris me testou: o andar, o assobio. Ele suspeita que eu seja o irmão dele. Não sei se tenho medo ou esperança.",
+  "alt": "Boris me interrogou. Rotina."
+ },
+ "needed": [
+  "espelho",
+  "gravador",
+  "pasta"
+ ],
+ "question": "O que Boris suspeita?"
+}

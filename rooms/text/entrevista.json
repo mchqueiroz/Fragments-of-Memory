@@ -1,0 +1,57 @@
+{
+ "clues": {
+  "retrato": {
+   "note": "Um porta-retratos virado para baixo na mesa de Boris. Ele o desvira quando está sozinho e o esconde quando alguém entra. Dois garotos na neve.",
+   "say": "Ele esconde essa foto de quem entra. Por quê?"
+  },
+  "diploma": {
+   "say": "Ivanovich, como eu. Será só o patronímico mais comum da Rússia?"
+  }
+ },
+ "talk": {
+  "npc": "boris",
+  "hint": "Boris se recosta na cadeira e cruza os braços. Acho que vai começar a entrevista.",
+  "lines": [
+   "BORIS: Petrov. Currículo limpo demais. De onde você veio?",
+   "ALEKSEY: De Leningrado. Pais professores, falecidos.",
+   "BORIS: ...E o jeito de andar? Você arrasta o pé. Teve acidente?",
+   {
+    "q": "Boris olha para o seu pé esquerdo. O que você responde?",
+    "opts": [
+     "Responder com a biografia decorada",
+     "Admitir: «Não sei. Não lembro.»"
+    ],
+    "seconds": 10,
+    "default": 0,
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "admitiu",
+    "trust": {
+     "boris": [
+      -1,
+      2
+     ]
+    },
+    "reply": [
+     [
+      "BORIS: Decorada. Bem decorada."
+     ],
+     [
+      "BORIS: (Longo silêncio.) Também não lembro certas coisas. Muito bem, Petrov."
+     ]
+    ]
+   },
+   "BORIS: Contratado. Mas ouça: não me agrada quem assobia no corredor. Não faça isso."
+  ],
+  "note": "Boris me contratou, mas me olhou como quem quase sabe. Não gosta de quem assobia.",
+  "alt": "Fui contratado. Boris é chato mas justo."
+ },
+ "needed": [
+  "curriculo",
+  "retrato",
+  "crachas"
+ ],
+ "question": "O que Boris esconde?"
+}

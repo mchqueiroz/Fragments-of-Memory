@@ -1,0 +1,52 @@
+{
+ "clues": {
+  "placa": {
+   "say": "Parque de cultura e descanso. Hoje, descanso me soa a senha."
+  }
+ },
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me espera num banco, os óculos escuros na mão. Acho que é hora de falar.",
+  "lines": [
+   "IRINA: Aleksey. Você está bem. Os dois anos fizeram bem.",
+   "ALEKSEY: Fizeram de mim outra pessoa.",
+   "IRINA: Foi para isso. Escute: na segunda você começa no Kosmos, como consultor. Sergei Morozov será seu contato.",
+   "IRINA: Karpov quer o Lethe. Você é meus olhos lá dentro. Quando eu pedir, você age.",
+   {
+    "q": "Irina pousa a mão em seu braço. O que você diz?",
+    "opts": [
+     "Aceitar a missão sem perguntas",
+     "Perguntar: «O que eu ganho com isso?»"
+    ],
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "missao_aceita",
+    "trust": {
+     "irina": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "IRINA: Esse é o homem que eu preparei."
+     ],
+     [
+      "IRINA: Uma vida. Nada mais. É mais do que a maioria recebe."
+     ]
+    ]
+   },
+   "IRINA: Hoje é o último dia de sol, Aleksey. Aproveite."
+  ],
+  "note": "Irina me deu a missão: entrar no Kosmos como consultor. Sergei Morozov será meu contato. Karpov quer o Lethe.",
+  "alt": "Começo a trabalhar no Kosmos na segunda. Bom emprego."
+ },
+ "needed": [
+  "placa",
+  "roda",
+  "lago"
+ ],
+ "question": "O que Irina quer de mim?"
+}

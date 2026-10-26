@@ -1,0 +1,98 @@
+{
+ "needed": [
+  "pecas",
+  "estante",
+  "jogo"
+ ],
+ "clues": {
+  "pecas": {
+   "note": "Tabuleiro armado: as brancas comigo, as pretas com Sergei. Falta um peão branco do meu lado.",
+   "say": "Falta um peão no meu lado.",
+   "uses": {
+    "item": "peao",
+    "note": "Pus o peão que Sergei me deu no lugar vazio. Encaixou como se tivesse nascido ali.",
+    "say": "O peão cabe no vazio do tabuleiro. Como se tivesse sido feito para ele."
+   }
+  },
+  "foto": {
+   "note": "Foto de um casal, com um canto queimado. O canto queimado me diz alguma coisa.",
+   "say": "Esse canto queimado... eu já vi isto."
+  },
+  "estante": {
+   "optional": false,
+   "note": "Estante de livros de xadrez: «Дебюты», «Королевский гамбит». Em um deles, a lápis, uma linha: 1.e4 e5 2.Cf3 Cc6.",
+   "say": "Todos esses livros e uma só linha sublinhada: e4, e5, Cf3, Cc6."
+  },
+  "jogo": {
+   "note": "A partida com Sergei: minhas mãos conhecem aberturas que eu não aprendi.",
+   "say": "A mão sabe. A boca falou. E Sergei ouviu.",
+   "ask": {
+    "q": "Sergei abre com 1.e4 e você responde 1...e5. Ele joga 2.Cf3 e espera. Seu lance?",
+    "opts": [
+     "2... Cc6: defender o peão com o cavalo",
+     "2... f6: defesa passiva",
+     "2... d6: a defesa Philidor"
+    ],
+    "truth": [
+     1,
+     0,
+     0
+    ],
+    "flag": "falou_misha",
+    "correct": 0,
+    "must": true,
+    "reply": [
+     [
+      "SERGEI: Cc6. Sempre Cc6. (Ele fica pálido.)",
+      "ALEKSEY: Meu pai... quer dizer... Misha ensinava assim.",
+      "SERGEI: Quem é Misha, Aleksey?"
+     ],
+     [
+      "SERGEI: f6. Hm. Não é o seu estilo. Tente de novo."
+     ],
+     [
+      "SERGEI: Philidor. Ousado, quando não se sabe o que faz. Tente de novo."
+     ]
+    ]
+   }
+  }
+ },
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei me olha sem piscar. Acho que devo falar com ele.",
+  "lines": [
+   "SERGEI: Você jogou como alguém que eu perdi.",
+   "ALEKSEY: Desculpe. Não sei por que falei aquele nome.",
+   {
+    "q": "Sergei serve chá. O que você diz?",
+    "opts": [
+     "Perguntar: «Quem é Misha, Sergei?»",
+     "Mudar de assunto: «Falemos do trabalho.»"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "perguntou_misha",
+    "trust": {
+     "sergei": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "SERGEI: Um aluno meu. Talentoso. Perdi-o em 1991. (Ele se afasta.)"
+     ],
+     [
+      "SERGEI: ...Claro. O trabalho. Sempre o trabalho."
+     ]
+    ]
+   },
+   "SERGEI: Volte amanhã. Jogaremos outra vez."
+  ],
+  "note": "Sergei ouviu a palavra Misha escapar de mim e fingiu não notar. Ele sabe, e eu quase sei.",
+  "alt": "Joguei xadrez com Sergei. Divertido."
+ },
+ "question": "Que nome eu quase disse?"
+}

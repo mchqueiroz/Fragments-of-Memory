@@ -1,0 +1,64 @@
+{
+ "clues": {
+  "caixao": {
+   "note": "Caixão de pinho sobre a cova aberta. A placa diz: uma mulher de 34 anos. A tampa fechada esconde o rosto.",
+   "say": "Quem é ela? A neve não responde."
+  },
+  "coroa": {
+   "note": "Coroa de cravos vermelhos: «Лена — коллеги из «Космоса»». Num laço preto, por baixo, em letra menor: «Нам тебя не хватает, Миша».",
+   "say": "Cravos vermelhos. E um nome pequeno demais, escondido embaixo: Misha."
+  },
+  "lapide": {
+   "note": "Lápide provisória de madeira: «Елена Морозова, 1958–1992».",
+   "say": "Morozova. Esse sobrenome me é familiar. De onde?"
+  },
+  "sergei": {
+   "note": "Um homem ao lado da cova, sem chapéu e sem lágrimas, a mão fechada num lenço. Não olha para ninguém.",
+   "say": "Todos choram, menos ele. Ou ele já chorou tudo."
+  }
+ },
+ "talk": {
+  "npc": "boris",
+  "hint": "Do outro lado da cova, um homem de farda me olha fixamente. Acho que ele quer falar.",
+  "lines": [
+   "BORIS: Eu conheço você?",
+   "ALEKSEY: Não creio.",
+   "BORIS: Você anda como meu irmão. O mesmo jeito de arrastar o pé esquerdo.",
+   {
+    "q": "Ele não desvia o olhar. O que você faz?",
+    "opts": [
+     "Aproximar-se: «Meus pêsames pela perda.»",
+     "Virar as costas e ir embora"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "encarou_boris",
+    "trust": {
+     "boris": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "BORIS: ...Obrigado. Não, perdão. Você me lembrou alguém."
+     ],
+     [
+      "BORIS: Espere! ...Esquece. Esqueça."
+     ]
+    ]
+   },
+   "BORIS: Meu irmão sumiu em agosto. Se um dia o vir, diga que o procuro."
+  ],
+  "note": "No cemitério, um homem de farda me encarou e disse que eu ando como o irmão dele, desaparecido desde agosto de 1991.",
+  "alt": "Um policial me confundiu com alguém. Besteira."
+ },
+ "needed": [
+  "coroa",
+  "lapide",
+  "sergei"
+ ],
+ "question": "Quem era ela, e quem a chora?"
+}

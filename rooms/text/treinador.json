@@ -1,0 +1,54 @@
+{
+ "clues": {
+  "tabuleiro": {
+   "note": "O treinador deixou uma abertura no tabuleiro. Minhas mãos jogam como se já tivessem jogado a vida inteira.",
+   "say": "Jogo sem pensar. Isso devia me assustar."
+  },
+  "cartilha": {
+   "note": "Cartilha: «Aleksey Ivanovich Petrov, nascido em 1958, filho de professores, técnico em eletrônica». Releio até soar como memória.",
+   "say": "Decoro a vida que me contam. Ainda não soa como minha."
+  },
+  "caderno": {
+   "note": "Caderno novo de capa preta. O treinador mandou: «Escreva tudo. Quem escreve, existe.»",
+   "say": "Primeira página: a data e o nome que me deram."
+  }
+ },
+ "talk": {
+  "npc": "treinador",
+  "hint": "O treinador espera, as mãos sobre o tabuleiro. Acho que posso falar com ele.",
+  "lines": [
+   "TREINADOR: Dois anos, Aleksey. Você aprende mais rápido do que devia.",
+   "ALEKSEY: Rápido demais para quem não sabe nada.",
+   "TREINADOR: Quem não sabe nada não joga e4 sem olhar. Você sabe alguma coisa. O corpo lembra, mesmo que a cabeça não.",
+   {
+    "q": "O treinador estende o caderno novo. O que você faz?",
+    "opts": [
+     "Escrever tudo, como ele mandou",
+     "Confiar na memória"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "diario",
+    "reply": [
+     [
+      "TREINADOR: Bom. Quem escreve, existe."
+     ],
+     [
+      "TREINADOR: Hm. Memória é o que mais falha em quem mais confia nela."
+     ]
+    ]
+   },
+   "TREINADOR: Quando estiver pronto, Irina vai buscá-lo. Não conte a ninguém que você joga assim."
+  ],
+  "note": "O treinador diz que o corpo lembra, mesmo que a cabeça não. Preciso escrever tudo.",
+  "alt": "O treinador gosta de mim. Fico tranquilo."
+ },
+ "needed": [
+  "tabuleiro",
+  "cartilha",
+  "caderno"
+ ],
+ "question": "Quem estão me treinando para ser?"
+}

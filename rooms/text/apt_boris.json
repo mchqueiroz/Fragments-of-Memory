@@ -1,0 +1,49 @@
+{
+ "intro": [
+  [
+   "Boris foi para o turno. Entro sem ser convidado: não posso ser visto aqui.",
+   5.0
+  ]
+ ],
+ "timer": {
+  "seconds": 110,
+  "warns": [
+   [
+    60,
+    "A porta do prédio bateu lá embaixo. Pode ser ninguém."
+   ],
+   [
+    28,
+    "Passos subindo a escada. Preciso terminar e sair."
+   ]
+  ],
+  "fail": "A chave girou na fechadura. Boris voltou cedo. Recomeço, com mais cuidado."
+ },
+ "clues": {
+  "foto": {
+   "note": "Porta-retratos: dois garotos na neve, o mais velho com a mão no ombro do menor. Por um segundo, sem som, eu estive lá.",
+   "say": "Um segundo de neve, sem som. Uma mão no meu ombro."
+  },
+  "farda": {
+   "note": "Farda de milícia no armário aberto, passada a ferro com capricho.",
+   "say": "Passada a ferro todo dia. Ele só tem isso."
+  },
+  "cama": {
+   "note": "Cama arrumada com precisão militar. Debaixo do travesseiro, um velho peão de xadrez, branco, lascado.",
+   "say": "Debaixo do travesseiro, um peão branco, igual ao que Sergei me deu."
+  },
+  "mesa": {
+   "note": "Cadernos de relatório de Boris: página após página sobre «М. Волков» e «А. Петров», lado a lado.",
+   "say": "Dois nomes lado a lado. Ele está comparando."
+  },
+  "tv": {
+   "optional": false
+  }
+ },
+ "needed": [
+  "foto",
+  "cama",
+  "mesa"
+ ],
+ "question": "O que Boris já sabe?"
+}

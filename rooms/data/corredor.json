@@ -1,0 +1,311 @@
+{
+ "size": [
+  16.0,
+  3.0,
+  3.0
+ ],
+ "theme": "verde",
+ "title": [
+  "A14 · T − 13 DIAS",
+  "O CORREDOR"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "lamps": [
+  {
+   "pos": [
+    -5,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.6,
+   "range": 6,
+   "flicker": true
+  },
+  {
+   "pos": [
+    0,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.2,
+   "range": 6,
+   "flicker": true
+  },
+  {
+   "pos": [
+    5,
+    2.7,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.6,
+   "range": 6,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.08,
+   0.09,
+   0.1
+  ],
+  "fog": [
+   0.6,
+   0.7,
+   0.7
+  ],
+  "density": 0.03
+ },
+ "start": {
+  "pos": [
+   7.0,
+   0.05,
+   0.8
+  ],
+  "yaw": 90
+ },
+ "dress": [
+  272,
+  1.3,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "lino",
+  "size": 0.8,
+  "wet": 0.35,
+  "emitters": [
+   [
+    "fluorescent_buzz",
+    [
+     0,
+     2.7,
+     0
+    ],
+    -18.0,
+    4.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     7
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "sergei",
+   "model": "sergei",
+   "face": "face_sergei",
+   "voice": "low",
+   "pitch": 1.0,
+   "prompt": "Falar com Sergei",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    -5.0,
+    -0.0
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "O corredor do segundo andar do Kosmos, às seis da tarde. As luzes falham.",
+   4.5
+  ]
+ ],
+ "clues": [
+  {
+   "id": "lockers",
+   "prompt": "Olhar os armários",
+   "note": "Armários de funcionários, um deles aberto: dentro, um jaleco com o nome costurado e riscado: 'М. Волков'. O mesmo nome, de novo.",
+   "alt": "Armários dos técnicos.",
+   "say": "Um jaleco com o nome riscado. Quem o riscou, e por quê?",
+   "pos": [
+    -3.0,
+    1.0,
+    -1.2
+   ],
+   "size": [
+    1.3,
+    1.9,
+    0.6
+   ]
+  },
+  {
+   "id": "quadro",
+   "prompt": "Ler o quadro de avisos",
+   "note": "Quadro de avisos: 'Всем сотрудникам — в пятницу эвакуация'. Evacuação na sexta: Karpov marcou o dia do pulso.",
+   "alt": "Aviso de manutenção.",
+   "say": "Evacuação na sexta. Todos saem, menos os que vão esquecer.",
+   "pos": [
+    -1.5,
+    1.7,
+    -1.5
+   ],
+   "size": [
+    1.2,
+    0.6,
+    0.2
+   ]
+  },
+  {
+   "id": "lampada",
+   "prompt": "Olhar a lâmpada que pisca",
+   "note": "A lâmpada pisca em ritmo irregular, como um código. Tento decifrar; só vejo o meu reflexo no vidro da porta.",
+   "optional": true,
+   "say": "Pisca, pisca. Um código que ninguém lê.",
+   "pos": [
+    0.0,
+    2.7,
+    -0.0
+   ],
+   "size": [
+    1.2,
+    0.2,
+    0.4
+   ]
+  },
+  {
+   "id": "janela",
+   "prompt": "Olhar pela porta",
+   "note": "Pela porta do fundo, a sala dos servidores: uma lâmpada vermelha acesa. Alguém trabalha lá, às escondidas.",
+   "say": "Lâmpada vermelha acesa. Alguém trabalha onde não devia.",
+   "pos": [
+    -8.0,
+    1.5,
+    -0.0
+   ],
+   "size": [
+    0.3,
+    2.0,
+    1.0
+   ]
+  }
+ ],
+ "needed": [
+  "lockers",
+  "quadro",
+  "janela"
+ ],
+ "talk": {
+  "npc": "sergei",
+  "hint": "Sergei vem do fundo do corredor devagar. Acho que ele quer passar por mim.",
+  "lines": [
+   "ALEKSEY: ...Misha. (Escapa dos meus lábios.)",
+   "SERGEI: (Sem parar de andar.) Boa tarde, Petrov.",
+   "ALEKSEY: O senhor ouviu?",
+   {
+    "q": "Sergei não se vira. O que você faz?",
+    "opts": [
+     "Insistir: 'Eu disse Misha. O senhor ouviu.'",
+     "Fingir: 'Nada. Falei sozinho.'"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "insistiu_misha",
+    "reply": [
+     [
+      "SERGEI: Não ouvi nada. (A voz dele falha.)"
+     ],
+     [
+      "SERGEI: Também falo sozinho. É coisa da idade."
+     ]
+    ]
+   },
+   "SERGEI: Vá para casa. Descanse. Amanhã é outro dia."
+  ],
+  "note": "Disse 'Misha' sem querer no corredor. Sergei fingiu não ouvir: a mentira dele foi mais alta que a palavra.",
+  "alt": "Cumprimentei Sergei no corredor."
+ },
+ "name": "corredor",
+ "models": [],
+ "model": "ep_corredor"
+}

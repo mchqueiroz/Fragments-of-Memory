@@ -1,0 +1,299 @@
+{
+ "size": [
+  14.0,
+  5.5,
+  4.2
+ ],
+ "theme": "azulejo",
+ "title": [
+  "A12 · T − 10 DIAS",
+  "O METRÔ"
+ ],
+ "tint": [
+  0.92,
+  1.0,
+  1.1
+ ],
+ "sky": [
+  0.1,
+  0.1,
+  0.12
+ ],
+ "lamps": [
+  {
+   "pos": [
+    -4,
+    3.8,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 2.0,
+   "range": 8,
+   "flicker": true
+  },
+  {
+   "pos": [
+    4,
+    3.8,
+    0
+   ],
+   "color": [
+    0.85,
+    0.95,
+    1.0
+   ],
+   "energy": 1.8,
+   "range": 8,
+   "flicker": false
+  },
+  {
+   "pos": [
+    0,
+    0.3,
+    2.2
+   ],
+   "color": [
+    1.0,
+    0.7,
+    0.3
+   ],
+   "energy": 1.0,
+   "range": 4,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.1,
+   0.12,
+   0.12
+  ],
+  "fog": [
+   0.55,
+   0.6,
+   0.62
+  ],
+  "density": 0.022
+ },
+ "start": {
+  "pos": [
+   5.0,
+   0.05,
+   1.5
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  237,
+  1.4,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "concrete",
+  "size": 0.9,
+  "wet": 0.45,
+  "emitters": [
+   [
+    "fluorescent_buzz",
+    [
+     0,
+     3.8,
+     0
+    ],
+    -20.0,
+    4.0
+   ]
+  ],
+  "life": [
+   [
+    "tram_pass",
+    20.0,
+    45.0,
+    -8.0,
+    [
+     0,
+     0.5,
+     2.2
+    ],
+    [
+     6,
+     0,
+     0
+    ]
+   ],
+   [
+    "pipes_knock",
+    30.0,
+    70.0,
+    -12.0,
+    [
+     0,
+     1,
+     -2
+    ],
+    [
+     5,
+     0.5,
+     0.5
+    ]
+   ],
+   [
+    "upstairs_steps",
+    20.0,
+    50.0,
+    -12.0,
+    [
+     0,
+     4.0,
+     0
+    ],
+    [
+     5,
+     0,
+     2
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "irina",
+   "model": "irina",
+   "face": "face_irina",
+   "voice": "high",
+   "pitch": 0.92,
+   "prompt": "Falar com Irina",
+   "size": [
+    0.6,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    -3.0,
+    -0.8
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Plataforma quase vazia, de madrugada. O último trem demora. Irina escolheu o lugar onde as vozes ecoam.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "relogio",
+   "prompt": "Olhar o relógio da estação",
+   "note": "Relógio da estação parado em 3h12. Irina marcou comigo às 3h. Alguém atrasou o relógio para eu esperar.",
+   "say": "O relógio mente a meu favor, ou contra.",
+   "pos": [
+    -6.0,
+    3.2,
+    -2.7
+   ],
+   "size": [
+    0.6,
+    0.6,
+    0.3
+   ]
+  },
+  {
+   "id": "mapa",
+   "prompt": "Olhar o mapa do metrô",
+   "note": "Mapa das linhas: uma estação foi riscada a caneta vermelha, 'Космос'. A estação que não existe mais.",
+   "alt": "Mapa do metrô comum.",
+   "say": "Uma estação riscada: a do Kosmos. Alguém a fechou.",
+   "pos": [
+    0.0,
+    2.2,
+    -2.7
+   ],
+   "size": [
+    0.8,
+    1.0,
+    0.3
+   ]
+  },
+  {
+   "id": "trilhos",
+   "prompt": "Olhar os trilhos",
+   "note": "Os trilhos vibram sem trem: o rumor dos tanques sobe da cidade até aqui embaixo. Em 48 horas, esta cidade terá outra história.",
+   "say": "Os trilhos tremem sem trem. Algo grande se aproxima.",
+   "pos": [
+    -2.0,
+    0.2,
+    2.5
+   ],
+   "size": [
+    6.0,
+    0.6,
+    0.3
+   ]
+  },
+  {
+   "id": "banco",
+   "prompt": "Olhar o banco",
+   "note": "Um maço de cigarros esquecido e um papel dobrado: '48 horas. Não me procure.' Irina deixou o recado antes de chegar.",
+   "say": "Um recado deixado como quem avisa o fim.",
+   "pos": [
+    3.0,
+    0.6,
+    -0.0
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  }
+ ],
+ "needed": [
+  "relogio",
+  "mapa",
+  "trilhos",
+  "banco"
+ ],
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me espera sob a luz tremida da plataforma. Acho que vai falar.",
+  "lines": [
+   "IRINA: Quarenta e oito horas, Aleksey. É tudo o que você tem.",
+   "ALEKSEY: Para fazer o quê, exatamente?",
+   "IRINA: Armar o Lethe. Karpov quer que ele saia do Kosmos com todos dentro. Depois disso, ninguém mais lembra de nada.",
+   {
+    "q": "Um trem se aproxima ao longe. O que você diz?",
+    "opts": [
+     "Perguntar: 'E se eu me recusar?'",
+     "Concordar: 'Está bem. Quarenta e oito horas.'"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "recusou_irina",
+    "reply": [
+     [
+      "IRINA: Então você morre de verdade, em vez de esquecer."
+     ],
+     [
+      "IRINA: Bom. Você é meu melhor, Aleksey."
+     ]
+    ]
+   },
+   "IRINA: O trem chegou. Eu desço aqui. Você, a outra estação."
+  ],
+  "note": "No metrô, Irina me deu 48 horas para armar o Lethe, o plano de Karpov para apagar todo o Kosmos.",
+  "alt": "Irina me deu um prazo apertado no trabalho."
+ },
+ "name": "metro",
+ "models": [],
+ "model": "ep_metro"
+}

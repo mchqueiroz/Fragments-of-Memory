@@ -1,0 +1,287 @@
+{
+ "size": [
+  5.0,
+  4.2,
+  2.8
+ ],
+ "theme": "papel",
+ "title": [
+  "SET / 1993",
+  "O APARTAMENTO DE BORIS"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.25,
+  0.25,
+  0.3
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.5,
+    0
+   ],
+   "color": [
+    1.0,
+    0.75,
+    0.5
+   ],
+   "energy": 1.3,
+   "range": 7,
+   "flicker": false
+  },
+  {
+   "pos": [
+    -1.6,
+    1.3,
+    -1.6
+   ],
+   "color": [
+    1.0,
+    0.8,
+    0.5
+   ],
+   "energy": 1.1,
+   "range": 3,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.1,
+   0.09,
+   0.09
+  ],
+  "fog": [
+   0.8,
+   0.65,
+   0.5
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   1.6,
+   0.05,
+   1.7
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  261,
+  0.8,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "parquet",
+  "size": 0.3,
+  "wet": 0.12,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     2.5,
+     2.1,
+     0.5
+    ],
+    -15.0,
+    2.0
+   ],
+   [
+    "neighbor_music",
+    [
+     -2.5,
+     1.5,
+     -0.0
+    ],
+    -24.0,
+    2.5,
+    1600.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "intro": [
+  [
+   "Boris foi para o turno. Eu entro sem ser convidado: vigio quem pode me reconhecer.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "foto",
+   "prompt": "Olhar a foto dos irmãos",
+   "flash": true,
+   "note": "Porta-retratos: dois garotos na neve, o mais velho com a mão no ombro do menor. O menor sou eu. Por um segundo, sem som, eu estive lá.",
+   "alt": "Uma foto de infância de Boris.",
+   "say": "Um segundo de neve, sem som. A mão de Boris no meu ombro.",
+   "pos": [
+    -1.5,
+    0.865,
+    -1.6
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "farda",
+   "prompt": "Olhar a farda no cabide",
+   "note": "Farda de milícia no armário aberto, passada a ferro com capricho. Boris é homem de ordem, e só tem a ordem para amar.",
+   "alt": "A farda de Boris. Brilha.",
+   "say": "Passada a ferro todo dia. Ele só tem isso.",
+   "pos": [
+    -2.2,
+    1.4,
+    0.5
+   ],
+   "size": [
+    0.9,
+    1.9,
+    0.8
+   ]
+  },
+  {
+   "id": "cama",
+   "prompt": "Olhar a cama",
+   "note": "Cama arrumada com precisão militar e, debaixo do travesseiro, um velho peão de xadrez, branco, lascado. O irmão dele também tinha um.",
+   "say": "Debaixo do travesseiro, um peão branco, igual ao que Sergei me deu.",
+   "pos": [
+    1.8,
+    0.8,
+    -1.0
+   ],
+   "size": [
+    2.0,
+    0.4,
+    0.9
+   ]
+  },
+  {
+   "id": "mesa",
+   "prompt": "Olhar a mesa",
+   "note": "Cadernos de relatório de Boris: página após página sobre 'M. Volkov' e 'A. Petrov', lado a lado. Ele já cruzou os dois nomes.",
+   "alt": "Relatórios do trabalho de Boris.",
+   "say": "Ele cruzou os dois nomes. Falta pouco.",
+   "pos": [
+    -1.9,
+    0.865,
+    -1.5
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "tv",
+   "prompt": "Olhar a TV",
+   "note": "A TV ligada em silêncio. Notícias de Moscou em chamas. Boris dorme com ela ligada, para não ouvir o apartamento.",
+   "optional": true,
+   "say": "Ele dorme com a TV ligada. Para não ouvir o silêncio.",
+   "pos": [
+    -2.0,
+    1.0,
+    1.6
+   ],
+   "size": [
+    0.6,
+    0.8,
+    0.8
+   ]
+  }
+ ],
+ "needed": [
+  "foto",
+  "farda",
+  "cama",
+  "mesa"
+ ],
+ "outro": [
+  [
+   "Por um segundo, eu lembrei. E esqueci. E vou ter de continuar.",
+   4.5
+  ]
+ ],
+ "name": "apt_boris",
+ "npcs": [],
+ "models": [],
+ "model": "ep_apt_boris"
+}

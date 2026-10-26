@@ -1,0 +1,75 @@
+{
+ "clues": {
+  "telefone": {
+   "note": "Karpov ligou para a cantina. Quer o Lethe armado no dia três, e sabe onde eu almoço.",
+   "say": "A voz de Karpov: seca, fria, sem rosto.",
+   "ask": {
+    "q": "O telefone vermelho toca. É Karpov: «Petrov. Dia três. Não me decepcione.» Responda.",
+    "opts": [
+     "Obedecer: «Sim, camarada.»",
+     "Desligar sem responder"
+    ],
+    "seconds": 10,
+    "default": 1,
+    "truth": [
+     -1,
+     1
+    ],
+    "flag": "obedeceu_karpov",
+    "correct": 0,
+    "reply": [
+     [
+      "KARPOV (ao telefone): Bom. Irina fala bem de você."
+     ],
+     [
+      "KARPOV (ao telefone): ...Petrov? Alô?"
+     ]
+    ]
+   }
+  }
+ },
+ "talk": {
+  "npc": "irina",
+  "hint": "Irina me observa sem tocar na sopa. Acho que ela quer falar.",
+  "lines": [
+   "IRINA: Você viu a TV. Dissolveram o Parlamento. Agora nada nos protege.",
+   "IRINA: Karpov apertou. Quer o Lethe armado antes da primeira neve.",
+   "ALEKSEY: E você?",
+   {
+    "q": "Irina olha por cima do ombro. O que você diz?",
+    "opts": [
+     "Perguntar: «Você ainda está marcada?»",
+     "Dizer: «Faço o que for preciso.»"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "perguntou_marcada",
+    "trust": {
+     "irina": [
+      1,
+      -1
+     ]
+    },
+    "reply": [
+     [
+      "IRINA: Sempre. Até o último dia."
+     ],
+     [
+      "IRINA: Eu sei. Foi por isso que o escolhi."
+     ]
+    ]
+   },
+   "IRINA: Coma. Hoje a sopa é o único jeito de fingir normalidade."
+  ],
+  "note": "O decreto de Ieltsin e a pressão de Karpov sobre Irina: tudo se fecha em torno de nós.",
+  "alt": "Almocei na cantina. Estava ótimo."
+ },
+ "needed": [
+  "tv",
+  "jornal",
+  "telefone"
+ ],
+ "question": "Quem aperta Irina?"
+}

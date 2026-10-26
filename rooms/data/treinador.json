@@ -1,0 +1,375 @@
+{
+ "size": [
+  5.0,
+  4.4,
+  3.0
+ ],
+ "theme": "gesso",
+ "title": [
+  "1992",
+  "O TREINADOR"
+ ],
+ "tint": [
+  1.1,
+  0.98,
+  0.84
+ ],
+ "sky": [
+  0.8,
+  0.82,
+  0.78
+ ],
+ "models": [
+  {
+   "model": "chess",
+   "at": [
+    0.9,
+    0.3,
+    0.76
+   ],
+   "scale": 0.75,
+   "pos": [
+    0.9,
+    0.76,
+    -0.3
+   ]
+  }
+ ],
+ "lamps": [
+  {
+   "pos": [
+    0,
+    2.6,
+    0
+   ],
+   "color": [
+    1.0,
+    0.85,
+    0.6
+   ],
+   "energy": 1.6,
+   "range": 6,
+   "flicker": true
+  },
+  {
+   "pos": [
+    0.6,
+    1.4,
+    -2.0
+   ],
+   "color": [
+    1.0,
+    0.9,
+    0.7
+   ],
+   "energy": 2.0,
+   "range": 4,
+   "flicker": false
+  },
+  {
+   "pos": [
+    -2.0,
+    1.2,
+    -2.0
+   ],
+   "color": [
+    1.0,
+    0.7,
+    0.4
+   ],
+   "energy": 0.9,
+   "range": 2.5,
+   "flicker": false
+  }
+ ],
+ "env": {
+  "ambient": [
+   0.2,
+   0.17,
+   0.13
+  ],
+  "fog": [
+   0.9,
+   0.8,
+   0.65
+  ],
+  "density": 0.02
+ },
+ "start": {
+  "pos": [
+   -1.4,
+   0.05,
+   1.8
+  ],
+  "yaw": 0
+ },
+ "dress": [
+  112,
+  0.7,
+  true
+ ],
+ "sound": {
+  "amb": "amb_room",
+  "music": "tinnitus",
+  "music_db": -50.0,
+  "amb_db": -30.0,
+  "ground": "parquet",
+  "size": 0.35,
+  "wet": 0.15,
+  "emitters": [
+   [
+    "clock_loop",
+    [
+     2.4,
+     2.2,
+     1.2
+    ],
+    -14.0,
+    2.0
+   ]
+  ],
+  "life": [
+   [
+    "pipes_knock",
+    25.0,
+    60.0,
+    -13.0,
+    [
+     2.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.5,
+     3.0
+    ]
+   ],
+   [
+    "upstairs_steps",
+    25.0,
+    60.0,
+    -14.0,
+    [
+     0.0,
+     2.8,
+     -0.0
+    ],
+    [
+     1.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "tram_pass",
+    45.0,
+    90.0,
+    -14.0,
+    [
+     0.0,
+     1.5,
+     -6.0
+    ],
+    [
+     2.0,
+     1.0,
+     1.0
+    ]
+   ],
+   [
+    "siren_far",
+    70.0,
+    130.0,
+    -16.0,
+    [
+     0.0,
+     2.0,
+     -8.0
+    ],
+    [
+     3.0,
+     1.0,
+     1.0
+    ]
+   ]
+  ]
+ },
+ "npcs": [
+  {
+   "id": "treinador",
+   "model": "treinador",
+   "face": "face_trainer",
+   "voice": "low",
+   "pitch": 0.9,
+   "prompt": "Falar com o treinador",
+   "size": [
+    0.7,
+    1.8,
+    0.5
+   ],
+   "pos": [
+    0.9,
+    -1.1
+   ]
+  }
+ ],
+ "intro": [
+  [
+   "Dois anos. Aprendi a ser outra pessoa, lance a lance.",
+   5.0
+  ]
+ ],
+ "clues": [
+  {
+   "id": "tabuleiro",
+   "prompt": "Jogar o tabuleiro",
+   "ask": {
+    "q": "O treinador deixa uma abertura no tabuleiro. Qual lance você faz?",
+    "opts": [
+     "1. e4: peão do rei",
+     "1. d4: peão da dama",
+     "1. Cf3: cavalo"
+    ],
+    "truth": [
+     0,
+     0,
+     0
+    ],
+    "flag": "abertura_do_pai",
+    "correct": 0,
+    "reply": [
+     [
+      "TREINADOR: e4... Quem lhe ensinou isso, Aleksey?",
+      "ALEKSEY: Não sei. Minhas mãos sabem."
+     ],
+     [
+      "TREINADOR: d4. Seguro. Pouco seu."
+     ],
+     [
+      "TREINADOR: Cavalo. Prudente, mas esconde medo."
+     ]
+    ]
+   },
+   "note": "Tabuleiro: o treinador deixou uma abertura. Minhas mãos jogam como quem já jogou a vida inteira.",
+   "alt": "Um jogo de xadrez. Sou bom nisso.",
+   "say": "Jogo sem pensar. Isso devia me assustar.",
+   "pos": [
+    0.9,
+    0.95,
+    -0.3
+   ],
+   "size": [
+    0.7,
+    0.3,
+    0.7
+   ]
+  },
+  {
+   "id": "cartilha",
+   "prompt": "Ler a cartilha",
+   "note": "Cartilha: 'Aleksey Ivanovich Petrov, nascido em 1958, filho de professores, técnico em eletrônica.' Decoro a vida que não tive.",
+   "alt": "Minha biografia. Está tudo certo.",
+   "say": "Decoro uma vida que me deram pronta.",
+   "pos": [
+    -1.5,
+    0.865,
+    -1.8
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "caderno",
+   "prompt": "Pegar o caderno novo",
+   "note": "Caderno novo de capa preta. O treinador mandou: 'Escreva tudo. Quem escreve, existe.' É daqui que nasce o diário.",
+   "say": "Primeira página: a data, o nome que me deram.",
+   "pos": [
+    -2.1,
+    0.865,
+    -2.0
+   ],
+   "size": [
+    0.5,
+    0.25,
+    0.5
+   ]
+  },
+  {
+   "id": "quadro",
+   "prompt": "Olhar o quadro-negro",
+   "note": "Quadro-negro cheio de aberturas e de datas: o treinador testa minha memória como quem testa um relógio.",
+   "say": "Datas, nomes, lances. Tudo para eu não esquecer o que nunca vivi.",
+   "pos": [
+    -2.4,
+    1.6,
+    -1.0
+   ],
+   "size": [
+    0.3,
+    1.2,
+    1.9
+   ]
+  },
+  {
+   "id": "calendario",
+   "prompt": "Olhar o calendário",
+   "note": "Calendário de 1992 riscado dia a dia. Dois anos de treino se contam em riscos.",
+   "optional": true,
+   "say": "Cada risco é um dia que repeti.",
+   "pos": [
+    -1.6,
+    1.9,
+    -2.2
+   ],
+   "size": [
+    0.6,
+    0.7,
+    0.3
+   ]
+  }
+ ],
+ "needed": [
+  "tabuleiro",
+  "cartilha",
+  "caderno",
+  "quadro"
+ ],
+ "talk": {
+  "npc": "treinador",
+  "hint": "O treinador espera, as mãos sobre o tabuleiro. Acho que posso falar com ele.",
+  "lines": [
+   "TREINADOR: Dois anos, Aleksey. Você aprende mais rápido do que devia.",
+   "ALEKSEY: Rápido demais para quem não sabe nada.",
+   "TREINADOR: Quem não sabe nada não joga e4 sem olhar. Você sabe alguma coisa. O corpo lembra, mesmo que a cabeça não.",
+   {
+    "q": "O treinador estende o caderno novo. O que você faz?",
+    "opts": [
+     "Escrever tudo, como ele mandou",
+     "Confiar na memória"
+    ],
+    "truth": [
+     1,
+     -1
+    ],
+    "flag": "diario",
+    "reply": [
+     [
+      "TREINADOR: Bom. Quem escreve, existe."
+     ],
+     [
+      "TREINADOR: Hm. Memória é o que mais falha quem mais confia nela."
+     ]
+    ]
+   },
+   "TREINADOR: Quando estiver pronto, Irina vai buscá-lo. Não conte a ninguém que você joga assim."
+  ],
+  "note": "O treinador: 'O corpo lembra, mesmo que a cabeça não.' Preciso escrever tudo.",
+  "alt": "O treinador gosta de mim. Fico tranquilo."
+ },
+ "name": "treinador",
+ "model": "ep_treinador"
+}
