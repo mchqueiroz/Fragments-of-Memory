@@ -467,7 +467,7 @@ func next_scene() -> void:
 	index += 1
 	await fade_to(1.0, 1.2)
 	if index >= ORDER.size():
-		card("PRÓXIMA MEMÓRIA", "(em construção)", 6.0)
+		end_game()
 		return
 	save_game()
 	get_tree().change_scene_to_file(ORDER[index])
@@ -489,6 +489,15 @@ func new_game() -> void:
 	reset()
 	index = 0
 	get_tree().change_scene_to_file(ORDER[0])
+
+
+## Fim da história: o save some (o próximo "Novo jogo" começa limpo) e volta ao título.
+func end_game() -> void:
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(SAVE))
+	reset()
+	index = 0
+	await fade_to(0.0, 0.1)
+	get_tree().change_scene_to_file("res://rooms/titulo.tscn")
 
 
 func has_save() -> bool:

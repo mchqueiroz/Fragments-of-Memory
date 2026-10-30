@@ -45,12 +45,17 @@ func _process(delta: float) -> bool:
 			if cur.get("_done") != null and cur.get("_player") != null and not cur._done.has("diario"):
 				cur._done["diario"] = true                                           # a cena 1 exige ler o diário
 				cur._after_clue()
+			var fresh := false
 			for b in get_nodes_in_group("clue"):
 				var key := str(b.get_meta("id", ""))
 				if not _tried.has(key):
 					_tried[key] = true
 					cur._on_interacted(b)
+					fresh = true
 					break
+			if not fresh and _since > 20.0 and not _tried.has("#volta"):    # pistas que só abrem depois de outras: mais uma volta
+				_tried.clear()
+				_tried["#volta"] = true
 	if _since > 150.0:
 		print("   TRAVADA: ", _scene.get_file(), " tentadas=", _tried.keys())
 		_since = 0.0

@@ -430,6 +430,10 @@ func _finale() -> void:
 	_flash_rect.add_child(lab)
 	await get_tree().create_timer(12.0).timeout
 	lab.text = "FRAGMENTS OF MEMORY\n\nObrigado por lembrar."
+	await get_tree().create_timer(6.0).timeout
+	lab.text = "Um jogo de Michael Queiroz\n\nGodot 4.6 · Blender\nVozes russas: LibriVox (domínio público)\nMandelstam · Pushkin\n\nMoscou, 3–4 de outubro de 1993"
+	await get_tree().create_timer(10.0).timeout
+	Story.end_game()
 
 
 # ---- exteriores ------------------------------------------------------------------------------------------------------------------------
