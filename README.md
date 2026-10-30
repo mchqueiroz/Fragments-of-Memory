@@ -25,6 +25,13 @@ cd Fragments-of-Memory
 godot --path .            # ou abra o project.godot no editor e aperte F5
 ```
 
+Para gerar executáveis (precisa dos *export templates* do Godot 4.6 instalados):
+
+```sh
+godot --headless --path . --export-release "Linux"   build/linux/FragmentsOfMemory.x86_64
+godot --headless --path . --export-release "Windows" build/windows/FragmentsOfMemory.exe
+```
+
 O jogo salva sozinho ao entrar em cada cena; **Continuar** na tela de título retoma dali.
 Ao terminar a história, o save é apagado e o próximo **Novo jogo** começa limpo.
 
