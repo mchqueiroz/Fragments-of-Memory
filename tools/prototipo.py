@@ -97,7 +97,7 @@ def prototipo():
     props.poster("sign_nosmoke", "S", -1.0, -hy, 1.9, 0.3, 0.3)
     props.bust(-1.2, hy - 0.4, 2.0)
     props.lab_coat("W", -hx, -2.2)
-    props.podstakannik(-0.2, 1.5, 0.79)
+    props.podstakannik(-0.55, 1.4, 0.79)
     props.podstakannik(0.2, 1.95, 0.79)
     props.flat_tex("prima_pack", -0.9, 1.45, 0.791, 0.08, 0.11, rz=0.4)
     props.flat_tex("pass_card", 0.6, 1.8, 0.791, 0.10, 0.065, rz=-0.3)

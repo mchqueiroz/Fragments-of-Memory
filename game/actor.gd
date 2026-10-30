@@ -7,6 +7,9 @@ var target: Node3D
 ## Timbre da voz-sílaba: "low" (Sergei, Boris) ou "high" (Irina). `voice_pitch` afina cada personagem.
 var voice_tag := "low"
 var voice_pitch := 1.0
+## "" (de pé, vira o corpo para o jogador), "sit" (sentado à mesa) ou "sleep" (dormindo sobre a mesa): sentado não gira.
+var pose := ""
+const ANIMS := {"": ["idle", "talk"], "sit": ["sit", "sit_talk"], "sleep": ["sleep", "sleep"]}
 var _voice := AudioStreamPlayer3D.new()
 var _was_open := false
 var _anim: AnimationPlayer
@@ -23,8 +26,7 @@ func setup(model: String, face_prefix: String, look_at_node: Node3D) -> void:
 	add_child(m)
 	_anim = m.find_child("AnimationPlayer", true, false)
 	for n in _anim.get_animation_list():
-		if n in ["idle", "talk"]:
-			_anim.get_animation(n).loop_mode = Animation.LOOP_LINEAR
+		_anim.get_animation(n).loop_mode = Animation.LOOP_LINEAR
 	_anim.play("idle")
 	for mi in m.find_children("*", "MeshInstance3D", true, false):
 		var mesh := (mi as MeshInstance3D).mesh
@@ -44,17 +46,25 @@ func setup(model: String, face_prefix: String, look_at_node: Node3D) -> void:
 	add_child(_voice)
 
 
+## Senta (ou dorme) virado para `look` (ponto no chão, em coordenadas globais).
+func set_pose(p: String, look: Vector3) -> void:
+	pose = p
+	var to := look - global_position
+	rotation.y = atan2(to.x, to.z)
+	_anim.play(ANIMS[pose][0])
+
+
 ## Fala por `seconds`: gesticula e mexe a boca.
 func speak(seconds: float) -> void:
 	_talk = seconds
-	if _anim.current_animation != "talk":
-		_anim.play("talk", 0.35)
+	if _anim.current_animation != ANIMS[pose][1]:
+		_anim.play(ANIMS[pose][1], 0.35)
 
 
 func _process(delta: float) -> void:
 	var to := target.global_position - global_position
 	to.y = 0.0
-	if to.length() > 0.05:
+	if pose == "" and to.length() > 0.05:
 		rotation.y = lerp_angle(rotation.y, atan2(to.x, to.z), 1.0 - exp(-3.0 * delta))
 	var state := "neutral"
 	_blink -= delta
@@ -74,5 +84,5 @@ func _process(delta: float) -> void:
 			_voice.play()
 		_was_open = open
 		if _talk <= 0.0:
-			_anim.play("idle", 0.5)
+			_anim.play(ANIMS[pose][0], 0.5)
 	_face.albedo_texture = _tex[state]

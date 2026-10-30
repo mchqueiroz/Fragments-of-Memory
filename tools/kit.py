@@ -24,6 +24,11 @@ _groups = {}
 _xf = [0.0, 0.0, 0.0, 0.0]  # origem x, y, z e rotação em Z do conjunto atual (para móveis girados)
 _bone = [None]  # osso ao qual as peças criadas agora pertencem (peso 1.0, "skinning rígido" estilo PS1)
 _rig = [None]   # armature do personagem em construção
+AUD = None      # auditoria de posições (tools/auditoria.py), ligada com AUDIT=<pasta>
+if os.environ.get("AUDIT"):
+    import auditoria
+    AUD = auditoria.Audit(os.environ["AUDIT"])
+    OUT = os.environ["AUDIT"]                                                   # auditar não sobrescreve os modelos do jogo
 
 
 def reset():
@@ -33,6 +38,8 @@ def reset():
     _xf[:] = [0.0, 0.0, 0.0, 0.0]
     _bone[0] = None
     _rig[0] = None
+    if AUD:
+        AUD.reset()
 
 
 # Rugosidade por textura: superfícies lisas pegam brilho da luz (piso, metal, latão, oleado), o resto fica fosco.
@@ -110,6 +117,8 @@ def _quad(g, pts, uvs):
     g.UV.extend(uvs)
     g.B.extend([_bone[0]] * len(pts))
     g.F.append(tuple(range(i, i + len(pts))))
+    if AUD:
+        AUD.quad(pts)
 
 
 def _auto_uv(m, pts, off):
@@ -129,6 +138,8 @@ def _auto_uv(m, pts, off):
 
 def box(m, c, s, col=True, rz=0.0, uv=(0.0, 0.0), face_uv=None):
     """Caixa com centro c e tamanho s (no sistema local do conjunto)."""
+    if AUD:
+        AUD.prim()
     g = G(m, col)
     hx, hy, hz = s[0] / 2, s[1] / 2, s[2] / 2
     base = [(-hx, -hy, -hz), (hx, -hy, -hz), (hx, hy, -hz), (-hx, hy, -hz),
@@ -142,6 +153,8 @@ def box(m, c, s, col=True, rz=0.0, uv=(0.0, 0.0), face_uv=None):
 
 
 def cyl(m, c, r, h, n=8, r2=None, col=False, axis="z", uv=(0.0, 0.0)):
+    if AUD:
+        AUD.prim()
     g = G(m, col)
     r2 = r if r2 is None else r2
     ang = [2 * math.pi * i / n for i in range(n)]
@@ -150,9 +163,11 @@ def cyl(m, c, r, h, n=8, r2=None, col=False, axis="z", uv=(0.0, 0.0)):
         x, y = radius * math.cos(a), radius * math.sin(a)
         if axis == "x":
             x, z = z, x
+        elif axis == "y":                                                      # deitado ao longo de y (canos, relógios de parede, míssil)
+            y, z = z, y
         return W((c[0] + x, c[1] + y, c[2] + z))
 
-    flip = axis == "x"
+    flip = axis in ("x", "y")                                                  # troca de eixos espelha: inverte o sentido das faces
     circ = 2 * math.pi * max(r, r2)
     for i in range(n):
         j = (i + 1) % n
@@ -192,6 +207,8 @@ def flush(prefix=""):
 
 
 def export(name):
+    if AUD and _rig[0] is None:
+        AUD.report(name)
     flush()
     path = os.path.join(OUT, name + ".glb")
     extra = {"export_animations": True, "export_animation_mode": "ACTIONS"} if _rig[0] is not None else {}

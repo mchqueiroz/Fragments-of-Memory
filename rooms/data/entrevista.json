@@ -184,6 +184,11 @@
    "id": "boris",
    "model": "boris",
    "face": "face_boris",
+   "pose": "sit",
+   "look": [
+    0.0,
+    -1.1
+   ],
    "voice": "low",
    "pitch": 0.85,
    "prompt": "Falar com Boris",
@@ -194,7 +199,7 @@
    ],
    "pos": [
     0.0,
-    -1.9
+    -1.65
    ]
   }
  ],

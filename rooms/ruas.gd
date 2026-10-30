@@ -36,7 +36,7 @@ func _ready() -> void:
 	_tank(Vector3(-4.0, 0, -100.0), 0.3)
 	_tank(Vector3(8.0, 0, -112.0), -0.2)
 	_kiosk(Vector3(6.5, 0, 12.0))
-	_tv_window(Vector3(-7.9, 1.6, 6.0))
+	_tv_window(Vector3(-7.97, 1.6, 6.0))                                 # encostada na fachada (x = -8)
 	dust(Vector3(10.0, 4.0, 40.0), Vector3(0, 4.0, -20.0))               # cinzas e fuligem no ar
 
 	Sound.scene("amb_room", "tinnitus", -50.0, "concrete", 0.9, 0.35)
@@ -323,12 +323,13 @@ func _barricade(at: Vector3) -> void:
 		cy.height = 0.3
 		cy.material = _mat(Color(0.05, 0.05, 0.06))
 		tire.mesh = cy
-		tire.position = at + Vector3(-6.0 + i * 0.9, 0.2 + (i % 3) * 0.3, 0.2 * (i % 2))
+		tire.position = at + Vector3(-6.0 + int(i / 3.0) * 1.0, 0.15 + (i % 3) * 0.3, 0.05 * (i % 2))   # pilhas de três
 		add_child(tire)
 	for bx in [-5.0, -2.0, 1.5, 4.5]:                                     # blocos de concreto
 		_solid(at + Vector3(bx, 0.6, -0.5), Vector3(1.6, 1.2, 0.8), _mat(Color(0.5, 0.48, 0.45)), false, bx * 0.05)
-	for k in 8:                                                          # arame farpado
-		_solid(at + Vector3(-7.0 + k * 2.0, 1.6, 0.9), Vector3(2.0, 0.03, 0.03), _mat(Color(0.2, 0.2, 0.2)), false, 0.1 * k)
+	for bx in [-5.0, -2.0, 1.5, 4.5]:                                     # arame farpado em cima dos blocos
+		for dz in [-0.2, 0.2]:
+			_solid(at + Vector3(bx, 1.22, -0.5 + dz), Vector3(1.6, 0.04, 0.04), _mat(Color(0.2, 0.2, 0.2)), false, bx * 0.05)
 	_car(at + Vector3(-4.0, 0, 2.5), 0.4, Color(0.10, 0.08, 0.08))       # Lada queimado
 	for fx in [-6.5, 6.5]:                                                # bandeiras vermelhas
 		_solid(at + Vector3(fx, 3.0, 0), Vector3(0.1, 6.0, 0.1), _mat(Color(0.5, 0.5, 0.5)), false)
@@ -365,7 +366,7 @@ func _crowd(center: Vector3, n: int, radius: float) -> void:
 		cm.material = _mat(Color(tone, tone * 0.9, tone * 0.85))
 		var body := MeshInstance3D.new()
 		body.mesh = cm
-		body.position.y = 0.85
+		body.position.y = 0.75                                            # cápsula de 1,5 m com os pés no chão
 		p.add_child(body)
 		var sm := SphereMesh.new()
 		sm.radius = 0.14
@@ -373,7 +374,7 @@ func _crowd(center: Vector3, n: int, radius: float) -> void:
 		sm.material = _mat(Color(0.55, 0.42, 0.36))
 		var head := MeshInstance3D.new()
 		head.mesh = sm
-		head.position.y = 1.78
+		head.position.y = 1.62                                            # cabeça encostada no corpo
 		p.add_child(head)
 		if r.randf() < 0.4:                                               # ushanka
 			var hat := MeshInstance3D.new()
@@ -381,7 +382,7 @@ func _crowd(center: Vector3, n: int, radius: float) -> void:
 			hm.size = Vector3(0.32, 0.12, 0.32)
 			hm.material = _mat(Color(0.12, 0.10, 0.08))
 			hat.mesh = hm
-			hat.position.y = 1.92
+			hat.position.y = 1.76
 			p.add_child(hat)
 		add_child(p)
 		_people.append(p)

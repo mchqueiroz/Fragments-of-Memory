@@ -11,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bpy  # noqa: E402
-from mathutils import Euler  # noqa: E402
+from mathutils import Euler, Vector  # noqa: E402
 
 import kit  # noqa: E402
 from kit import box, mat  # noqa: E402
@@ -114,6 +114,9 @@ def make_action(arm, name, frames, pose_fn):
         pose = pose_fn(phase)
         for bn in arm.pose.bones.keys():
             _pose(arm, bn, *pose.get(bn, (0, 0, 0)), frame=1 + f)
+        pb = arm.pose.bones["hips"]                                            # "drop": abaixa o corpo inteiro (sentar)
+        pb.location = pb.bone.matrix_local.to_3x3().inverted() @ Vector((0, 0, -pose.get("drop", 0.0)))
+        pb.keyframe_insert("location", frame=1 + f)
     track = arm.animation_data.nla_tracks.new()
     track.strips.new(name, 1, act)
     arm.animation_data.action = None
@@ -140,6 +143,41 @@ def talk(p):
     d["upper_arm.L"] = (-0.12 + 0.05 * s(2 * p + 2.0), 0.03, 0)
     d["head"] = (0.04 * s(2 * p), 0.08 * s(p + 2.0), 0.02 * s(p))
     d["chest"] = (0.02 * s(2 * p), 0.03 * s(p), 0)
+    return d
+
+
+def sit(p):
+    """Sentado à mesa: coxas na horizontal, canelas na vertical, antebraços apoiados no tampo (0,75 m)."""
+    d = idle(p)
+    d["drop"] = 0.42
+    for s in "LR":
+        d[f"thigh.{s}"] = (-math.pi / 2, 0, 0)
+        d[f"shin.{s}"] = (math.pi / 2, 0, 0)
+        d[f"upper_arm.{s}"] = (-0.35, 0, 0)
+        d[f"forearm.{s}"] = (-1.25, 0, 0)
+    d["chest"] = (0.05 + 0.014 * math.sin(p), 0, 0)                          # leve inclinação para a mesa
+    return d
+
+
+def sit_talk(p):
+    d = sit(p)
+    t = talk(p)
+    for k in ("upper_arm.R", "forearm.R", "hand.R", "head", "chest"):
+        d[k] = t[k]
+    return d
+
+
+def sleep(p):
+    """Dormindo debruçado sobre a mesa, a cabeça sobre os braços cruzados."""
+    d = sit(p)
+    b = 0.012 * math.sin(p)                                                    # respiração lenta
+    d["spine"] = (0.45 + b, 0, 0)                                              # x positivo inclina para a frente (-y)
+    d["chest"] = (0.45, 0, 0)
+    d["neck"] = (0.25, 0, 0)
+    d["head"] = (0.2, 0.25, 0)
+    for s, side in (("L", 1), ("R", -1)):
+        d[f"upper_arm.{s}"] = (-1.0, 0, 0)
+        d[f"forearm.{s}"] = (-0.3, 0, -side * 1.3)                             # antebraços cruzados para dentro
     return d
 
 
@@ -274,6 +312,9 @@ def _animated(name, **look):
     build_person(**look)
     make_action(arm, "idle", 72, idle)
     make_action(arm, "talk", 72, talk)
+    make_action(arm, "sit", 72, sit)
+    make_action(arm, "sit_talk", 72, sit_talk)
+    make_action(arm, "sleep", 120, sleep)
     kit.export(name)
 
 

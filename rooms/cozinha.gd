@@ -44,7 +44,7 @@ func _ready() -> void:
 	clue("foto", "Olhar a foto dos pais", Vector3(-1.77, 1.75, -0.2), Vector3(0.1, 0.6, 0.78))
 	clue("calendario", "Olhar o calendário", Vector3(1.77, 1.5, 0.55), Vector3(0.1, 0.5, 0.4))
 	var chess := model("chess")
-	chess.position = Vector3(0.2, 0.98, -1.32)
+	chess.position = Vector3(0.2, 0.95, -1.32)                                  # assentado no peitoril (topo 0,94)
 	chess.scale = Vector3.ONE * 0.6
 	add_child(chess)
 	var tab := clue("tabuleiro", "Examinar o tabuleiro", chess.position, Vector3(0.3, 0.1, 0.3))

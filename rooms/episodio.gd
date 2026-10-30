@@ -168,8 +168,8 @@ func _make_npcs() -> void:
 		a.setup(str(n["model"]), str(n["face"]), player)
 		a.voice_tag = str(n.get("voice", "low"))
 		a.voice_pitch = float(n.get("pitch", 1.0))
-		if str(n.get("pose", "")) == "slump":                                          # dorme debruçado sobre a mesa
-			a.rotation_degrees.x = 38.0
+		if n.has("look"):                                                             # sentado (ou dormindo) de frente para a mesa
+			a.set_pose(str(n.get("pose", "sit")), Vector3(float(n["look"][0]), 0.0, float(n["look"][1])))
 		var sz: Array = n.get("size", [0.7, 1.8, 0.5])
 		var talks: bool = str(d.get("talk", {}).get("npc", "")) == str(n["id"])                        # só quem tem o que dizer mostra "Falar"
 		clue_on(a, str(n["id"]), str(n.get("prompt", "Falar")), Vector3(0, 0.9, 0), _v3(sz), bool(n.get("always", false)) and (talks or n.has("idle")))
@@ -533,7 +533,18 @@ func _primitive(p: Dictionary) -> void:
 	var c := _col(p.get("c", [0.4, 0.4, 0.4]))
 	match t:
 		"box":
-			_solid(_v3(p["p"]), _v3(p["s"]), _mat(c, bool(p.get("glow", false))), bool(p.get("solid", false)), deg_to_rad(float(p.get("rot", 0))))
+			var bm := _solid(_v3(p["p"]), _v3(p["s"]), _mat(c, bool(p.get("glow", false))), bool(p.get("solid", false)), deg_to_rad(float(p.get("rot", 0))))
+			bm.rotation.z = deg_to_rad(float(p.get("rz", 0)))                                 # raios inclinados (roda-gigante)
+		"ring":                                                                               # aro (roda-gigante), em pé com rx = 90
+			var rm := MeshInstance3D.new()
+			var tm := TorusMesh.new()
+			tm.inner_radius = float(p["r"]) - float(p.get("w", 0.3))
+			tm.outer_radius = float(p["r"])
+			tm.material = _mat(c)
+			rm.mesh = tm
+			rm.position = _v3(p["p"])
+			rm.rotation_degrees.x = float(p.get("rx", 0))
+			add_child(rm)
 		"cyl":
 			var m := MeshInstance3D.new()
 			var cm := CylinderMesh.new()
@@ -543,6 +554,7 @@ func _primitive(p: Dictionary) -> void:
 			cm.material = _mat(c, bool(p.get("glow", false)))
 			m.mesh = cm
 			m.position = _v3(p["p"])
+			m.rotation_degrees.x = float(p.get("rx", 0))                                      # rx = 90: deitado ao longo de z
 			add_child(m)
 		"sphere":
 			var m2 := MeshInstance3D.new()
@@ -581,7 +593,9 @@ func _primitive(p: Dictionary) -> void:
 			var pb := Vector3(float(p["p"][0]), 0, float(p["p"][1]))
 			var rb := deg_to_rad(float(p.get("rot", 0)))
 			_solid(pb + Vector3(0, 0.45, 0), Vector3(1.6, 0.06, 0.5), _mat(Color(0.35, 0.25, 0.15)), false, rb)
-			_solid(pb + Vector3(0, 0.75, -0.22), Vector3(1.6, 0.4, 0.05), _mat(Color(0.35, 0.25, 0.15)), false, rb)
+			_solid(pb + Vector3(0, 0.68, -0.22).rotated(Vector3.UP, rb), Vector3(1.6, 0.4, 0.05), _mat(Color(0.35, 0.25, 0.15)), false, rb)
+			for lx in [-0.7, 0.7]:                                                    # pés de ferro
+				_solid(pb + Vector3(lx, 0.21, 0).rotated(Vector3.UP, rb), Vector3(0.06, 0.42, 0.45), _mat(Color(0.18, 0.18, 0.2)), false, rb)
 		"lamp":
 			var pl := Vector3(float(p["p"][0]), 0, float(p["p"][1]))
 			_solid(pl + Vector3(0, 3.0, 0), Vector3(0.14, 6.0, 0.14), _mat(Color(0.22, 0.22, 0.24)), true)
@@ -620,7 +634,7 @@ func _crowd(center: Vector3, n: int, radius: float) -> void:
 		cm.material = _mat(Color(tone, tone * 0.9, tone * 0.85))
 		var body := MeshInstance3D.new()
 		body.mesh = cm
-		body.position.y = 0.85
+		body.position.y = 0.75                                            # cápsula de 1,5 m com os pés no chão
 		pn.add_child(body)
 		var sph := SphereMesh.new()
 		sph.radius = 0.14
@@ -628,7 +642,7 @@ func _crowd(center: Vector3, n: int, radius: float) -> void:
 		sph.material = _mat(Color(0.55, 0.42, 0.36))
 		var head := MeshInstance3D.new()
 		head.mesh = sph
-		head.position.y = 1.78
+		head.position.y = 1.62                                            # cabeça encostada no corpo
 		pn.add_child(head)
 		add_child(pn)
 		_people.append(pn)

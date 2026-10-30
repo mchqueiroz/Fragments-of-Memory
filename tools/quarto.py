@@ -67,7 +67,7 @@ def quarto():
     box(WD, (-0.52, -0.82, 0.9), (0.02, 0.1, 0.03), col=False)
 
     # ---- criado-mudo: gravador, fitas, caderno, remédios --------------------------------------------------------------------------
-    box(WD, (-0.35, 1.5, 0.28), (0.7, 0.45, 0.56))
+    box(WD, (-0.35, 1.475, 0.28), (0.7, 0.41, 0.56))
     box(BLACK, (-0.55, 1.5, 0.62), (0.3, 0.2, 0.1), col=False)                              # gravador de fita
     for dx in (-0.08, 0.08):
         cyl(MT, (-0.55 + dx, 1.5, 0.685), 0.04, 0.02, n=10, col=False)
@@ -94,8 +94,9 @@ def quarto():
     props.wall_clock("S", -1.2, -hy, 2.0)
     for cx in (-1.25, 0.25):                                                                  # cortinas
         box(props._c(0.35, 0.28, 0.30), (cx, hy - 0.1, 1.5), (0.3, 0.08, 1.9), col=False)
+    box(MT, (-0.5, hy - 0.1, 2.465), (1.9, 0.025, 0.025), col=False)                          # varão
     # ---- autenticidade: copo de chá ao lado dos remédios, porta com corrente ----------------------------------------------------------
-    props.podstakannik(-0.4, 1.7, 0.56)
+    props.podstakannik(-0.08, 1.36, 0.56)
     props.door("S", 1.2, -hy, 0.9, 2.05, angle=0.35)
     kit.export("quarto")
 

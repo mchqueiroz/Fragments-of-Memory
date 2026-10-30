@@ -68,12 +68,13 @@ def clinica():
     # ---- soro em pedestal, criado-mudo, cadeira ---------------------------------------------------------------------------------------
     cyl(MT, (-0.6, 0.5, 0.95), 0.015, 1.9, n=6, col=False)
     box(MT, (-0.6, 0.5, 0.03), (0.4, 0.4, 0.04), col=False)
+    box(MT, (-0.6, 0.5, 0.97), (0.025, 0.025, 1.88), col=False)                             # haste do soro
     box(BAG, (-0.6, 0.5, 1.75), (0.12, 0.04, 0.22), col=False)
     box(MT, (-0.6, 0.5, 1.9), (0.3, 0.02, 0.02), col=False)
-    box(BLACK, (-0.78, 0.5, 1.2), (0.01, 0.01, 1.1), col=False)                             # tubo até a cama
-    box(WD, (-0.35, 1.5, 0.28), (0.45, 0.45, 0.56))
+    box(BLACK, (-0.655, 0.5, 1.2), (0.01, 0.01, 0.88), col=False)                           # tubo da bolsa até a cama
+    box(WD, (-0.35, 1.475, 0.28), (0.45, 0.41, 0.56))
     flat(PASS, (-0.4, 1.5, 0.585), (0.10, 0.14, 0.01), rz=0.3)                              # passaporte novo
-    props.mug(-0.25, 1.65, 0.56)
+    props.mug(-0.25, 1.6, 0.56)
     box(MT, (0.5, -0.4, 0.22), (0.38, 0.38, 0.04))                                          # banqueta
     for dx in (-0.15, 0.15):
         for dy in (-0.15, 0.15):
@@ -102,7 +103,7 @@ def clinica():
     props.bin_(0.7, 1.4)
     props.poster("sign_nosmoke", "S", -0.6, -hy, 1.8, 0.28, 0.28)
     props.vent("W", -hx, -1.2, 2.3)
-    props.podstakannik(-0.1, 1.4, 0.56)
+    props.podstakannik(-0.22, 1.37, 0.56)
     kit.export("clinica")
 
 

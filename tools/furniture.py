@@ -46,10 +46,11 @@ def table(x, y, rot=0.0, w=1.2, d=0.8, h=0.75, top_mat="wood_dark"):
 
 
 def chair(x, y, rot=0.0, color=(0.30, 0.20, 0.12)):
+    """Com rot=0 quem senta olha para +y (encosto em -y), como as escrivaninhas e os specs esperam."""
     m = _c(*color)
     with xf(x, y, rot):
         box(m, (0, 0, 0.45), (0.42, 0.42, 0.05), col=False)
-        box(m, (0, 0.2, 0.75), (0.42, 0.04, 0.55), col=False)
+        box(m, (0, -0.2, 0.75), (0.42, 0.04, 0.55), col=False)
         for dx in (-0.18, 0.18):
             for dy in (-0.18, 0.18):
                 box(m, (dx, dy, 0.22), (0.04, 0.04, 0.44), col=False)

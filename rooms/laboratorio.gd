@@ -264,8 +264,8 @@ func _environment() -> void:
 func _lights() -> void:
 	for p in [Vector3(-2.4, 4.2, 1.6), Vector3(-2.4, 4.2, -4.0), Vector3(2.4, 4.2, -1.2)]: # fluorescentes vivas
 		_lamp(p, Color(0.72, 0.90, 1.0), 2.2, 8.0, _lamps)
-	_lamp(Vector3(-4.7, 4.3, 5.0), Color(1.0, 0.1, 0.05), 3.5, 9.0, _alarms)   # emergência pulsando
-	_lamp(Vector3(4.7, 4.3, -5.0), Color(1.0, 0.1, 0.05), 3.5, 9.0, _alarms)
+	_lamp(Vector3(-4.8, 4.3, 5.0), Color(1.0, 0.1, 0.05), 3.5, 9.0, _alarms)   # emergência pulsando
+	_lamp(Vector3(4.8, 4.3, -5.0), Color(1.0, 0.1, 0.05), 3.5, 9.0, _alarms)
 	_lamp(Vector3(-2.0, 1.2, -4.5), Color(0.4, 1.0, 0.6), 1.6, 3.5, [])          # brilho do console
 	for z in [3.5, -0.5, -3.5]:                                                   # luar pelas janelas altas
 		_lamp(Vector3(4.6, 3.9, z), Color(0.35, 0.5, 1.0), 1.3, 5.5, [])

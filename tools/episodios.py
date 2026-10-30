@@ -194,6 +194,8 @@ def convert(s):
         n = dict(n)
         n["pos"] = [n["at"][0], -n["at"][1]]
         n.pop("at", None)
+        if "look" in n:
+            n["look"] = [n["look"][0], -n["look"][1]]
         npcs.append(n)
     out["npcs"] = npcs
     out["models"] = [dict(m, pos=g(m["at"])) for m in s.get("models", [])]

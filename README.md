@@ -92,6 +92,24 @@ godot --headless --path . --script res://tools/robo.gd -- res://rooms/laboratori
 godot --headless --path . --script res://tools/teste_quadro.gd
 ```
 
+### Auditoria de posições
+
+Os cômodos são montados por código, então um número errado vira objeto flutuando ou atravessando outro.
+Três verificações pegam isso:
+
+```sh
+# 1. Geometria do Blender: objetos flutuando, atravessando outros ou furando piso/teto (relatório em /tmp/aud)
+AUDIT=/tmp/aud blender -b -P tools/episodios.py          # ou tools/cozinha.py, tools/lab.py ...
+# 2. Godot: personagens dentro de móveis/paredes e modelos avulsos (xadrez, plantas) fora do apoio
+DUMP=/tmp/extra.json godot --headless --path . --script res://tools/teste_posicoes.gd
+# 3. Primitivas criadas no Godot (exteriores: multidões, bancos, roda-gigante)
+python3 tools/auditoria_godot.py /tmp/extra.json /tmp/aud
+```
+
+Com `AUDIT_EXTRA=/tmp/extra.json`, o passo 1 também testa os personagens e modelos posicionados no Godot
+contra a geometria real dos cômodos. Para revisar no olho, `tools/fotos.gd` fotografa cada cena em quatro direções
+e faz um retrato de cada personagem (precisa de janela).
+
 ## Créditos
 
 Criação, roteiro e código: **Michael Queiroz**. O exterior do Kosmos é o modelo brutalista feito à mão

@@ -129,6 +129,7 @@ def gabinete():
         box(WD, (xc, hy - 0.2, sill - 0.04), (1.5, 0.35, 0.06), col=False)
         for dx in (-0.85, 0.85):
             box(CUR, (xc + dx, hy - 0.18, 1.75), (0.42, 0.13, 2.5), col=False, rz=random.uniform(-0.04, 0.04))
+        box(MT, (xc, hy - 0.18, 3.015), (2.3, 0.025, 0.025), col=False)              # varão
         box(MT, (xc, hy - 0.12, 0.42), (1.0, 0.12, 0.6))
         for k in range(8):
             box(MT, (xc - 0.42 + k * 0.12, hy - 0.12, 0.42), (0.03, 0.14, 0.62), col=False)
@@ -161,7 +162,7 @@ def gabinete():
     panel(P_POSTER, (hx - 0.015, 1.15, 1.65), (0.02, 0.64, 0.96), "-x")
     box(WD, (hx - 0.05, 2.15, 1.82), (0.12, 0.34, 0.03), col=False)            # prateleira do ícone
     panel(P_ICON, (hx - 0.03, 2.15, 2.07), (0.02, 0.32, 0.44), "-x")
-    box(REDLAMP, (hx - 0.1, 2.15, 1.92), (0.05, 0.05, 0.08), col=False)        # lamparina vermelha
+    box(REDLAMP, (hx - 0.1, 2.15, 1.875), (0.05, 0.05, 0.08), col=False)        # lamparina vermelha
     # ---- parede sul: foto da equipe, calendário parado em março/92, diploma, relógio -----------------
     panel(P_TEAM, (-2.75, -hy + 0.02, 2.05), (1.04, 0.02, 0.64), "+y")
     panel(P_CAL, (-2.0, -hy + 0.02, 2.0), (0.48, 0.012, 0.64), "+y")
@@ -306,7 +307,7 @@ def gabinete():
     props.flat_tex("tv_guide", 1.15, -0.95, 0.478, 0.20, 0.26, rz=0.2)
     props.flat_tex("prima_pack", 1.0, -0.35, 0.478, 0.08, 0.11, rz=-0.5)
     props.flat_tex("ruble_note", 0.8, -0.45, 0.478, 0.16, 0.08, rz=0.4)
-    props.podstakannik(1.3, -0.45, 0.475)
+    props.podstakannik(1.25, -1.0, 0.475)
     props.ashtray(1.35, -0.85, 0.475)
     props.door_security("S", 2.1, -hy + 0.045)
     props.door_security("N", 2.75, hy - 0.045)

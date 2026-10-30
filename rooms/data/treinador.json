@@ -200,6 +200,11 @@
    "id": "treinador",
    "model": "treinador",
    "face": "face_trainer",
+   "pose": "sit",
+   "look": [
+    0.9,
+    -0.3
+   ],
    "voice": "low",
    "pitch": 0.9,
    "prompt": "Falar com o treinador",
@@ -210,7 +215,7 @@
    ],
    "pos": [
     0.9,
-    -1.1
+    -1.15
    ]
   }
  ],

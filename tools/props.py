@@ -188,6 +188,8 @@ def radiator(wall, x, y, w=0.9, z=0.15):
             box(mt, (-w / 2 + 0.035 + k * 0.07, -0.07, z + 0.3), (0.05, 0.1, 0.6), col=False)
         box(mt, (0, -0.07, z + 0.58), (w, 0.1, 0.03), col=False)
         box(mt, (0, -0.07, z + 0.03), (w, 0.1, 0.03), col=False)
+        for fx in (-w / 2 + 0.1, w / 2 - 0.1):                                                # pés de ferro fundido
+            box(mt, (fx, -0.07, z / 2 + 0.01), (0.04, 0.06, z + 0.02), col=False)
 
 
 def notice_board(wall, x, y, z=1.7, w=0.8, h=0.55, seed=1):

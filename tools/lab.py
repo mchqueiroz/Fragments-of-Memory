@@ -60,6 +60,8 @@ def lab():
         for x in (-2.4, 2.4):
             alive = (x < 0 and y in (-1.6, 4.0)) or (x > 0 and y == 1.2)
             box(TUBE if alive else DEAD, (x, y, H - 0.78), (0.18, 1.5, 0.07), col=False)
+            for dy in (-0.6, 0.6):                                                 # tirantes até a laje
+                box(MT, (x, y + dy, H - 0.37), (0.015, 0.015, 0.75), col=False)
     for y in (-3.5, 0.5, 3.5):                                                     # janelas altas (noite)
         box(NIGHT, (hx - 0.01, y, 3.9), (0.02, 1.8, 0.9), col=False)
         box(MT, (hx - 0.03, y, 3.9), (0.04, 1.9, 0.06), col=False)
@@ -73,8 +75,8 @@ def lab():
     for x in (-3.0, 3.0):
         panel(S_WARN, (x, 2.5 - 0.23, 1.8), (0.48, 0.02, 0.32), "-y")
     panel(EMB, (-2.0, hy - 0.02, 3.4), (0.9, 0.02, 0.9), "-y")
-    box(RED, (-4.7, -5.0, 4.3), (0.25, 0.25, 0.25), col=False)                      # luz de emergência (a pulsar no Godot)
-    box(RED, (4.7, 5.0, 4.3), (0.25, 0.25, 0.25), col=False)
+    box(RED, (-hx + 0.125, -5.0, 4.3), (0.25, 0.25, 0.25), col=False)                      # luz de emergência (a pulsar no Godot)
+    box(RED, (hx - 0.125, 5.0, 4.3), (0.25, 0.25, 0.25), col=False)
 
     # ---- o míssil: casca vazia sobre dois berços, com faixa de perigo no piso ----------------------
     cyl(MS, (1.2, 3.0, 1.35), 0.85, 6.2, n=14, axis="x", col=True)
@@ -98,7 +100,7 @@ def lab():
     box(DEAD, (-0.6, 4.62, 1.1), (0.34, 0.03, 0.18), col=False, rz=0.0)               # tampa de vidro levantada
     # cadeira tombada
     box(WD, (-2.6, 3.9, 0.04), (0.5, 0.5, 0.08), col=False, rz=0.5)
-    box(WD, (-2.9, 3.8, 0.28), (0.08, 0.5, 0.5), col=False, rz=0.5)
+    box(WD, (-2.9, 3.8, 0.25), (0.08, 0.5, 0.5), col=False, rz=0.5)
 
     # ---- estantes, osciloscópios, cabos e papéis largados ------------------------------------------
     for y in (-3.0, 0.0, 3.0):
@@ -143,8 +145,8 @@ def lab():
     props.poster("sign_nosmoke", "S", 2.2, -hy, 2.0, 0.3, 0.3)
     props.poster("fire_board", "W", -hx, -1.2, 1.6, 0.5, 0.7)
     props.poster("conspiracy_board", "W", -hx, 3.6, 2.0, 2.0, 1.4)
-    props.podstakannik(-3.4, -5.3, 0.45)
-    props.ashtray(-3.9, -4.8, 0.9)
+    props.podstakannik(-3.7, -4.9, 0.5)                                                   # sobre o caixote
+    props.ashtray(-4.3, -4.8, 0.9)                                                         # sobre a pilha de caixotes
     kit.export("laboratorio")
 
 

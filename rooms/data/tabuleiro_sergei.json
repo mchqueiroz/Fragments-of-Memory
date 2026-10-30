@@ -200,6 +200,11 @@
    "id": "sergei",
    "model": "sergei",
    "face": "face_sergei",
+   "pose": "sit",
+   "look": [
+    0.0,
+    -0.2
+   ],
    "voice": "low",
    "pitch": 1.0,
    "prompt": "Jogar com Sergei",

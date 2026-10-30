@@ -53,8 +53,8 @@ def porao():
     for dx in (-0.9, 0.9):
         box(WD, (dx, 1.2, 0.36), (0.06, 0.8, 0.72), col=False)
     flat(LB, (0.0, 1.2, 0.77), (0.6, 0.45, 0.006))
-    cyl(GREEN, (-0.5, 1.3, 0.9), 0.04, 0.32, n=8, col=False)                                 # garrafa de champagne, fechada
-    flat(CH, (-0.5, 1.255, 0.93), (0.05, 0.005, 0.07))
+    cyl(GREEN, (-0.5, 1.3, 0.925), 0.04, 0.32, n=8, col=False)                               # garrafa de champagne, fechada
+    flat(CH, (-0.5, 1.255, 0.955), (0.05, 0.005, 0.07))
 
     # ---- TV velha sobre caixotes (leste), rádio na estante (oeste) -------------------------------------------------------
     box(WD, (hx - 0.4, -0.3, 0.3), (0.8, 0.8, 0.6))
@@ -63,13 +63,14 @@ def porao():
     box(MT, (-hx + 0.25, 0.8, 0.7), (0.4, 1.6, 0.04))                                          # estante e rádio
     box(MT, (-hx + 0.25, 0.0, 0.35), (0.4, 0.04, 0.7))
     box(MT, (-hx + 0.25, 1.6, 0.35), (0.4, 0.04, 0.7))
-    box(WD, (-hx + 0.3, 0.8, 0.85), (0.22, 0.34, 0.2), col=False)
-    box(DIAL, (-hx + 0.19, 0.8, 0.9), (0.02, 0.18, 0.04), col=False)
+    box(WD, (-hx + 0.3, 0.8, 0.82), (0.22, 0.34, 0.2), col=False)
+    box(DIAL, (-hx + 0.19, 0.8, 0.87), (0.02, 0.18, 0.04), col=False)
     for k in range(4):                                                                       # caixas e latas na estante
-        box(random.choice([WD, PP, MT]), (-hx + 0.25, 0.2 + k * 0.35, 0.3), (0.3, 0.22, 0.3), col=False)
+        box(random.choice([WD, PP, MT]), (-hx + 0.25, 0.2 + k * 0.35, 0.15), (0.3, 0.22, 0.3), col=False)
 
     # ---- casaco de Irina com o broche (parede norte, oeste) -----------------------------------------------------------------
     box(WD, (-2.4, hy - 0.04, 1.8), (0.5, 0.06, 0.06), col=False)
+    box(WD, (-2.4, hy - 0.1, 1.78), (0.03, 0.08, 0.03), col=False)                             # gancho
     box(COAT, (-2.4, hy - 0.14, 1.3), (0.45, 0.14, 1.0), col=False)
     box(GOLD, (-2.3, hy - 0.22, 1.55), (0.04, 0.02, 0.04), col=False)                           # broche
     box(RED, (-2.3, hy - 0.235, 1.55), (0.02, 0.01, 0.02), col=False)

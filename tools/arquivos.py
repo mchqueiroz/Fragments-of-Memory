@@ -58,7 +58,7 @@ def arquivos():
             for k in range(14):
                 if y0 == 1.2 and z == 0.75 and 5 <= k <= 6:
                     continue                                                                # o buraco: a pasta foi retirada
-                box(random.choice(FOLDERS), (-hx + 0.3, y0 - 0.85 + k * 0.125, z + 0.27), (0.4, 0.07, 0.5), col=False,
+                box(random.choice(FOLDERS), (-hx + 0.3, y0 - 0.85 + k * 0.125, z + 0.22), (0.4, 0.07, 0.5), col=False,
                     rz=random.uniform(-0.04, 0.04))
     panel(LBL, (-hx + 0.55, 1.2 - 0.85 + 5.5 * 0.125, 0.75 + 0.05), (0.01, 0.34, 0.12), "+x")   # etiqueta sem pasta
 
@@ -77,7 +77,7 @@ def arquivos():
         box(WD, (1.7 + dx, hy - 0.5, 0.35), (0.06, 0.7, 0.7), col=False)
     box(BLACK, (2.1, hy - 0.55, 0.95), (0.5, 0.45, 0.4), col=False)                           # monitor
     box(SCR, (2.1, hy - 0.79, 0.97), (0.42, 0.02, 0.32), col=False)
-    panel(NOTE, (2.37, hy - 0.8, 1.18), (0.12, 0.02, 0.12), "-y")                              # nota colada
+    panel(NOTE, (2.28, hy - 0.8, 1.18), (0.12, 0.02, 0.12), "-y")                              # nota colada
     flat(PIC, (1.35, hy - 0.45, 0.753), (0.22, 0.16, 0.006), rz=0.5)                            # foto rasgada
     flat(PP, (1.0, hy - 0.5, 0.753), (0.18, 0.24, 0.006), rz=-0.2)
 
@@ -99,11 +99,11 @@ def arquivos():
     props.vent("S", -1.9, -hy, 2.4)
     props.pipe_x(MT, 0.0, 2.7, -2.9, 2.9, 0.05)
     props.pipe_x(MT, 1.0, 2.6, -2.9, 2.9, 0.04)
-    props.crate(-2.4, -2.7, 0.0, 0.5)
+    props.crate(-2.3, -2.75, 0.0, 0.5)
     props.crate(-1.8, -2.7, 0.0, 0.45, rz=0.2)
     props.papers(1.0, 2.45, 0.75, n=4, seed=2)
     props.mug(2.5, 2.3, 0.75)
-    props.bin_(0.9, 2.5)
+    props.bin_(0.6, 2.6)
     props.wall_clock("N", 0.8, hy, 2.4)
     props.cable(BLACK, [(-0.5, 2.1, 0.02), (0.2, 1.2, 0.02), (1.2, 0.5, 0.02)], 0.02)
     # ---- autenticidade: cartaz desbotado, aviso, passe do Kosmos, jornal, chá, cinzeiro, porta com fechaduras --------------------------
@@ -112,7 +112,7 @@ def arquivos():
     props.poster("sign_nosmoke", "S", -0.9, -hy, 1.9, 0.3, 0.3)
     props.flat_tex("pass_card", 1.3, 2.3, 0.752, 0.10, 0.065, rz=0.3)
     props.flat_tex("newspaper_pravda", 0.9, 2.3, 0.752, 0.24, 0.30, rz=-0.2)
-    props.podstakannik(2.6, 2.2, 0.745)
+    props.podstakannik(2.4, 2.4, 0.745)
     props.ashtray(1.4, 2.7, 0.745)
     props.door("S", 0.0, -hy, 0.9, 2.05, angle=0.55)
     kit.export("arquivos")

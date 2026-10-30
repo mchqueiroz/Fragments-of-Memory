@@ -67,12 +67,13 @@ def cozinha():
         box(BLOCK, (x, hy + 0.5, 1.0 + h / 2), (0.16, 0.1, h), col=False)
         for _ in range(random.randint(0, 2)):
             box(WIN, (x + random.uniform(-0.05, 0.05), hy + 0.44, 1.0 + random.uniform(0.1, h)), (0.04, 0.02, 0.04), col=False)
-    box(WD, (-0.1, hy - 0.16, sill - 0.04), (1.35, 0.3, 0.06), col=False)               # parapeito
+    box(WD, (-0.1, hy - 0.16, sill - 0.04), (1.35, 0.3, 0.06))                          # parapeito
     box(WD, (-0.35, hy - 0.2, sill + 0.09), (0.34, 0.16, 0.2), col=False)                 # rádio Spidola
     box(BLACK, (-0.42, hy - 0.285, sill + 0.09), (0.14, 0.01, 0.1), col=False)
     box(DIAL, (-0.28, hy - 0.285, sill + 0.14), (0.1, 0.01, 0.03), col=False)
     for dx in (-0.8, 0.6):
         box(CUR, (dx, hy - 0.2, 1.45), (0.3, 0.1, 1.6), col=False, rz=random.uniform(-0.05, 0.05))
+    box(MT, (-0.1, hy - 0.2, 2.265), (1.8, 0.025, 0.025), col=False)                        # varão
 
     # ---- porta e gancheira: quepe e jaqueta de Boris -------------------------------------------------------
     for dx in (-0.5, 0.5):
@@ -153,7 +154,6 @@ def cozinha():
     props.pipe_z(MT, hx - 0.08, -0.45, 0.0, 2.5)                                             # cano de gás atrás do fogão
     props.pipe_x(MT, hy - 0.15, 2.45, -1.7, 1.7)                                             # cano sob o teto
     props.radiator("N", -0.1, hy, w=1.0)
-    props.bin_(-1.45, -0.5)
     props.crate(-1.5, 1.2, 0.0, 0.4, rz=0.15)
     props.bucket(1.45, 1.22)
     props.cable(BLACK, [(-0.2, -1.4, 0.02), (0.0, -1.0, 0.02), (0.3, -0.6, 0.02)])
@@ -167,8 +167,7 @@ def cozinha():
     props.ashtray(-0.8, -0.25, 0.775)
     props.avoska("S", -0.2, -hy + 0.05, 1.25)
     props.valenki(0.2, -1.15, 0.3)
-    for k, fill in enumerate(((0.70, 0.15, 0.10), (0.65, 0.20, 0.10), (0.50, 0.45, 0.15))):
-        props.jar(-0.5 + k * 0.2, hy - 0.18, 1.0, fill=fill)                               # conservas no peitoril
+    props.jar(-0.6, hy - 0.18, sill - 0.01, fill=(0.70, 0.15, 0.10))                       # conserva entre a cortina e o rádio (o tabuleiro fica no meio)
     props.door_security("S", 0.95, -hy + 0.045)
     kit.export("cozinha")
 

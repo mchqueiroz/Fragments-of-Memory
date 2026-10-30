@@ -57,7 +57,7 @@ func _ready() -> void:
 	cm.bottom_radius = 0.022
 	cm.height = 0.07
 	_glass.mesh = cm
-	_glass.position = Vector3(0.8, 0.82, -1.35)
+	_glass.position = Vector3(0.8, 0.80, -1.35)                                   # apoiada no tampo (0,765)
 	add_child(_glass)
 
 	var cs := BoxMesh.new()                                                          # a maleta de Irina (entra depois)

@@ -46,7 +46,7 @@ func _ready() -> void:
 	player.interacted.connect(_on_interacted)
 
 	_sergei = Actor.new()
-	_sergei.position = Vector3(1.25, 0, -1.8)
+	_sergei.position = Vector3(1.4, 0, -1.8)
 	add_child(_sergei)
 	_sergei.setup("sergei", "face_sergei", player)
 	clue_on(_sergei, "sergei", "Falar com Sergei", Vector3(0, 0.9, 0), Vector3(0.7, 1.8, 0.5))

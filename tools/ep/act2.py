@@ -12,7 +12,7 @@ SPECS["sala_controle"] = {
     "openings": [("S", 2.4, 0.9, 0.0, 2.1), ("E", 0.5, 3.2, 0.9, 2.5)], "sky": [0.15, 0.25, 0.30],
     "things": [
         ("c1", "console", -1.2, 1.0, 0.0, {"w": 2.4}), ("c2", "console", 1.6, 1.0, 0.0, {"w": 2.4}),
-        ("d1", "desk", -2.6, -1.4, 1.5708, {"w": 1.4}), ("ch1", "chair", -1.9, -1.4, 1.5708),
+        ("d1", "desk", -2.6, -1.4, 1.5708, {"w": 1.4}), ("ch1", "chair", -1.75, -1.4, 1.5708),
         ("f1", "filing", 3.2, -2.2, -1.5708), ("l1", "locker", -3.2, 2.0, 1.5708),
         ("sh", "bookshelf", 0.5, 2.78, 3.1416, {"w": 1.2}),
     ],
@@ -20,17 +20,17 @@ SPECS["sala_controle"] = {
         ("props", "poster", "poster_safety", "W", -3.5, -2.0, 1.8, 0.7, 0.9), ("props", "poster", "sign_nosmoke", "S", 1.0, -3.0, 1.9, 0.3, 0.3),
         ("props", "poster", "fire_board", "N", 2.8, 3.0, 1.6, 0.5, 0.7), ("props", "wall_clock", "N", -1.5, 3.0, 2.5),
         ("props", "notice_board", "W", -3.5, 0.5, 1.7, {"seed": 2}), ("props", "vent", "N", 1.0, 3.0, 3.0),
-        ("props", "switch", "S", 1.6, -3.0), ("props", "outlet", "E", 3.5, -2.4), ("props", "bin_", -3.0, -2.6),
+        ("props", "switch", "S", 1.6, -3.0), ("props", "outlet", "E", 3.5, -1.5), ("props", "bin_", -3.0, -2.6),
         ("props", "extinguisher", "E", 3.5, -2.5),
-        ("furniture", "computer", -2.5, -1.4, 0.765, 0.2), ("props", "mug", -3.0, -1.0, 0.765), ("props", "ashtray", -2.1, -1.0, 0.765),
-        ("props", "podstakannik", -2.0, -1.8, 0.765), ("props", "papers", -2.5, -1.8, 0.765, {"n": 3, "seed": 6}),
+        ("furniture", "computer", -2.5, -1.4, 0.765, 0.2), ("props", "mug", -2.75, -0.85, 0.765), ("props", "ashtray", -2.45, -0.85, 0.765),
+        ("props", "podstakannik", -2.45, -1.95, 0.765), ("props", "papers", -2.75, -1.9, 0.765, {"n": 3, "seed": 6}),
         ("props", "bottle", 3.1, -2.2, 1.4, {"color": [0.3, 0.15, 0.05]}),
     ],
     "lamps": [[0, 0, 3.0, COLD, 2.0, 8, True], [-2.6, -1.2, 1.4, [0.6, 1.0, 0.7], 1.0, 3, False], [3.3, 0.5, 1.5, [0.2, 0.5, 0.6], 1.2, 4, False]],
     "env": {"ambient": [0.10, 0.12, 0.12], "fog": [0.6, 0.7, 0.7], "density": 0.02},
     "start": [2.0, -2.4, 0], "dress": [101, 1.0, True],
     "sound": snd("lino", 0.5, 0.25, emitters=[["fluorescent_buzz", [0, 0, 3.0], -22.0, 3.0]], life=life_building()),
-    "npcs": [{"id": "boris", "model": "boris", "face": "face_boris", "at": [-1.95, -1.4], "pose": "slump", "always": True, "size": [0.5, 1.0, 0.5]}],
+    "npcs": [{"id": "boris", "model": "boris", "face": "face_boris", "at": [-1.75, -1.4], "pose": "sleep", "look": [-2.6, -1.4], "always": True, "size": [0.5, 1.0, 0.5]}],
     "intro": [["Dois andares acima do hangar: a sala de onde se vê tudo e se controla tudo.", 5.0]],
     "clues": [
         {"id": "terminal", "prompt": "Usar o terminal", "at": [-1.2, 0.5, 1.3], "size": [1.2, 0.6, 0.5],
@@ -72,13 +72,13 @@ SPECS["treinador"] = {
     "things": [
         ("mesa", "table", 0.9, 0.3, 0.0, {"w": 1.1, "d": 1.1}), ("c1", "chair", 0.9, -0.55, 0.0), ("c2", "chair", 0.9, 1.15, 3.1416),
         ("desk", "desk", -1.7, 1.8, 3.1416, {"w": 1.5}), ("sh", "bookshelf", 2.28, 0.9, 1.5708, {"w": 1.4}),
-        ("sofa", "sofa", -2.1, -0.5, 1.5708, {"w": 1.6}),
+        ("sofa", "sofa", -2.03, -0.5, 1.5708, {"w": 1.6}),
     ],
     "decor": [
         ("props", "poster", "blackboard", "W", -2.5, 1.0, 1.6, 1.8, 1.1), ("props", "poster", "calendar_1991", "N", -1.6, 2.2, 1.9, 0.5, 0.6),
         ("props", "poster", "sign_nosmoke", "S", 0.4, -2.2, 1.9, 0.3, 0.3), ("props", "wall_clock", "E", 2.5, -1.2, 2.2),
         ("props", "radiator", "N", 0.6, 2.2, {"w": 1.2}), ("props", "switch", "S", -0.6, -2.2),
-        ("props", "podstakannik", 0.55, 0.1, 0.78), ("props", "podstakannik", 1.3, 0.4, 0.78),
+        ("props", "podstakannik", 0.55, 0.1, 0.75), ("props", "podstakannik", 1.3, 0.4, 0.75),
         ("props", "papers", -1.3, 1.8, 0.77, {"n": 4, "seed": 2}), ("props", "ashtray", -2.0, 1.7, 0.77),
         ("furniture", "lamp_table", -2.0, 2.0, 0.765),
     ],
@@ -87,7 +87,7 @@ SPECS["treinador"] = {
     "env": {"ambient": [0.2, 0.17, 0.13], "fog": [0.9, 0.8, 0.65], "density": 0.02},
     "start": [-1.4, -1.8, 0], "dress": [112, 0.7, True],
     "sound": snd("parquet", 0.35, 0.15, emitters=[["clock_loop", [2.4, -1.2, 2.2], -14.0, 2.0]], life=life_building()),
-    "npcs": [{"id": "treinador", "model": "treinador", "face": "face_trainer", "at": [0.9, 1.1], "voice": "low", "pitch": 0.9,
+    "npcs": [{"id": "treinador", "model": "treinador", "face": "face_trainer", "at": [0.9, 1.15], "pose": "sit", "look": [0.9, 0.3], "voice": "low", "pitch": 0.9,
               "prompt": "Falar com o treinador", "size": [0.7, 1.8, 0.5]}],
     "intro": [["Dois anos. Aprendi a ser outra pessoa, lance a lance.", 5.0]],
     "clues": [
@@ -276,7 +276,7 @@ SPECS["chave"] = {
         ("props", "poster", "poster_safety", "S", -1.0, -3.0, 2.0, 0.7, 0.9), ("props", "poster", "sign_nosmoke", "N", -0.5, 3.0, 2.0, 0.3, 0.3),
         ("props", "poster", "fire_board", "W", -4.0, 1.5, 1.6, 0.5, 0.7), ("props", "extinguisher", "E", 4.0, 0.8),
         ("props", "wall_clock", "N", 1.0, 3.0, 2.8), ("props", "vent", "S", 1.5, -3.0, 2.8, {"w": 0.6, "h": 0.35}),
-        ("props", "switch", "S", 2.2, -3.0), ("props", "outlet", "W", -4.0, -1.5), ("props", "bin_", 3.4, 2.6),
+        ("props", "switch", "S", 2.2, -3.0), ("props", "outlet", "W", -4.0, -1.5), ("props", "bin_", 3.65, 2.6),
         ("props", "papers", 2.4, 2.3, 0.77, {"n": 3, "seed": 3}), ("props", "mug", 2.9, 2.2, 0.77), ("props", "ashtray", 2.1, 2.5, 0.77),
         ("props", "podstakannik", 2.0, 2.0, 0.77),
     ],
@@ -284,7 +284,7 @@ SPECS["chave"] = {
     "env": {"ambient": [0.07, 0.06, 0.07], "fog": [0.7, 0.4, 0.4], "density": 0.025},
     "start": [3.0, -2.4, 0], "dress": [153, 1.3, True],
     "sound": snd("concrete", 0.85, 0.3, emitters=[["fluorescent_buzz", [0, 0, 3.4], -22.0, 3.0]], life=life_building()),
-    "npcs": [{"id": "sergei", "model": "sergei", "face": "face_sergei", "at": [1.5, 1.0], "voice": "low", "pitch": 1.0, "prompt": "Falar com Sergei",
+    "npcs": [{"id": "sergei", "model": "sergei", "face": "face_sergei", "at": [1.5, 1.4], "voice": "low", "pitch": 1.0, "prompt": "Falar com Sergei",
               "size": [0.7, 1.8, 0.5]}],
     "intro": [["Madrugada no hangar. Sergei me chamou para me mostrar a chave do que construímos.", 5.5]],
     "clues": [
@@ -322,6 +322,7 @@ SPECS["chave"] = {
 # 16 · F8 · O Parque Gorky · ago/1993 (exterior)
 # ======================================================================================================================
 def _park_prims():
+    import math
     import random
     r = random.Random(93)
     p = [{"t": "light", "p": [0, 8, -10], "c": [1.0, 0.95, 0.8], "e": 0.6, "r": 40}]
@@ -334,16 +335,22 @@ def _park_prims():
     for x in (-3.5, 3.5):
         for z in (0, -20, -40):
             p.append({"t": "lamp", "p": [x, z]})
-    p += [{"t": "cyl", "p": [-35, 12, -55], "r": 10.0, "h": 0.4, "c": [0.6, 0.6, 0.62], "taper": 1.0},                    # roda-gigante
-          {"t": "cyl", "p": [-35, 12, -55.6], "r": 9.2, "h": 0.2, "c": [0.7, 0.2, 0.2]},
-          {"t": "box", "p": [-35, 6, -55], "s": [0.6, 12, 0.6], "c": [0.45, 0.45, 0.48]}]
+    p += [{"t": "ring", "p": [-35, 12, -55.3], "r": 10.0, "w": 0.35, "rx": 90, "c": [0.6, 0.6, 0.62]},                    # roda-gigante: aro,
+          {"t": "ring", "p": [-35, 12, -55.7], "r": 9.4, "w": 0.2, "rx": 90, "c": [0.7, 0.2, 0.2]},
+          {"t": "cyl", "p": [-35, 12, -55.5], "r": 0.7, "h": 1.0, "rx": 90, "c": [0.45, 0.45, 0.48]},                     # cubo
+          {"t": "box", "p": [-35, 6, -55.5], "s": [0.6, 12, 0.6], "c": [0.45, 0.45, 0.48]}]
+    for k in range(10):                                                                                          # e raios até cada cabine
+        a = k * 360 / 10
+        p.append({"t": "box", "p": [-35 + 5 * math.cos(math.radians(a)), 12 + 5 * math.sin(math.radians(a)), -55.3], "s": [10, 0.12, 0.12],
+                  "rz": a, "c": [0.6, 0.6, 0.62]})
     for k in range(10):
-        import math
         a = k * math.tau / 10
         p.append({"t": "box", "p": [-35 + 10 * math.cos(a), 12 + 10 * math.sin(a), -55], "s": [1.4, 1.0, 1.0], "c": [0.8, 0.3 + 0.05 * k, 0.2]})
     p += [{"t": "box", "p": [-8, 1.2, -14], "s": [2.0, 2.4, 2.0], "c": [0.85, 0.85, 0.8], "solid": True},                # quiosque de sorvete
-          {"t": "box", "p": [-8, 2.6, -14], "s": [2.4, 0.2, 2.4], "c": [0.8, 0.2, 0.25]},
+          {"t": "box", "p": [-8, 2.5, -14], "s": [2.4, 0.2, 2.4], "c": [0.8, 0.2, 0.25]},                                 # toldo assentado no quiosque
           {"t": "box", "p": [3.5, 1.3, -4], "s": [0.2, 1.6, 1.4], "c": [0.15, 0.3, 0.2], "solid": True},               # placa de entrada
+          {"t": "box", "p": [3.5, 0.25, -4.55], "s": [0.08, 0.5, 0.08], "c": [0.2, 0.2, 0.22]},                        # e seus postes
+          {"t": "box", "p": [3.5, 0.25, -3.45], "s": [0.08, 0.5, 0.08], "c": [0.2, 0.2, 0.22]},
           {"t": "people", "p": [-12, -30], "n": 5, "r": 4.0}, {"t": "people", "p": [14, -8], "n": 4, "r": 3.0}]
     return p
 
