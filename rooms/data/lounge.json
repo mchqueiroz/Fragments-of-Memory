@@ -250,7 +250,7 @@
   {
    "id": "bar",
    "prompt": "Olhar o bar",
-   "note": "Garrafas de uísque e de vodka 'Royal': o bar nunca falta. Quem tem acesso a isso tem acesso a tudo.",
+   "note": "Garrafas de uísque e de vodca 'Royal': o bar nunca falta. Quem tem acesso a isso tem acesso a tudo.",
    "optional": true,
    "say": "Garrafas importadas. O novo poder tem rótulo estrangeiro.",
    "pos": [

@@ -78,8 +78,8 @@ func _on_interacted(t: Node3D) -> void:
 			Story.add_note("O cabo da câmera foi arrancado, com marcas fundas. Quem fez isso tinha pressa e força.")
 			Story.say("Arrancado à mão. Não foi falha.", 4.0)
 		"armario":
-			Story.add_note("Armário de Boris: vodka e um caderno de técnico, folhas arrancadas. Ele bebia aqui, sozinho.",
-				"Armário de Boris: só vodka. Ele é fraco.")
+			Story.add_note("Armário de Boris: vodca e um caderno de técnico, folhas arrancadas. Ele bebia aqui, sozinho.",
+				"Armário de Boris: só vodca. Ele é fraco.")
 			Story.say("Uma garrafa meio vazia e um caderno com folhas arrancadas.", 4.5)
 		"pasta":
 			Story.add_note("Etiqueta 'ВОЛКОВ М. И. — изъято': retirada. Volkov... como Boris. Quem é M. I.?")

@@ -53,7 +53,7 @@ SPECS["sala_controle"] = {
          "say": "A lona esconde o que ninguém devia ver."},
         {"id": "garrafa", "prompt": "Olhar a garrafa e o copo", "on": "d1", "at": [0.4, 0.2],
          "note": "Garrafa e copo na mesa de Boris. Ele bebe sozinho aqui, entre turnos.", "alt": "Boris bebe no trabalho. Fraco.",
-         "say": "Vodka de turno. Ninguém o vigia.", "optional": True},
+         "say": "Vodca de turno. Ninguém o vigia.", "optional": True},
         {"id": "boris_dorme", "prompt": "Olhar Boris dormindo", "at": [-1.95, -1.4, 1.0], "size": [0.6, 0.6, 1.4],
          "note": "Boris dorme sobre a mesa, a mão sobre uma foto. Faz dois dias que não vai para casa.",
          "say": "Ele dorme com a boca aberta, como um garoto.", "optional": True},

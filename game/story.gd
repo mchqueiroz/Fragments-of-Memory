@@ -506,12 +506,17 @@ func has_save() -> bool:
 
 ## Salva ao entrar em cada cena (30 cenas não cabem numa sessão).
 func save_game() -> void:
-	var f := FileAccess.open(SAVE, FileAccess.WRITE)
-	if f:
-		_toast.text = "● salvo"
-		_toast.modulate.a = 0.8
-		create_tween().tween_property(_toast, "modulate:a", 0.0, 2.5).set_delay(1.5)
-		f.store_string(JSON.stringify({"index": index, "truth": truth, "flags": flags, "notes": notes, "items": items, "trust": trust, "deduced": deduced, "resolved": resolved, "seen_q": _seen_q}))
+	var tmp := SAVE + ".tmp"                                              # grava ao lado e troca: queda de energia não corrompe o save
+	var f := FileAccess.open(tmp, FileAccess.WRITE)
+	if f == null:
+		return
+	f.store_string(JSON.stringify({"version": 1, "index": index, "truth": truth, "flags": flags, "notes": notes, "items": items, "trust": trust, "deduced": deduced, "resolved": resolved, "seen_q": _seen_q}))
+	f.close()
+	if DirAccess.rename_absolute(ProjectSettings.globalize_path(tmp), ProjectSettings.globalize_path(SAVE)) != OK:
+		return
+	_toast.text = "● salvo"
+	_toast.modulate.a = 0.8
+	create_tween().tween_property(_toast, "modulate:a", 0.0, 2.5).set_delay(1.5)
 
 
 func continue_game() -> void:
@@ -519,17 +524,19 @@ func continue_game() -> void:
 	if not d is Dictionary:
 		new_game()
 		return
-	reset()
-	index = clampi(int(d["index"]), 0, ORDER.size() - 1)
-	truth = int(d["truth"])
-	flags = d["flags"]
-	notes = d["notes"]
-	items = d["items"]
-	for k in d["trust"]:
-		trust[k] = int(d["trust"][k])
-	deduced = d["deduced"]
-	resolved = d.get("resolved", {})
-	_seen_q = d.get("seen_q", {})
+	reset()                                                               # campos ausentes (save antigo/incompleto) ficam no padrão
+	index = clampi(int(d.get("index", 0)), 0, ORDER.size() - 1)
+	truth = int(d.get("truth", 0))
+	flags = d.get("flags", {}) if d.get("flags") is Dictionary else {}
+	notes = d.get("notes", []) if d.get("notes") is Array else []
+	items = d.get("items", {}) if d.get("items") is Dictionary else {}
+	var tr = d.get("trust", {})
+	if tr is Dictionary:
+		for k in tr:
+			trust[k] = int(tr[k])
+	deduced = d.get("deduced", {}) if d.get("deduced") is Dictionary else {}
+	resolved = d.get("resolved", {}) if d.get("resolved") is Dictionary else {}
+	_seen_q = d.get("seen_q", {}) if d.get("seen_q") is Dictionary else {}
 	get_tree().change_scene_to_file(ORDER[index])
 
 

@@ -104,7 +104,7 @@ func _on_interacted(t: Node3D) -> void:
 	_done[id] = true
 	match id:
 		"kiosk":
-			Story.add_note("Quiosque: Marlboro, Snickers, Pepsi e vodka 'Royal'. Metade da rua vive de contrabando; a outra metade, de rancor.",
+			Story.add_note("Quiosque: Marlboro, Snickers, Pepsi e vodca 'Royal'. Metade da rua vive de contrabando; a outra metade, de rancor.",
 				"Um quiosque comum.")
 			Story.say("Marlboro e Snickers num país onde ontem não havia pão.", 5.0)
 		"tv":

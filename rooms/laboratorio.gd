@@ -277,7 +277,7 @@ func _lamp(pos: Vector3, color: Color, energy: float, rng: float, into: Array) -
 	l.light_color = color
 	l.light_energy = energy
 	l.omni_range = rng
-	l.shadow_enabled = true
+	l.shadow_enabled = false                                                 # Settings.apply_graphics escolhe quem projeta sombra
 	l.set_meta("e", energy)
 	add_child(l)
 	if into != null:

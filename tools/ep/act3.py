@@ -281,7 +281,7 @@ SPECS["lounge"] = {
         {"id": "tv", "prompt": "Olhar a TV", "at": [3.7, -2.0, 1.1], "size": [0.6, 0.8, 0.8],
          "note": "A TV mostra imagens da Casa Branca cercada. Os homens no bar fingem não olhar.", "say": "A TV mostra o fim do país. Ninguém aqui ergue os olhos."},
         {"id": "bar", "prompt": "Olhar o bar", "at": [-2.0, 2.4, 1.3], "size": [3.6, 0.7, 0.4],
-         "note": "Garrafas de uísque e de vodka 'Royal': o bar nunca falta. Quem tem acesso a isso tem acesso a tudo.", "optional": True, "say": "Garrafas importadas. O novo poder tem rótulo estrangeiro."},
+         "note": "Garrafas de uísque e de vodca 'Royal': o bar nunca falta. Quem tem acesso a isso tem acesso a tudo.", "optional": True, "say": "Garrafas importadas. O novo poder tem rótulo estrangeiro."},
     ],
     "needed": ["dossie", "nota", "tv"],
     "outro": [["Fico com o dossiê no bolso. Não sei mais de que lado estou.", 4.5]],

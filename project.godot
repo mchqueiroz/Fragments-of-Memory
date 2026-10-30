@@ -7,6 +7,11 @@ config_version=5
 [application]
 
 config/name="Fragments of Memory"
+config/description="Moscou, outubro de 1993. Um homem acorda ao lado de um cadáver, sem memória."
+config/version="1.0.0"
+config/icon="res://icon.png"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 run/main_scene="res://rooms/titulo.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 

@@ -1,7 +1,7 @@
 """Cozinha dos Volkov (Cena 2, jun/1991, linha F): um apartamento "khrushchevka" apertado, onde Boris esperou o irmão.
 
 Uso: blender -b -P tools/cozinha.py        -> art/models/cozinha.glb
-Dramaturgia: oleado com marcas de copo, prato de comida coberto e frio (Boris esperou), garrafa de vodka pela metade, quepe e
+Dramaturgia: oleado com marcas de copo, prato de comida coberto e frio (Boris esperou), garrafa de vodca pela metade, quepe e
 jaqueta de milícia no gancho, o tabuleiro do pai, a foto dos pais com o canto queimado, calendário de junho de 1991.
 Eixos: X leste, Y norte (frente do jogador), Z cima. A janela dá para o pátio, ao pôr do sol.
 """
@@ -157,7 +157,7 @@ def cozinha():
     props.crate(-1.5, 1.2, 0.0, 0.4, rz=0.15)
     props.bucket(1.45, 1.22)
     props.cable(BLACK, [(-0.2, -1.4, 0.02), (0.0, -1.0, 0.02), (0.3, -0.6, 0.02)])
-    # ---- autenticidade 1991: podstakanniki, Belomor/Prima, talão de vodka, rublos, avoska, valenki, potes de tomate, cinzeiro --------
+    # ---- autenticidade 1991: podstakanniki, Belomor/Prima, talão de vodca, rublos, avoska, valenki, potes de tomate, cinzeiro --------
     props.podstakannik(-1.2, 0.45, 0.775)
     props.podstakannik(-0.85, 0.2, 0.775)
     props.flat_tex("prima_pack", -1.3, 0.05, 0.777, 0.09, 0.12, rz=0.4)

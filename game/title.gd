@@ -1,5 +1,5 @@
 extends Control
-## Tela de título: Novo jogo / Continuar (o jogo salva ao entrar em cada cena) / Sair.
+## Tela de título: Continuar (o jogo salva ao entrar em cada cena) / Novo jogo / Opções / Sair.
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -45,6 +45,15 @@ void fragment(){
 	if Story.has_save():
 		first = _button(box, "Continuar", Story.continue_game)
 	var nova := _button(box, "Novo jogo", Story.new_game)
+	var menu := PauseMenu.new()
+	menu.from_title = true
+	add_child(menu)
+	var opts := _button(box, "Opções", func():
+		box.visible = false
+		menu.open())
+	menu.closed.connect(func():
+		box.visible = true
+		opts.grab_focus())
 	_button(box, "Sair", get_tree().quit)
 	(first if first else nova).grab_focus()
 	modulate.a = 0.0

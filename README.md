@@ -50,6 +50,21 @@ Ao terminar a história, o save é apagado e o próximo **Novo jogo** começa li
 | Soltar a arma | Q | X |
 | Escolhas | 1–9, ou W/S e E | analógico e A |
 | Pausa / opções | Esc | |
+| Tela cheia | F11 | |
+
+### Opções
+
+Na pausa ou em **Opções**, na tela de título: sensibilidade, eixo Y invertido, balanço da câmera (pode ser desligado
+para quem enjoa), campo de visão, **qualidade gráfica**, tela cheia, sincronia vertical e volumes separados (geral,
+música, efeitos, vozes). Tudo fica salvo em `user://settings.cfg`.
+
+| Qualidade | Sombras | Oclusão (SSAO) | Névoa |
+|---|---|---|---|
+| Alta | 2 luzes principais | sim | volumétrica |
+| Média | 1 luz principal | não | volumétrica |
+| Baixa | nenhuma | não | simples |
+
+Na Alta, quase todas as cenas mantêm 60 fps numa GPU integrada (AMD Lucienne); o quadro mais lento medido foi de 20 ms.
 
 ### Mecânicas
 
@@ -90,6 +105,8 @@ Um robô joga o jogo sozinho, examina todas as pistas, escolhe e avança; avisa 
 ```sh
 godot --headless --path . --script res://tools/robo.gd -- res://rooms/laboratorio.tscn 40
 godot --headless --path . --script res://tools/teste_quadro.gd
+godot --headless --path . --script res://tools/teste_save.gd        # save atômico, save antigo e corrompido
+godot --path . --script res://tools/desempenho.gd                   # ms por quadro e draw calls de cada cena (QUALIDADE=0|1|2)
 ```
 
 ### Auditoria de posições

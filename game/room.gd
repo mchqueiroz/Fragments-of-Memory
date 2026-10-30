@@ -175,7 +175,7 @@ func lamp(pos: Vector3, color: Color, energy: float, rng: float, flicker := true
 	l.light_color = color
 	l.light_energy = energy
 	l.omni_range = rng
-	l.shadow_enabled = true
+	l.shadow_enabled = false                                                 # Settings.apply_graphics escolhe quem projeta sombra
 	l.set_meta("e", energy)
 	l.set_meta("flicker", flicker)
 	add_child(l)
