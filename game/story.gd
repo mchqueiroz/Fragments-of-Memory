@@ -139,7 +139,7 @@ func _ready() -> void:
 	_vo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_vo.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	_vo.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_vo.add_theme_font_size_override("font_size", 11)
+	_vo.add_theme_font_size_override("font_size", 14 if Settings.big_subs else 11)
 	_vo.add_theme_constant_override("line_spacing", 2)
 	_vo.add_theme_constant_override("outline_size", 4)
 	_vo.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.9))

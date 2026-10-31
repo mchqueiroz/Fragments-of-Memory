@@ -21,11 +21,12 @@ func _initialize() -> void:
 
 func _process(delta: float) -> bool:
 	var st = root.get_node("Story")
+	var cur := current_scene
 	if st._choice == -2:
-		st._choice = 0
+		var code = cur.get_script().get_script_constant_map().get("CODE") if cur and cur.get_script() else null
+		st._choice = maxi(0, Array(st._options).find(code))                  # cadeado: digita o código certo
 	if st._waiting:
 		st._advance = true
-	var cur := current_scene
 	if cur == null:
 		return false
 	_since += delta
@@ -35,6 +36,10 @@ func _process(delta: float) -> bool:
 		_tried.clear()
 		_count += 1
 		print("[%d] %s  verdade=%d confiança=%s itens=%s notas=%d" % [_count, _scene.get_file(), st.truth, st.trust, st.items.keys(), st.notes.size()])
+		if _scene.ends_with("titulo.tscn") and _count > 1:
+			print("FIM: a história chegou aos créditos")
+			quit()
+			return true
 		if _count > _limit:
 			quit()
 			return true
@@ -56,6 +61,8 @@ func _process(delta: float) -> bool:
 			if not fresh and _since > 20.0 and not _tried.has("#volta"):    # pistas que só abrem depois de outras: mais uma volta
 				_tried.clear()
 				_tried["#volta"] = true
+			elif not fresh and _since > 25.0 and _scene.ends_with("kosmos_fora.tscn"):
+				cur.player.position.z += 4.0                                 # cena de caminhada: anda até o portão
 	if _since > 150.0:
 		print("   TRAVADA: ", _scene.get_file(), " tentadas=", _tried.keys())
 		_since = 0.0

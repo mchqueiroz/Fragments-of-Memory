@@ -17,7 +17,8 @@ e de como escolheu lembrar. O jogo não diz se você acertou.
 
 ## Como jogar
 
-Requer o [Godot 4.6](https://godotengine.org/download/) (versão padrão, não a .NET).
+Executáveis prontos para Linux e Windows ficam em [Releases](https://github.com/mchqueiroz/Fragments-of-Memory/releases).
+Para rodar a partir do código, use o [Godot 4.6](https://godotengine.org/download/) (versão padrão, não a .NET).
 
 ```sh
 git clone https://github.com/mchqueiroz/Fragments-of-Memory.git
@@ -55,7 +56,7 @@ Ao terminar a história, o save é apagado e o próximo **Novo jogo** começa li
 ### Opções
 
 Na pausa ou em **Opções**, na tela de título: sensibilidade, eixo Y invertido, balanço da câmera (pode ser desligado
-para quem enjoa), campo de visão, **qualidade gráfica**, tela cheia, sincronia vertical e volumes separados (geral,
+para quem enjoa), campo de visão, legendas grandes, **qualidade gráfica**, tela cheia, sincronia vertical e volumes separados (geral,
 música, efeitos, vozes). Tudo fica salvo em `user://settings.cfg`.
 
 | Qualidade | Sombras | Oclusão (SSAO) | Névoa |
@@ -100,9 +101,12 @@ python3 tools/textos.py                           # regrava os textos revisados 
 
 ### Testes
 
-Um robô joga o jogo sozinho, examina todas as pistas, escolhe e avança; avisa se alguma cena travar:
+Um robô joga o jogo sozinho, examina todas as pistas, escolhe e avança; avisa se alguma cena travar.
+`tools/testes.sh` roda tudo e sai com erro se algo falhar. O CI do GitHub roda esse script a cada push e,
+numa tag `v*`, gera os executáveis e publica a Release com o texto do [CHANGELOG](CHANGELOG.md).
 
 ```sh
+tools/testes.sh ~/caminho/do/godot                                # save, quadro e a partida completa até os créditos
 godot --headless --path . --script res://tools/robo.gd -- res://rooms/laboratorio.tscn 40
 godot --headless --path . --script res://tools/teste_quadro.gd
 godot --headless --path . --script res://tools/teste_save.gd        # save atômico, save antigo e corrompido

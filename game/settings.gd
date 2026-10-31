@@ -20,6 +20,7 @@ var voice := 1.0
 var quality := 2       # 0 baixa, 1 média, 2 alta
 var fullscreen := false
 var vsync := true
+var big_subs := false   # legendas grandes (acessibilidade)
 
 var _scene: Node
 
@@ -38,6 +39,7 @@ func _ready() -> void:
 		quality = clampi(cf.get_value("video", "quality", quality), 0, 2)
 		fullscreen = cf.get_value("video", "fullscreen", fullscreen)
 		vsync = cf.get_value("video", "vsync", vsync)
+		big_subs = cf.get_value("access", "big_subs", big_subs)
 	apply_audio()
 	apply_display()
 
@@ -55,6 +57,7 @@ func save() -> void:
 	cf.set_value("video", "quality", quality)
 	cf.set_value("video", "fullscreen", fullscreen)
 	cf.set_value("video", "vsync", vsync)
+	cf.set_value("access", "big_subs", big_subs)
 	cf.save(PATH)
 
 

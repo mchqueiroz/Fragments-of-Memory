@@ -40,6 +40,9 @@ func _ready() -> void:
 	_check(left, "Inverter eixo Y", Settings.invert_y, func(on): Settings.invert_y = on)
 	_slider(left, "Balanço da câmera (0 = desligado)", 0.0, 1.0, Settings.bob, func(v): Settings.bob = v)
 	_slider(left, "Campo de visão", 60.0, 90.0, Settings.fov, func(v): Settings.fov = v)
+	_check(left, "Legendas grandes", Settings.big_subs, func(on):
+		Settings.big_subs = on
+		Story._vo.add_theme_font_size_override("font_size", 14 if on else 11))
 
 	var q := OptionButton.new()
 	for n in Settings.QUALITY_NAMES:
