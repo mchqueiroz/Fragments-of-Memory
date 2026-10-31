@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Godot
         run: |
           base=https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable
@@ -31,7 +31,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Godot e export templates
         run: |
           base=https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable
